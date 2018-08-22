@@ -21,8 +21,8 @@ function generateContents() {
           icon =>
             `module ${icon} = {
   [@bs.module "react-icons/${iconSet.toLowerCase()}"] external reactClass : ReasonReact.reactClass = "${icon}";
-  let make = (children) =>
-    ReasonReact.wrapJsForReason(~reactClass, ~props=Js.Obj.empty(), children);
+  let make = (~className=?, ~color=?, ~size=?, ~style=?, children) =>
+    ReasonReact.wrapJsForReason(~reactClass, ~props=jsIconProps(~className?, ~color?, ~size?, ~style?, ()), children);
 };`
         )
         .join(`${os.EOL}${os.EOL}`)
@@ -30,4 +30,5 @@ function generateContents() {
     .join(`${os.EOL}${os.EOL}`);
 }
 
-fs.writeFileSync('./src/ReactIcons.re', generateContents());
+fs.copyFileSync('./scripts/bindings-template.re', './src/ReactIcons.re');
+fs.appendFileSync('./src/ReactIcons.re', generateContents());
