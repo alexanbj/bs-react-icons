@@ -1,5 +1,4 @@
 const fs = require('fs');
-const os = require('os');
 
 const iconSets = {
   Fa: require('react-icons/fa'),
@@ -10,24 +9,30 @@ const iconSets = {
   Fi: require('react-icons/fi')
 };
 
-/**
- * Even Prettier can't make this readable >_<
- */
-function generateContents() {
-  return Object.entries(iconSets)
-    .map(([iconSet, icons]) =>
-      Object.keys(icons)
-        .map(
-          icon =>
-            `module ${icon} = MakeIcon({
-  [@bs.module "react-icons/${iconSet.toLowerCase()}"] 
-  external reactClass : ReasonReact.reactClass = "${icon}";
-});`
-        )
-        .join(`${os.EOL}${os.EOL}`)
-    )
-    .join(`${os.EOL}${os.EOL}`);
-}
+const iconTemplate = (iconSetKey, iconName) => `
+[@bs.module "react-icons/${iconSetKey.toLowerCase()}"]
+external reactClass : ReasonReact.reactClass = "${iconName}";
+let make = (~className=?, ~color=?, ~size=?, ~style=?, children) =>
+  ReasonReact.wrapJsForReason(
+    ~reactClass,
+    ~props=ReactIcons.jsIconProps(~className?, ~color?, ~size?, ~style?, ()),
+    children,
+  );
 
-fs.copyFileSync('./scripts/bindings-template.re', './src/ReactIcons.re');
-fs.appendFileSync('./src/ReactIcons.re', generateContents());
+`;
+
+Object.keys(iconSets).forEach(iconSetKey => {
+  const iconSetPath = `./src/${iconSetKey}`;
+
+  // Make sure the directories for each icon set exists
+  if (!fs.existsSync(iconSetPath)) {
+    fs.mkdirSync(iconSetPath);
+  }
+
+  // Write each icon in the set to it's own file
+  Object.keys(iconSets[iconSetKey]).forEach(iconName => {
+    const iconPath = `${iconSetPath}/${iconName}.re`;
+
+    fs.writeFileSync(iconPath, iconTemplate(iconSetKey, iconName));
+  });
+});
