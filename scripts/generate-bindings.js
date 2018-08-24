@@ -19,7 +19,7 @@ function generateContents() {
       Object.keys(icons)
         .map(
           icon =>
-            `module ${icon} = MakeIcon({
+            `module ${icon} = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/${iconSet.toLowerCase()}"] 
   external reactClass : ReasonReact.reactClass = "${icon}";
 });`

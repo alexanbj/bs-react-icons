@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "Reason bindings for React Icons",
   "main": "lib/js/src/ReactIcons.js",
+  "sideEffects": false,
   "author": "Alexander Bjerkan <alexander.bjerkan@gmail.com>",
   "license": "MIT",
   "scripts": {

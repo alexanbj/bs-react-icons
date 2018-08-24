@@ -1,15 +1,3 @@
-[@bs.deriving abstract]
-type jsIconProps = {
-  [@bs.optional]
-  className: string,
-  [@bs.optional]
-  color: string,
-  [@bs.optional]
-  size: string,
-  [@bs.optional]
-  style: ReactDOMRe.Style.t,
-};
-
 module Provider = {
   [@bs.deriving abstract]
   type iconContext = {
@@ -18,7 +6,7 @@ module Provider = {
   };
 
   [@bs.deriving abstract]
-  type jsProps = {value: jsIconProps};
+  type jsProps = {value: ReactIcons_IconProps.jsIconProps};
 
   [@bs.module "react-icons"] external iconContext: iconContext = "IconContext";
   let make = (~className=?, ~color=?, ~size=?, ~style=?, children) =>
@@ -26,22 +14,19 @@ module Provider = {
       ~reactClass=iconContext->providerGet,
       ~props=
         jsProps(
-          ~value=jsIconProps(~className?, ~color?, ~size?, ~style?, ()),
+          ~value=
+            ReactIcons_IconProps.jsIconProps(
+              ~className?,
+              ~color?,
+              ~size?,
+              ~style?,
+              (),
+            ),
         ),
       children,
     );
 };
 
-module type Icon = {let reactClass: ReasonReact.reactClass;};
-
-module MakeIcon = (Icon: Icon) => {
-  let make = (~className=?, ~color=?, ~size=?, ~style=?, children) =>
-    ReasonReact.wrapJsForReason(
-      ~reactClass=Icon.reactClass,
-      ~props=jsIconProps(~className?, ~color?, ~size?, ~style?, ()),
-      children,
-    );
-};
 /*
  * The rest of this file has been generated
  */

@@ -1,15 +1,3 @@
-[@bs.deriving abstract]
-type jsIconProps = {
-  [@bs.optional]
-  className: string,
-  [@bs.optional]
-  color: string,
-  [@bs.optional]
-  size: string,
-  [@bs.optional]
-  style: ReactDOMRe.Style.t,
-};
-
 module Provider = {
   [@bs.deriving abstract]
   type iconContext = {
@@ -18,7 +6,7 @@ module Provider = {
   };
 
   [@bs.deriving abstract]
-  type jsProps = {value: jsIconProps};
+  type jsProps = {value: ReactIcons_IconProps.jsIconProps};
 
   [@bs.module "react-icons"] external iconContext: iconContext = "IconContext";
   let make = (~className=?, ~color=?, ~size=?, ~style=?, children) =>
@@ -26,17141 +14,17137 @@ module Provider = {
       ~reactClass=iconContext->providerGet,
       ~props=
         jsProps(
-          ~value=jsIconProps(~className?, ~color?, ~size?, ~style?, ()),
+          ~value=
+            ReactIcons_IconProps.jsIconProps(
+              ~className?,
+              ~color?,
+              ~size?,
+              ~style?,
+              (),
+            ),
         ),
       children,
     );
 };
 
-module type Icon = {let reactClass: ReasonReact.reactClass;};
-
-module MakeIcon = (Icon: Icon) => {
-  let make = (~className=?, ~color=?, ~size=?, ~style=?, children) =>
-    ReasonReact.wrapJsForReason(
-      ~reactClass=Icon.reactClass,
-      ~props=jsIconProps(~className?, ~color?, ~size?, ~style?, ()),
-      children,
-    );
-};
 /*
  * The rest of this file has been generated
- */
-module Fa500px = MakeIcon({
+ */module Fa500px = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "Fa500px";
 });
 
-module FaAccessibleIcon = MakeIcon({
+module FaAccessibleIcon = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaAccessibleIcon";
 });
 
-module FaAccusoft = MakeIcon({
+module FaAccusoft = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaAccusoft";
 });
 
-module FaAdn = MakeIcon({
+module FaAdn = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaAdn";
 });
 
-module FaAdversal = MakeIcon({
+module FaAdversal = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaAdversal";
 });
 
-module FaAffiliatetheme = MakeIcon({
+module FaAffiliatetheme = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaAffiliatetheme";
 });
 
-module FaAlgolia = MakeIcon({
+module FaAlgolia = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaAlgolia";
 });
 
-module FaAmazonPay = MakeIcon({
+module FaAmazonPay = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaAmazonPay";
 });
 
-module FaAmazon = MakeIcon({
+module FaAmazon = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaAmazon";
 });
 
-module FaAmilia = MakeIcon({
+module FaAmilia = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaAmilia";
 });
 
-module FaAndroid = MakeIcon({
+module FaAndroid = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaAndroid";
 });
 
-module FaAngellist = MakeIcon({
+module FaAngellist = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaAngellist";
 });
 
-module FaAngrycreative = MakeIcon({
+module FaAngrycreative = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaAngrycreative";
 });
 
-module FaAngular = MakeIcon({
+module FaAngular = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaAngular";
 });
 
-module FaAppStoreIos = MakeIcon({
+module FaAppStoreIos = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaAppStoreIos";
 });
 
-module FaAppStore = MakeIcon({
+module FaAppStore = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaAppStore";
 });
 
-module FaApper = MakeIcon({
+module FaApper = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaApper";
 });
 
-module FaApplePay = MakeIcon({
+module FaApplePay = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaApplePay";
 });
 
-module FaApple = MakeIcon({
+module FaApple = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaApple";
 });
 
-module FaAsymmetrik = MakeIcon({
+module FaAsymmetrik = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaAsymmetrik";
 });
 
-module FaAudible = MakeIcon({
+module FaAudible = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaAudible";
 });
 
-module FaAutoprefixer = MakeIcon({
+module FaAutoprefixer = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaAutoprefixer";
 });
 
-module FaAvianex = MakeIcon({
+module FaAvianex = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaAvianex";
 });
 
-module FaAviato = MakeIcon({
+module FaAviato = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaAviato";
 });
 
-module FaAws = MakeIcon({
+module FaAws = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaAws";
 });
 
-module FaBandcamp = MakeIcon({
+module FaBandcamp = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaBandcamp";
 });
 
-module FaBehanceSquare = MakeIcon({
+module FaBehanceSquare = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaBehanceSquare";
 });
 
-module FaBehance = MakeIcon({
+module FaBehance = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaBehance";
 });
 
-module FaBimobject = MakeIcon({
+module FaBimobject = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaBimobject";
 });
 
-module FaBitbucket = MakeIcon({
+module FaBitbucket = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaBitbucket";
 });
 
-module FaBitcoin = MakeIcon({
+module FaBitcoin = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaBitcoin";
 });
 
-module FaBity = MakeIcon({
+module FaBity = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaBity";
 });
 
-module FaBlackTie = MakeIcon({
+module FaBlackTie = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaBlackTie";
 });
 
-module FaBlackberry = MakeIcon({
+module FaBlackberry = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaBlackberry";
 });
 
-module FaBloggerB = MakeIcon({
+module FaBloggerB = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaBloggerB";
 });
 
-module FaBlogger = MakeIcon({
+module FaBlogger = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaBlogger";
 });
 
-module FaBluetoothB = MakeIcon({
+module FaBluetoothB = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaBluetoothB";
 });
 
-module FaBluetooth = MakeIcon({
+module FaBluetooth = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaBluetooth";
 });
 
-module FaBtc = MakeIcon({
+module FaBtc = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaBtc";
 });
 
-module FaBuromobelexperte = MakeIcon({
+module FaBuromobelexperte = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaBuromobelexperte";
 });
 
-module FaBuysellads = MakeIcon({
+module FaBuysellads = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaBuysellads";
 });
 
-module FaCcAmazonPay = MakeIcon({
+module FaCcAmazonPay = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCcAmazonPay";
 });
 
-module FaCcAmex = MakeIcon({
+module FaCcAmex = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCcAmex";
 });
 
-module FaCcApplePay = MakeIcon({
+module FaCcApplePay = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCcApplePay";
 });
 
-module FaCcDinersClub = MakeIcon({
+module FaCcDinersClub = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCcDinersClub";
 });
 
-module FaCcDiscover = MakeIcon({
+module FaCcDiscover = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCcDiscover";
 });
 
-module FaCcJcb = MakeIcon({
+module FaCcJcb = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCcJcb";
 });
 
-module FaCcMastercard = MakeIcon({
+module FaCcMastercard = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCcMastercard";
 });
 
-module FaCcPaypal = MakeIcon({
+module FaCcPaypal = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCcPaypal";
 });
 
-module FaCcStripe = MakeIcon({
+module FaCcStripe = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCcStripe";
 });
 
-module FaCcVisa = MakeIcon({
+module FaCcVisa = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCcVisa";
 });
 
-module FaCentercode = MakeIcon({
+module FaCentercode = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCentercode";
 });
 
-module FaChrome = MakeIcon({
+module FaChrome = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaChrome";
 });
 
-module FaCloudscale = MakeIcon({
+module FaCloudscale = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCloudscale";
 });
 
-module FaCloudsmith = MakeIcon({
+module FaCloudsmith = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCloudsmith";
 });
 
-module FaCloudversify = MakeIcon({
+module FaCloudversify = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCloudversify";
 });
 
-module FaCodepen = MakeIcon({
+module FaCodepen = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCodepen";
 });
 
-module FaCodiepie = MakeIcon({
+module FaCodiepie = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCodiepie";
 });
 
-module FaConnectdevelop = MakeIcon({
+module FaConnectdevelop = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaConnectdevelop";
 });
 
-module FaContao = MakeIcon({
+module FaContao = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaContao";
 });
 
-module FaCpanel = MakeIcon({
+module FaCpanel = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCpanel";
 });
 
-module FaCreativeCommonsBy = MakeIcon({
+module FaCreativeCommonsBy = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCreativeCommonsBy";
 });
 
-module FaCreativeCommonsNcEu = MakeIcon({
+module FaCreativeCommonsNcEu = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCreativeCommonsNcEu";
 });
 
-module FaCreativeCommonsNcJp = MakeIcon({
+module FaCreativeCommonsNcJp = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCreativeCommonsNcJp";
 });
 
-module FaCreativeCommonsNc = MakeIcon({
+module FaCreativeCommonsNc = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCreativeCommonsNc";
 });
 
-module FaCreativeCommonsNd = MakeIcon({
+module FaCreativeCommonsNd = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCreativeCommonsNd";
 });
 
-module FaCreativeCommonsPdAlt = MakeIcon({
+module FaCreativeCommonsPdAlt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCreativeCommonsPdAlt";
 });
 
-module FaCreativeCommonsPd = MakeIcon({
+module FaCreativeCommonsPd = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCreativeCommonsPd";
 });
 
-module FaCreativeCommonsRemix = MakeIcon({
+module FaCreativeCommonsRemix = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCreativeCommonsRemix";
 });
 
-module FaCreativeCommonsSa = MakeIcon({
+module FaCreativeCommonsSa = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCreativeCommonsSa";
 });
 
-module FaCreativeCommonsSamplingPlus = MakeIcon({
+module FaCreativeCommonsSamplingPlus = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCreativeCommonsSamplingPlus";
 });
 
-module FaCreativeCommonsSampling = MakeIcon({
+module FaCreativeCommonsSampling = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCreativeCommonsSampling";
 });
 
-module FaCreativeCommonsShare = MakeIcon({
+module FaCreativeCommonsShare = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCreativeCommonsShare";
 });
 
-module FaCreativeCommons = MakeIcon({
+module FaCreativeCommons = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCreativeCommons";
 });
 
-module FaCss3Alt = MakeIcon({
+module FaCss3Alt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCss3Alt";
 });
 
-module FaCss3 = MakeIcon({
+module FaCss3 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCss3";
 });
 
-module FaCuttlefish = MakeIcon({
+module FaCuttlefish = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCuttlefish";
 });
 
-module FaDAndD = MakeIcon({
+module FaDAndD = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaDAndD";
 });
 
-module FaDashcube = MakeIcon({
+module FaDashcube = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaDashcube";
 });
 
-module FaDelicious = MakeIcon({
+module FaDelicious = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaDelicious";
 });
 
-module FaDeploydog = MakeIcon({
+module FaDeploydog = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaDeploydog";
 });
 
-module FaDeskpro = MakeIcon({
+module FaDeskpro = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaDeskpro";
 });
 
-module FaDeviantart = MakeIcon({
+module FaDeviantart = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaDeviantart";
 });
 
-module FaDigg = MakeIcon({
+module FaDigg = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaDigg";
 });
 
-module FaDigitalOcean = MakeIcon({
+module FaDigitalOcean = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaDigitalOcean";
 });
 
-module FaDiscord = MakeIcon({
+module FaDiscord = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaDiscord";
 });
 
-module FaDiscourse = MakeIcon({
+module FaDiscourse = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaDiscourse";
 });
 
-module FaDochub = MakeIcon({
+module FaDochub = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaDochub";
 });
 
-module FaDocker = MakeIcon({
+module FaDocker = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaDocker";
 });
 
-module FaDraft2digital = MakeIcon({
+module FaDraft2digital = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaDraft2digital";
 });
 
-module FaDribbbleSquare = MakeIcon({
+module FaDribbbleSquare = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaDribbbleSquare";
 });
 
-module FaDribbble = MakeIcon({
+module FaDribbble = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaDribbble";
 });
 
-module FaDropbox = MakeIcon({
+module FaDropbox = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaDropbox";
 });
 
-module FaDrupal = MakeIcon({
+module FaDrupal = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaDrupal";
 });
 
-module FaDyalog = MakeIcon({
+module FaDyalog = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaDyalog";
 });
 
-module FaEarlybirds = MakeIcon({
+module FaEarlybirds = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaEarlybirds";
 });
 
-module FaEbay = MakeIcon({
+module FaEbay = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaEbay";
 });
 
-module FaEdge = MakeIcon({
+module FaEdge = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaEdge";
 });
 
-module FaElementor = MakeIcon({
+module FaElementor = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaElementor";
 });
 
-module FaEmber = MakeIcon({
+module FaEmber = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaEmber";
 });
 
-module FaEmpire = MakeIcon({
+module FaEmpire = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaEmpire";
 });
 
-module FaEnvira = MakeIcon({
+module FaEnvira = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaEnvira";
 });
 
-module FaErlang = MakeIcon({
+module FaErlang = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaErlang";
 });
 
-module FaEthereum = MakeIcon({
+module FaEthereum = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaEthereum";
 });
 
-module FaEtsy = MakeIcon({
+module FaEtsy = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaEtsy";
 });
 
-module FaExpeditedssl = MakeIcon({
+module FaExpeditedssl = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaExpeditedssl";
 });
 
-module FaFacebookF = MakeIcon({
+module FaFacebookF = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaFacebookF";
 });
 
-module FaFacebookMessenger = MakeIcon({
+module FaFacebookMessenger = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaFacebookMessenger";
 });
 
-module FaFacebookSquare = MakeIcon({
+module FaFacebookSquare = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaFacebookSquare";
 });
 
-module FaFacebook = MakeIcon({
+module FaFacebook = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaFacebook";
 });
 
-module FaFirefox = MakeIcon({
+module FaFirefox = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaFirefox";
 });
 
-module FaFirstOrderAlt = MakeIcon({
+module FaFirstOrderAlt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaFirstOrderAlt";
 });
 
-module FaFirstOrder = MakeIcon({
+module FaFirstOrder = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaFirstOrder";
 });
 
-module FaFirstdraft = MakeIcon({
+module FaFirstdraft = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaFirstdraft";
 });
 
-module FaFlickr = MakeIcon({
+module FaFlickr = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaFlickr";
 });
 
-module FaFlipboard = MakeIcon({
+module FaFlipboard = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaFlipboard";
 });
 
-module FaFly = MakeIcon({
+module FaFly = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaFly";
 });
 
-module FaFontAwesomeAlt = MakeIcon({
+module FaFontAwesomeAlt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaFontAwesomeAlt";
 });
 
-module FaFontAwesomeFlag = MakeIcon({
+module FaFontAwesomeFlag = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaFontAwesomeFlag";
 });
 
-module FaFontAwesomeLogoFull = MakeIcon({
+module FaFontAwesomeLogoFull = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaFontAwesomeLogoFull";
 });
 
-module FaFontAwesome = MakeIcon({
+module FaFontAwesome = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaFontAwesome";
 });
 
-module FaFonticonsFi = MakeIcon({
+module FaFonticonsFi = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaFonticonsFi";
 });
 
-module FaFonticons = MakeIcon({
+module FaFonticons = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaFonticons";
 });
 
-module FaFortAwesomeAlt = MakeIcon({
+module FaFortAwesomeAlt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaFortAwesomeAlt";
 });
 
-module FaFortAwesome = MakeIcon({
+module FaFortAwesome = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaFortAwesome";
 });
 
-module FaForumbee = MakeIcon({
+module FaForumbee = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaForumbee";
 });
 
-module FaFoursquare = MakeIcon({
+module FaFoursquare = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaFoursquare";
 });
 
-module FaFreeCodeCamp = MakeIcon({
+module FaFreeCodeCamp = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaFreeCodeCamp";
 });
 
-module FaFreebsd = MakeIcon({
+module FaFreebsd = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaFreebsd";
 });
 
-module FaFulcrum = MakeIcon({
+module FaFulcrum = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaFulcrum";
 });
 
-module FaGalacticRepublic = MakeIcon({
+module FaGalacticRepublic = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaGalacticRepublic";
 });
 
-module FaGalacticSenate = MakeIcon({
+module FaGalacticSenate = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaGalacticSenate";
 });
 
-module FaGetPocket = MakeIcon({
+module FaGetPocket = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaGetPocket";
 });
 
-module FaGgCircle = MakeIcon({
+module FaGgCircle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaGgCircle";
 });
 
-module FaGg = MakeIcon({
+module FaGg = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaGg";
 });
 
-module FaGitSquare = MakeIcon({
+module FaGitSquare = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaGitSquare";
 });
 
-module FaGit = MakeIcon({
+module FaGit = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaGit";
 });
 
-module FaGithubAlt = MakeIcon({
+module FaGithubAlt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaGithubAlt";
 });
 
-module FaGithubSquare = MakeIcon({
+module FaGithubSquare = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaGithubSquare";
 });
 
-module FaGithub = MakeIcon({
+module FaGithub = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaGithub";
 });
 
-module FaGitkraken = MakeIcon({
+module FaGitkraken = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaGitkraken";
 });
 
-module FaGitlab = MakeIcon({
+module FaGitlab = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaGitlab";
 });
 
-module FaGitter = MakeIcon({
+module FaGitter = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaGitter";
 });
 
-module FaGlideG = MakeIcon({
+module FaGlideG = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaGlideG";
 });
 
-module FaGlide = MakeIcon({
+module FaGlide = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaGlide";
 });
 
-module FaGofore = MakeIcon({
+module FaGofore = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaGofore";
 });
 
-module FaGoodreadsG = MakeIcon({
+module FaGoodreadsG = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaGoodreadsG";
 });
 
-module FaGoodreads = MakeIcon({
+module FaGoodreads = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaGoodreads";
 });
 
-module FaGoogleDrive = MakeIcon({
+module FaGoogleDrive = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaGoogleDrive";
 });
 
-module FaGooglePlay = MakeIcon({
+module FaGooglePlay = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaGooglePlay";
 });
 
-module FaGooglePlusG = MakeIcon({
+module FaGooglePlusG = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaGooglePlusG";
 });
 
-module FaGooglePlusSquare = MakeIcon({
+module FaGooglePlusSquare = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaGooglePlusSquare";
 });
 
-module FaGooglePlus = MakeIcon({
+module FaGooglePlus = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaGooglePlus";
 });
 
-module FaGoogleWallet = MakeIcon({
+module FaGoogleWallet = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaGoogleWallet";
 });
 
-module FaGoogle = MakeIcon({
+module FaGoogle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaGoogle";
 });
 
-module FaGratipay = MakeIcon({
+module FaGratipay = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaGratipay";
 });
 
-module FaGrav = MakeIcon({
+module FaGrav = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaGrav";
 });
 
-module FaGripfire = MakeIcon({
+module FaGripfire = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaGripfire";
 });
 
-module FaGrunt = MakeIcon({
+module FaGrunt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaGrunt";
 });
 
-module FaGulp = MakeIcon({
+module FaGulp = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaGulp";
 });
 
-module FaHackerNewsSquare = MakeIcon({
+module FaHackerNewsSquare = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaHackerNewsSquare";
 });
 
-module FaHackerNews = MakeIcon({
+module FaHackerNews = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaHackerNews";
 });
 
-module FaHips = MakeIcon({
+module FaHips = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaHips";
 });
 
-module FaHireAHelper = MakeIcon({
+module FaHireAHelper = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaHireAHelper";
 });
 
-module FaHooli = MakeIcon({
+module FaHooli = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaHooli";
 });
 
-module FaHotjar = MakeIcon({
+module FaHotjar = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaHotjar";
 });
 
-module FaHouzz = MakeIcon({
+module FaHouzz = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaHouzz";
 });
 
-module FaHtml5 = MakeIcon({
+module FaHtml5 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaHtml5";
 });
 
-module FaHubspot = MakeIcon({
+module FaHubspot = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaHubspot";
 });
 
-module FaImdb = MakeIcon({
+module FaImdb = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaImdb";
 });
 
-module FaInstagram = MakeIcon({
+module FaInstagram = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaInstagram";
 });
 
-module FaInternetExplorer = MakeIcon({
+module FaInternetExplorer = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaInternetExplorer";
 });
 
-module FaIoxhost = MakeIcon({
+module FaIoxhost = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaIoxhost";
 });
 
-module FaItunesNote = MakeIcon({
+module FaItunesNote = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaItunesNote";
 });
 
-module FaItunes = MakeIcon({
+module FaItunes = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaItunes";
 });
 
-module FaJava = MakeIcon({
+module FaJava = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaJava";
 });
 
-module FaJediOrder = MakeIcon({
+module FaJediOrder = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaJediOrder";
 });
 
-module FaJenkins = MakeIcon({
+module FaJenkins = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaJenkins";
 });
 
-module FaJoget = MakeIcon({
+module FaJoget = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaJoget";
 });
 
-module FaJoomla = MakeIcon({
+module FaJoomla = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaJoomla";
 });
 
-module FaJsSquare = MakeIcon({
+module FaJsSquare = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaJsSquare";
 });
 
-module FaJs = MakeIcon({
+module FaJs = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaJs";
 });
 
-module FaJsfiddle = MakeIcon({
+module FaJsfiddle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaJsfiddle";
 });
 
-module FaKeybase = MakeIcon({
+module FaKeybase = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaKeybase";
 });
 
-module FaKeycdn = MakeIcon({
+module FaKeycdn = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaKeycdn";
 });
 
-module FaKickstarterK = MakeIcon({
+module FaKickstarterK = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaKickstarterK";
 });
 
-module FaKickstarter = MakeIcon({
+module FaKickstarter = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaKickstarter";
 });
 
-module FaKorvue = MakeIcon({
+module FaKorvue = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaKorvue";
 });
 
-module FaLaravel = MakeIcon({
+module FaLaravel = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaLaravel";
 });
 
-module FaLastfmSquare = MakeIcon({
+module FaLastfmSquare = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaLastfmSquare";
 });
 
-module FaLastfm = MakeIcon({
+module FaLastfm = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaLastfm";
 });
 
-module FaLeanpub = MakeIcon({
+module FaLeanpub = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaLeanpub";
 });
 
-module FaLess = MakeIcon({
+module FaLess = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaLess";
 });
 
-module FaLine = MakeIcon({
+module FaLine = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaLine";
 });
 
-module FaLinkedinIn = MakeIcon({
+module FaLinkedinIn = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaLinkedinIn";
 });
 
-module FaLinkedin = MakeIcon({
+module FaLinkedin = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaLinkedin";
 });
 
-module FaLinode = MakeIcon({
+module FaLinode = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaLinode";
 });
 
-module FaLinux = MakeIcon({
+module FaLinux = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaLinux";
 });
 
-module FaLyft = MakeIcon({
+module FaLyft = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaLyft";
 });
 
-module FaMagento = MakeIcon({
+module FaMagento = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaMagento";
 });
 
-module FaMandalorian = MakeIcon({
+module FaMandalorian = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaMandalorian";
 });
 
-module FaMastodon = MakeIcon({
+module FaMastodon = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaMastodon";
 });
 
-module FaMaxcdn = MakeIcon({
+module FaMaxcdn = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaMaxcdn";
 });
 
-module FaMedapps = MakeIcon({
+module FaMedapps = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaMedapps";
 });
 
-module FaMediumM = MakeIcon({
+module FaMediumM = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaMediumM";
 });
 
-module FaMedium = MakeIcon({
+module FaMedium = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaMedium";
 });
 
-module FaMedrt = MakeIcon({
+module FaMedrt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaMedrt";
 });
 
-module FaMeetup = MakeIcon({
+module FaMeetup = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaMeetup";
 });
 
-module FaMicrosoft = MakeIcon({
+module FaMicrosoft = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaMicrosoft";
 });
 
-module FaMix = MakeIcon({
+module FaMix = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaMix";
 });
 
-module FaMixcloud = MakeIcon({
+module FaMixcloud = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaMixcloud";
 });
 
-module FaMizuni = MakeIcon({
+module FaMizuni = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaMizuni";
 });
 
-module FaModx = MakeIcon({
+module FaModx = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaModx";
 });
 
-module FaMonero = MakeIcon({
+module FaMonero = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaMonero";
 });
 
-module FaNapster = MakeIcon({
+module FaNapster = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaNapster";
 });
 
-module FaNintendoSwitch = MakeIcon({
+module FaNintendoSwitch = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaNintendoSwitch";
 });
 
-module FaNodeJs = MakeIcon({
+module FaNodeJs = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaNodeJs";
 });
 
-module FaNode = MakeIcon({
+module FaNode = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaNode";
 });
 
-module FaNpm = MakeIcon({
+module FaNpm = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaNpm";
 });
 
-module FaNs8 = MakeIcon({
+module FaNs8 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaNs8";
 });
 
-module FaNutritionix = MakeIcon({
+module FaNutritionix = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaNutritionix";
 });
 
-module FaOdnoklassnikiSquare = MakeIcon({
+module FaOdnoklassnikiSquare = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaOdnoklassnikiSquare";
 });
 
-module FaOdnoklassniki = MakeIcon({
+module FaOdnoklassniki = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaOdnoklassniki";
 });
 
-module FaOldRepublic = MakeIcon({
+module FaOldRepublic = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaOldRepublic";
 });
 
-module FaOpencart = MakeIcon({
+module FaOpencart = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaOpencart";
 });
 
-module FaOpenid = MakeIcon({
+module FaOpenid = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaOpenid";
 });
 
-module FaOpera = MakeIcon({
+module FaOpera = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaOpera";
 });
 
-module FaOptinMonster = MakeIcon({
+module FaOptinMonster = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaOptinMonster";
 });
 
-module FaOsi = MakeIcon({
+module FaOsi = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaOsi";
 });
 
-module FaPage4 = MakeIcon({
+module FaPage4 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaPage4";
 });
 
-module FaPagelines = MakeIcon({
+module FaPagelines = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaPagelines";
 });
 
-module FaPalfed = MakeIcon({
+module FaPalfed = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaPalfed";
 });
 
-module FaPatreon = MakeIcon({
+module FaPatreon = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaPatreon";
 });
 
-module FaPaypal = MakeIcon({
+module FaPaypal = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaPaypal";
 });
 
-module FaPeriscope = MakeIcon({
+module FaPeriscope = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaPeriscope";
 });
 
-module FaPhabricator = MakeIcon({
+module FaPhabricator = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaPhabricator";
 });
 
-module FaPhoenixFramework = MakeIcon({
+module FaPhoenixFramework = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaPhoenixFramework";
 });
 
-module FaPhoenixSquadron = MakeIcon({
+module FaPhoenixSquadron = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaPhoenixSquadron";
 });
 
-module FaPhp = MakeIcon({
+module FaPhp = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaPhp";
 });
 
-module FaPiedPiperAlt = MakeIcon({
+module FaPiedPiperAlt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaPiedPiperAlt";
 });
 
-module FaPiedPiperHat = MakeIcon({
+module FaPiedPiperHat = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaPiedPiperHat";
 });
 
-module FaPiedPiperPp = MakeIcon({
+module FaPiedPiperPp = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaPiedPiperPp";
 });
 
-module FaPiedPiper = MakeIcon({
+module FaPiedPiper = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaPiedPiper";
 });
 
-module FaPinterestP = MakeIcon({
+module FaPinterestP = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaPinterestP";
 });
 
-module FaPinterestSquare = MakeIcon({
+module FaPinterestSquare = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaPinterestSquare";
 });
 
-module FaPinterest = MakeIcon({
+module FaPinterest = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaPinterest";
 });
 
-module FaPlaystation = MakeIcon({
+module FaPlaystation = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaPlaystation";
 });
 
-module FaProductHunt = MakeIcon({
+module FaProductHunt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaProductHunt";
 });
 
-module FaPushed = MakeIcon({
+module FaPushed = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaPushed";
 });
 
-module FaPython = MakeIcon({
+module FaPython = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaPython";
 });
 
-module FaQq = MakeIcon({
+module FaQq = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaQq";
 });
 
-module FaQuinscape = MakeIcon({
+module FaQuinscape = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaQuinscape";
 });
 
-module FaQuora = MakeIcon({
+module FaQuora = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaQuora";
 });
 
-module FaRProject = MakeIcon({
+module FaRProject = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaRProject";
 });
 
-module FaR = MakeIcon({
+module FaR = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaR";
 });
 
-module FaRavelry = MakeIcon({
+module FaRavelry = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaRavelry";
 });
 
-module FaReact = MakeIcon({
+module FaReact = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaReact";
 });
 
-module FaReadme = MakeIcon({
+module FaReadme = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaReadme";
 });
 
-module FaRebel = MakeIcon({
+module FaRebel = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaRebel";
 });
 
-module FaRedRiver = MakeIcon({
+module FaRedRiver = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaRedRiver";
 });
 
-module FaRedditAlien = MakeIcon({
+module FaRedditAlien = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaRedditAlien";
 });
 
-module FaRedditSquare = MakeIcon({
+module FaRedditSquare = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaRedditSquare";
 });
 
-module FaReddit = MakeIcon({
+module FaReddit = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaReddit";
 });
 
-module FaRendact = MakeIcon({
+module FaRendact = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaRendact";
 });
 
-module FaRenren = MakeIcon({
+module FaRenren = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaRenren";
 });
 
-module FaReplyd = MakeIcon({
+module FaReplyd = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaReplyd";
 });
 
-module FaResearchgate = MakeIcon({
+module FaResearchgate = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaResearchgate";
 });
 
-module FaResolving = MakeIcon({
+module FaResolving = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaResolving";
 });
 
-module FaRocketchat = MakeIcon({
+module FaRocketchat = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaRocketchat";
 });
 
-module FaRockrms = MakeIcon({
+module FaRockrms = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaRockrms";
 });
 
-module FaSafari = MakeIcon({
+module FaSafari = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaSafari";
 });
 
-module FaSass = MakeIcon({
+module FaSass = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaSass";
 });
 
-module FaSchlix = MakeIcon({
+module FaSchlix = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaSchlix";
 });
 
-module FaScribd = MakeIcon({
+module FaScribd = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaScribd";
 });
 
-module FaSearchengin = MakeIcon({
+module FaSearchengin = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaSearchengin";
 });
 
-module FaSellcast = MakeIcon({
+module FaSellcast = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaSellcast";
 });
 
-module FaSellsy = MakeIcon({
+module FaSellsy = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaSellsy";
 });
 
-module FaServicestack = MakeIcon({
+module FaServicestack = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaServicestack";
 });
 
-module FaShirtsinbulk = MakeIcon({
+module FaShirtsinbulk = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaShirtsinbulk";
 });
 
-module FaSimplybuilt = MakeIcon({
+module FaSimplybuilt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaSimplybuilt";
 });
 
-module FaSistrix = MakeIcon({
+module FaSistrix = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaSistrix";
 });
 
-module FaSith = MakeIcon({
+module FaSith = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaSith";
 });
 
-module FaSkyatlas = MakeIcon({
+module FaSkyatlas = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaSkyatlas";
 });
 
-module FaSkype = MakeIcon({
+module FaSkype = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaSkype";
 });
 
-module FaSlackHash = MakeIcon({
+module FaSlackHash = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaSlackHash";
 });
 
-module FaSlack = MakeIcon({
+module FaSlack = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaSlack";
 });
 
-module FaSlideshare = MakeIcon({
+module FaSlideshare = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaSlideshare";
 });
 
-module FaSnapchatGhost = MakeIcon({
+module FaSnapchatGhost = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaSnapchatGhost";
 });
 
-module FaSnapchatSquare = MakeIcon({
+module FaSnapchatSquare = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaSnapchatSquare";
 });
 
-module FaSnapchat = MakeIcon({
+module FaSnapchat = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaSnapchat";
 });
 
-module FaSoundcloud = MakeIcon({
+module FaSoundcloud = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaSoundcloud";
 });
 
-module FaSpeakap = MakeIcon({
+module FaSpeakap = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaSpeakap";
 });
 
-module FaSpotify = MakeIcon({
+module FaSpotify = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaSpotify";
 });
 
-module FaStackExchange = MakeIcon({
+module FaStackExchange = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaStackExchange";
 });
 
-module FaStackOverflow = MakeIcon({
+module FaStackOverflow = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaStackOverflow";
 });
 
-module FaStaylinked = MakeIcon({
+module FaStaylinked = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaStaylinked";
 });
 
-module FaSteamSquare = MakeIcon({
+module FaSteamSquare = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaSteamSquare";
 });
 
-module FaSteamSymbol = MakeIcon({
+module FaSteamSymbol = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaSteamSymbol";
 });
 
-module FaSteam = MakeIcon({
+module FaSteam = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaSteam";
 });
 
-module FaStickerMule = MakeIcon({
+module FaStickerMule = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaStickerMule";
 });
 
-module FaStrava = MakeIcon({
+module FaStrava = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaStrava";
 });
 
-module FaStripeS = MakeIcon({
+module FaStripeS = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaStripeS";
 });
 
-module FaStripe = MakeIcon({
+module FaStripe = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaStripe";
 });
 
-module FaStudiovinari = MakeIcon({
+module FaStudiovinari = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaStudiovinari";
 });
 
-module FaStumbleuponCircle = MakeIcon({
+module FaStumbleuponCircle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaStumbleuponCircle";
 });
 
-module FaStumbleupon = MakeIcon({
+module FaStumbleupon = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaStumbleupon";
 });
 
-module FaSuperpowers = MakeIcon({
+module FaSuperpowers = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaSuperpowers";
 });
 
-module FaSupple = MakeIcon({
+module FaSupple = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaSupple";
 });
 
-module FaTeamspeak = MakeIcon({
+module FaTeamspeak = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaTeamspeak";
 });
 
-module FaTelegramPlane = MakeIcon({
+module FaTelegramPlane = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaTelegramPlane";
 });
 
-module FaTelegram = MakeIcon({
+module FaTelegram = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaTelegram";
 });
 
-module FaTencentWeibo = MakeIcon({
+module FaTencentWeibo = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaTencentWeibo";
 });
 
-module FaThemeisle = MakeIcon({
+module FaThemeisle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaThemeisle";
 });
 
-module FaTradeFederation = MakeIcon({
+module FaTradeFederation = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaTradeFederation";
 });
 
-module FaTrello = MakeIcon({
+module FaTrello = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaTrello";
 });
 
-module FaTripadvisor = MakeIcon({
+module FaTripadvisor = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaTripadvisor";
 });
 
-module FaTumblrSquare = MakeIcon({
+module FaTumblrSquare = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaTumblrSquare";
 });
 
-module FaTumblr = MakeIcon({
+module FaTumblr = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaTumblr";
 });
 
-module FaTwitch = MakeIcon({
+module FaTwitch = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaTwitch";
 });
 
-module FaTwitterSquare = MakeIcon({
+module FaTwitterSquare = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaTwitterSquare";
 });
 
-module FaTwitter = MakeIcon({
+module FaTwitter = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaTwitter";
 });
 
-module FaTypo3 = MakeIcon({
+module FaTypo3 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaTypo3";
 });
 
-module FaUber = MakeIcon({
+module FaUber = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaUber";
 });
 
-module FaUikit = MakeIcon({
+module FaUikit = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaUikit";
 });
 
-module FaUniregistry = MakeIcon({
+module FaUniregistry = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaUniregistry";
 });
 
-module FaUntappd = MakeIcon({
+module FaUntappd = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaUntappd";
 });
 
-module FaUsb = MakeIcon({
+module FaUsb = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaUsb";
 });
 
-module FaUssunnah = MakeIcon({
+module FaUssunnah = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaUssunnah";
 });
 
-module FaVaadin = MakeIcon({
+module FaVaadin = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaVaadin";
 });
 
-module FaViacoin = MakeIcon({
+module FaViacoin = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaViacoin";
 });
 
-module FaViadeoSquare = MakeIcon({
+module FaViadeoSquare = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaViadeoSquare";
 });
 
-module FaViadeo = MakeIcon({
+module FaViadeo = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaViadeo";
 });
 
-module FaViber = MakeIcon({
+module FaViber = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaViber";
 });
 
-module FaVimeoSquare = MakeIcon({
+module FaVimeoSquare = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaVimeoSquare";
 });
 
-module FaVimeoV = MakeIcon({
+module FaVimeoV = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaVimeoV";
 });
 
-module FaVimeo = MakeIcon({
+module FaVimeo = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaVimeo";
 });
 
-module FaVine = MakeIcon({
+module FaVine = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaVine";
 });
 
-module FaVk = MakeIcon({
+module FaVk = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaVk";
 });
 
-module FaVnv = MakeIcon({
+module FaVnv = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaVnv";
 });
 
-module FaVuejs = MakeIcon({
+module FaVuejs = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaVuejs";
 });
 
-module FaWeibo = MakeIcon({
+module FaWeibo = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaWeibo";
 });
 
-module FaWeixin = MakeIcon({
+module FaWeixin = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaWeixin";
 });
 
-module FaWhatsappSquare = MakeIcon({
+module FaWhatsappSquare = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaWhatsappSquare";
 });
 
-module FaWhatsapp = MakeIcon({
+module FaWhatsapp = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaWhatsapp";
 });
 
-module FaWhmcs = MakeIcon({
+module FaWhmcs = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaWhmcs";
 });
 
-module FaWikipediaW = MakeIcon({
+module FaWikipediaW = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaWikipediaW";
 });
 
-module FaWindows = MakeIcon({
+module FaWindows = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaWindows";
 });
 
-module FaWolfPackBattalion = MakeIcon({
+module FaWolfPackBattalion = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaWolfPackBattalion";
 });
 
-module FaWordpressSimple = MakeIcon({
+module FaWordpressSimple = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaWordpressSimple";
 });
 
-module FaWordpress = MakeIcon({
+module FaWordpress = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaWordpress";
 });
 
-module FaWpbeginner = MakeIcon({
+module FaWpbeginner = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaWpbeginner";
 });
 
-module FaWpexplorer = MakeIcon({
+module FaWpexplorer = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaWpexplorer";
 });
 
-module FaWpforms = MakeIcon({
+module FaWpforms = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaWpforms";
 });
 
-module FaXbox = MakeIcon({
+module FaXbox = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaXbox";
 });
 
-module FaXingSquare = MakeIcon({
+module FaXingSquare = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaXingSquare";
 });
 
-module FaXing = MakeIcon({
+module FaXing = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaXing";
 });
 
-module FaYCombinator = MakeIcon({
+module FaYCombinator = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaYCombinator";
 });
 
-module FaYahoo = MakeIcon({
+module FaYahoo = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaYahoo";
 });
 
-module FaYandexInternational = MakeIcon({
+module FaYandexInternational = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaYandexInternational";
 });
 
-module FaYandex = MakeIcon({
+module FaYandex = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaYandex";
 });
 
-module FaYelp = MakeIcon({
+module FaYelp = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaYelp";
 });
 
-module FaYoast = MakeIcon({
+module FaYoast = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaYoast";
 });
 
-module FaYoutubeSquare = MakeIcon({
+module FaYoutubeSquare = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaYoutubeSquare";
 });
 
-module FaYoutube = MakeIcon({
+module FaYoutube = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaYoutube";
 });
 
-module FaAddressBook = MakeIcon({
+module FaAddressBook = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaAddressBook";
 });
 
-module FaAddressCard = MakeIcon({
+module FaAddressCard = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaAddressCard";
 });
 
-module FaAdjust = MakeIcon({
+module FaAdjust = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaAdjust";
 });
 
-module FaAlignCenter = MakeIcon({
+module FaAlignCenter = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaAlignCenter";
 });
 
-module FaAlignJustify = MakeIcon({
+module FaAlignJustify = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaAlignJustify";
 });
 
-module FaAlignLeft = MakeIcon({
+module FaAlignLeft = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaAlignLeft";
 });
 
-module FaAlignRight = MakeIcon({
+module FaAlignRight = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaAlignRight";
 });
 
-module FaAllergies = MakeIcon({
+module FaAllergies = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaAllergies";
 });
 
-module FaAmbulance = MakeIcon({
+module FaAmbulance = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaAmbulance";
 });
 
-module FaAmericanSignLanguageInterpreting = MakeIcon({
+module FaAmericanSignLanguageInterpreting = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaAmericanSignLanguageInterpreting";
 });
 
-module FaAnchor = MakeIcon({
+module FaAnchor = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaAnchor";
 });
 
-module FaAngleDoubleDown = MakeIcon({
+module FaAngleDoubleDown = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaAngleDoubleDown";
 });
 
-module FaAngleDoubleLeft = MakeIcon({
+module FaAngleDoubleLeft = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaAngleDoubleLeft";
 });
 
-module FaAngleDoubleRight = MakeIcon({
+module FaAngleDoubleRight = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaAngleDoubleRight";
 });
 
-module FaAngleDoubleUp = MakeIcon({
+module FaAngleDoubleUp = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaAngleDoubleUp";
 });
 
-module FaAngleDown = MakeIcon({
+module FaAngleDown = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaAngleDown";
 });
 
-module FaAngleLeft = MakeIcon({
+module FaAngleLeft = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaAngleLeft";
 });
 
-module FaAngleRight = MakeIcon({
+module FaAngleRight = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaAngleRight";
 });
 
-module FaAngleUp = MakeIcon({
+module FaAngleUp = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaAngleUp";
 });
 
-module FaArchive = MakeIcon({
+module FaArchive = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaArchive";
 });
 
-module FaArrowAltCircleDown = MakeIcon({
+module FaArrowAltCircleDown = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaArrowAltCircleDown";
 });
 
-module FaArrowAltCircleLeft = MakeIcon({
+module FaArrowAltCircleLeft = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaArrowAltCircleLeft";
 });
 
-module FaArrowAltCircleRight = MakeIcon({
+module FaArrowAltCircleRight = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaArrowAltCircleRight";
 });
 
-module FaArrowAltCircleUp = MakeIcon({
+module FaArrowAltCircleUp = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaArrowAltCircleUp";
 });
 
-module FaArrowCircleDown = MakeIcon({
+module FaArrowCircleDown = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaArrowCircleDown";
 });
 
-module FaArrowCircleLeft = MakeIcon({
+module FaArrowCircleLeft = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaArrowCircleLeft";
 });
 
-module FaArrowCircleRight = MakeIcon({
+module FaArrowCircleRight = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaArrowCircleRight";
 });
 
-module FaArrowCircleUp = MakeIcon({
+module FaArrowCircleUp = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaArrowCircleUp";
 });
 
-module FaArrowDown = MakeIcon({
+module FaArrowDown = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaArrowDown";
 });
 
-module FaArrowLeft = MakeIcon({
+module FaArrowLeft = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaArrowLeft";
 });
 
-module FaArrowRight = MakeIcon({
+module FaArrowRight = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaArrowRight";
 });
 
-module FaArrowUp = MakeIcon({
+module FaArrowUp = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaArrowUp";
 });
 
-module FaArrowsAltH = MakeIcon({
+module FaArrowsAltH = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaArrowsAltH";
 });
 
-module FaArrowsAltV = MakeIcon({
+module FaArrowsAltV = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaArrowsAltV";
 });
 
-module FaArrowsAlt = MakeIcon({
+module FaArrowsAlt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaArrowsAlt";
 });
 
-module FaAssistiveListeningSystems = MakeIcon({
+module FaAssistiveListeningSystems = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaAssistiveListeningSystems";
 });
 
-module FaAsterisk = MakeIcon({
+module FaAsterisk = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaAsterisk";
 });
 
-module FaAt = MakeIcon({
+module FaAt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaAt";
 });
 
-module FaAudioDescription = MakeIcon({
+module FaAudioDescription = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaAudioDescription";
 });
 
-module FaBackward = MakeIcon({
+module FaBackward = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaBackward";
 });
 
-module FaBalanceScale = MakeIcon({
+module FaBalanceScale = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaBalanceScale";
 });
 
-module FaBan = MakeIcon({
+module FaBan = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaBan";
 });
 
-module FaBandAid = MakeIcon({
+module FaBandAid = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaBandAid";
 });
 
-module FaBarcode = MakeIcon({
+module FaBarcode = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaBarcode";
 });
 
-module FaBars = MakeIcon({
+module FaBars = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaBars";
 });
 
-module FaBaseballBall = MakeIcon({
+module FaBaseballBall = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaBaseballBall";
 });
 
-module FaBasketballBall = MakeIcon({
+module FaBasketballBall = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaBasketballBall";
 });
 
-module FaBath = MakeIcon({
+module FaBath = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaBath";
 });
 
-module FaBatteryEmpty = MakeIcon({
+module FaBatteryEmpty = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaBatteryEmpty";
 });
 
-module FaBatteryFull = MakeIcon({
+module FaBatteryFull = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaBatteryFull";
 });
 
-module FaBatteryHalf = MakeIcon({
+module FaBatteryHalf = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaBatteryHalf";
 });
 
-module FaBatteryQuarter = MakeIcon({
+module FaBatteryQuarter = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaBatteryQuarter";
 });
 
-module FaBatteryThreeQuarters = MakeIcon({
+module FaBatteryThreeQuarters = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaBatteryThreeQuarters";
 });
 
-module FaBed = MakeIcon({
+module FaBed = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaBed";
 });
 
-module FaBeer = MakeIcon({
+module FaBeer = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaBeer";
 });
 
-module FaBellSlash = MakeIcon({
+module FaBellSlash = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaBellSlash";
 });
 
-module FaBell = MakeIcon({
+module FaBell = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaBell";
 });
 
-module FaBicycle = MakeIcon({
+module FaBicycle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaBicycle";
 });
 
-module FaBinoculars = MakeIcon({
+module FaBinoculars = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaBinoculars";
 });
 
-module FaBirthdayCake = MakeIcon({
+module FaBirthdayCake = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaBirthdayCake";
 });
 
-module FaBlender = MakeIcon({
+module FaBlender = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaBlender";
 });
 
-module FaBlind = MakeIcon({
+module FaBlind = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaBlind";
 });
 
-module FaBold = MakeIcon({
+module FaBold = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaBold";
 });
 
-module FaBolt = MakeIcon({
+module FaBolt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaBolt";
 });
 
-module FaBomb = MakeIcon({
+module FaBomb = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaBomb";
 });
 
-module FaBookOpen = MakeIcon({
+module FaBookOpen = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaBookOpen";
 });
 
-module FaBook = MakeIcon({
+module FaBook = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaBook";
 });
 
-module FaBookmark = MakeIcon({
+module FaBookmark = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaBookmark";
 });
 
-module FaBowlingBall = MakeIcon({
+module FaBowlingBall = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaBowlingBall";
 });
 
-module FaBoxOpen = MakeIcon({
+module FaBoxOpen = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaBoxOpen";
 });
 
-module FaBox = MakeIcon({
+module FaBox = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaBox";
 });
 
-module FaBoxes = MakeIcon({
+module FaBoxes = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaBoxes";
 });
 
-module FaBraille = MakeIcon({
+module FaBraille = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaBraille";
 });
 
-module FaBriefcaseMedical = MakeIcon({
+module FaBriefcaseMedical = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaBriefcaseMedical";
 });
 
-module FaBriefcase = MakeIcon({
+module FaBriefcase = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaBriefcase";
 });
 
-module FaBroadcastTower = MakeIcon({
+module FaBroadcastTower = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaBroadcastTower";
 });
 
-module FaBroom = MakeIcon({
+module FaBroom = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaBroom";
 });
 
-module FaBug = MakeIcon({
+module FaBug = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaBug";
 });
 
-module FaBuilding = MakeIcon({
+module FaBuilding = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaBuilding";
 });
 
-module FaBullhorn = MakeIcon({
+module FaBullhorn = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaBullhorn";
 });
 
-module FaBullseye = MakeIcon({
+module FaBullseye = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaBullseye";
 });
 
-module FaBurn = MakeIcon({
+module FaBurn = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaBurn";
 });
 
-module FaBus = MakeIcon({
+module FaBus = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaBus";
 });
 
-module FaCalculator = MakeIcon({
+module FaCalculator = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCalculator";
 });
 
-module FaCalendarAlt = MakeIcon({
+module FaCalendarAlt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCalendarAlt";
 });
 
-module FaCalendarCheck = MakeIcon({
+module FaCalendarCheck = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCalendarCheck";
 });
 
-module FaCalendarMinus = MakeIcon({
+module FaCalendarMinus = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCalendarMinus";
 });
 
-module FaCalendarPlus = MakeIcon({
+module FaCalendarPlus = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCalendarPlus";
 });
 
-module FaCalendarTimes = MakeIcon({
+module FaCalendarTimes = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCalendarTimes";
 });
 
-module FaCalendar = MakeIcon({
+module FaCalendar = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCalendar";
 });
 
-module FaCameraRetro = MakeIcon({
+module FaCameraRetro = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCameraRetro";
 });
 
-module FaCamera = MakeIcon({
+module FaCamera = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCamera";
 });
 
-module FaCapsules = MakeIcon({
+module FaCapsules = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCapsules";
 });
 
-module FaCar = MakeIcon({
+module FaCar = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCar";
 });
 
-module FaCaretDown = MakeIcon({
+module FaCaretDown = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCaretDown";
 });
 
-module FaCaretLeft = MakeIcon({
+module FaCaretLeft = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCaretLeft";
 });
 
-module FaCaretRight = MakeIcon({
+module FaCaretRight = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCaretRight";
 });
 
-module FaCaretSquareDown = MakeIcon({
+module FaCaretSquareDown = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCaretSquareDown";
 });
 
-module FaCaretSquareLeft = MakeIcon({
+module FaCaretSquareLeft = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCaretSquareLeft";
 });
 
-module FaCaretSquareRight = MakeIcon({
+module FaCaretSquareRight = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCaretSquareRight";
 });
 
-module FaCaretSquareUp = MakeIcon({
+module FaCaretSquareUp = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCaretSquareUp";
 });
 
-module FaCaretUp = MakeIcon({
+module FaCaretUp = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCaretUp";
 });
 
-module FaCartArrowDown = MakeIcon({
+module FaCartArrowDown = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCartArrowDown";
 });
 
-module FaCartPlus = MakeIcon({
+module FaCartPlus = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCartPlus";
 });
 
-module FaCertificate = MakeIcon({
+module FaCertificate = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCertificate";
 });
 
-module FaChalkboardTeacher = MakeIcon({
+module FaChalkboardTeacher = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaChalkboardTeacher";
 });
 
-module FaChalkboard = MakeIcon({
+module FaChalkboard = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaChalkboard";
 });
 
-module FaChartArea = MakeIcon({
+module FaChartArea = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaChartArea";
 });
 
-module FaChartBar = MakeIcon({
+module FaChartBar = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaChartBar";
 });
 
-module FaChartLine = MakeIcon({
+module FaChartLine = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaChartLine";
 });
 
-module FaChartPie = MakeIcon({
+module FaChartPie = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaChartPie";
 });
 
-module FaCheckCircle = MakeIcon({
+module FaCheckCircle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCheckCircle";
 });
 
-module FaCheckSquare = MakeIcon({
+module FaCheckSquare = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCheckSquare";
 });
 
-module FaCheck = MakeIcon({
+module FaCheck = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCheck";
 });
 
-module FaChessBishop = MakeIcon({
+module FaChessBishop = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaChessBishop";
 });
 
-module FaChessBoard = MakeIcon({
+module FaChessBoard = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaChessBoard";
 });
 
-module FaChessKing = MakeIcon({
+module FaChessKing = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaChessKing";
 });
 
-module FaChessKnight = MakeIcon({
+module FaChessKnight = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaChessKnight";
 });
 
-module FaChessPawn = MakeIcon({
+module FaChessPawn = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaChessPawn";
 });
 
-module FaChessQueen = MakeIcon({
+module FaChessQueen = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaChessQueen";
 });
 
-module FaChessRook = MakeIcon({
+module FaChessRook = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaChessRook";
 });
 
-module FaChess = MakeIcon({
+module FaChess = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaChess";
 });
 
-module FaChevronCircleDown = MakeIcon({
+module FaChevronCircleDown = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaChevronCircleDown";
 });
 
-module FaChevronCircleLeft = MakeIcon({
+module FaChevronCircleLeft = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaChevronCircleLeft";
 });
 
-module FaChevronCircleRight = MakeIcon({
+module FaChevronCircleRight = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaChevronCircleRight";
 });
 
-module FaChevronCircleUp = MakeIcon({
+module FaChevronCircleUp = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaChevronCircleUp";
 });
 
-module FaChevronDown = MakeIcon({
+module FaChevronDown = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaChevronDown";
 });
 
-module FaChevronLeft = MakeIcon({
+module FaChevronLeft = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaChevronLeft";
 });
 
-module FaChevronRight = MakeIcon({
+module FaChevronRight = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaChevronRight";
 });
 
-module FaChevronUp = MakeIcon({
+module FaChevronUp = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaChevronUp";
 });
 
-module FaChild = MakeIcon({
+module FaChild = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaChild";
 });
 
-module FaChurch = MakeIcon({
+module FaChurch = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaChurch";
 });
 
-module FaCircleNotch = MakeIcon({
+module FaCircleNotch = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCircleNotch";
 });
 
-module FaCircle = MakeIcon({
+module FaCircle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCircle";
 });
 
-module FaClipboardCheck = MakeIcon({
+module FaClipboardCheck = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaClipboardCheck";
 });
 
-module FaClipboardList = MakeIcon({
+module FaClipboardList = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaClipboardList";
 });
 
-module FaClipboard = MakeIcon({
+module FaClipboard = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaClipboard";
 });
 
-module FaClock = MakeIcon({
+module FaClock = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaClock";
 });
 
-module FaClone = MakeIcon({
+module FaClone = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaClone";
 });
 
-module FaClosedCaptioning = MakeIcon({
+module FaClosedCaptioning = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaClosedCaptioning";
 });
 
-module FaCloudDownloadAlt = MakeIcon({
+module FaCloudDownloadAlt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCloudDownloadAlt";
 });
 
-module FaCloudUploadAlt = MakeIcon({
+module FaCloudUploadAlt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCloudUploadAlt";
 });
 
-module FaCloud = MakeIcon({
+module FaCloud = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCloud";
 });
 
-module FaCodeBranch = MakeIcon({
+module FaCodeBranch = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCodeBranch";
 });
 
-module FaCode = MakeIcon({
+module FaCode = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCode";
 });
 
-module FaCoffee = MakeIcon({
+module FaCoffee = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCoffee";
 });
 
-module FaCog = MakeIcon({
+module FaCog = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCog";
 });
 
-module FaCogs = MakeIcon({
+module FaCogs = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCogs";
 });
 
-module FaCoins = MakeIcon({
+module FaCoins = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCoins";
 });
 
-module FaColumns = MakeIcon({
+module FaColumns = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaColumns";
 });
 
-module FaCommentAlt = MakeIcon({
+module FaCommentAlt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCommentAlt";
 });
 
-module FaCommentDots = MakeIcon({
+module FaCommentDots = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCommentDots";
 });
 
-module FaCommentSlash = MakeIcon({
+module FaCommentSlash = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCommentSlash";
 });
 
-module FaComment = MakeIcon({
+module FaComment = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaComment";
 });
 
-module FaComments = MakeIcon({
+module FaComments = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaComments";
 });
 
-module FaCompactDisc = MakeIcon({
+module FaCompactDisc = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCompactDisc";
 });
 
-module FaCompass = MakeIcon({
+module FaCompass = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCompass";
 });
 
-module FaCompress = MakeIcon({
+module FaCompress = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCompress";
 });
 
-module FaCopy = MakeIcon({
+module FaCopy = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCopy";
 });
 
-module FaCopyright = MakeIcon({
+module FaCopyright = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCopyright";
 });
 
-module FaCouch = MakeIcon({
+module FaCouch = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCouch";
 });
 
-module FaCreditCard = MakeIcon({
+module FaCreditCard = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCreditCard";
 });
 
-module FaCrop = MakeIcon({
+module FaCrop = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCrop";
 });
 
-module FaCrosshairs = MakeIcon({
+module FaCrosshairs = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCrosshairs";
 });
 
-module FaCrow = MakeIcon({
+module FaCrow = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCrow";
 });
 
-module FaCrown = MakeIcon({
+module FaCrown = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCrown";
 });
 
-module FaCube = MakeIcon({
+module FaCube = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCube";
 });
 
-module FaCubes = MakeIcon({
+module FaCubes = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCubes";
 });
 
-module FaCut = MakeIcon({
+module FaCut = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaCut";
 });
 
-module FaDatabase = MakeIcon({
+module FaDatabase = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaDatabase";
 });
 
-module FaDeaf = MakeIcon({
+module FaDeaf = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaDeaf";
 });
 
-module FaDesktop = MakeIcon({
+module FaDesktop = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaDesktop";
 });
 
-module FaDiagnoses = MakeIcon({
+module FaDiagnoses = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaDiagnoses";
 });
 
-module FaDiceFive = MakeIcon({
+module FaDiceFive = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaDiceFive";
 });
 
-module FaDiceFour = MakeIcon({
+module FaDiceFour = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaDiceFour";
 });
 
-module FaDiceOne = MakeIcon({
+module FaDiceOne = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaDiceOne";
 });
 
-module FaDiceSix = MakeIcon({
+module FaDiceSix = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaDiceSix";
 });
 
-module FaDiceThree = MakeIcon({
+module FaDiceThree = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaDiceThree";
 });
 
-module FaDiceTwo = MakeIcon({
+module FaDiceTwo = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaDiceTwo";
 });
 
-module FaDice = MakeIcon({
+module FaDice = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaDice";
 });
 
-module FaDivide = MakeIcon({
+module FaDivide = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaDivide";
 });
 
-module FaDna = MakeIcon({
+module FaDna = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaDna";
 });
 
-module FaDollarSign = MakeIcon({
+module FaDollarSign = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaDollarSign";
 });
 
-module FaDollyFlatbed = MakeIcon({
+module FaDollyFlatbed = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaDollyFlatbed";
 });
 
-module FaDolly = MakeIcon({
+module FaDolly = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaDolly";
 });
 
-module FaDonate = MakeIcon({
+module FaDonate = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaDonate";
 });
 
-module FaDoorClosed = MakeIcon({
+module FaDoorClosed = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaDoorClosed";
 });
 
-module FaDoorOpen = MakeIcon({
+module FaDoorOpen = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaDoorOpen";
 });
 
-module FaDotCircle = MakeIcon({
+module FaDotCircle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaDotCircle";
 });
 
-module FaDove = MakeIcon({
+module FaDove = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaDove";
 });
 
-module FaDownload = MakeIcon({
+module FaDownload = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaDownload";
 });
 
-module FaDumbbell = MakeIcon({
+module FaDumbbell = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaDumbbell";
 });
 
-module FaEdit = MakeIcon({
+module FaEdit = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaEdit";
 });
 
-module FaEject = MakeIcon({
+module FaEject = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaEject";
 });
 
-module FaEllipsisH = MakeIcon({
+module FaEllipsisH = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaEllipsisH";
 });
 
-module FaEllipsisV = MakeIcon({
+module FaEllipsisV = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaEllipsisV";
 });
 
-module FaEnvelopeOpen = MakeIcon({
+module FaEnvelopeOpen = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaEnvelopeOpen";
 });
 
-module FaEnvelopeSquare = MakeIcon({
+module FaEnvelopeSquare = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaEnvelopeSquare";
 });
 
-module FaEnvelope = MakeIcon({
+module FaEnvelope = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaEnvelope";
 });
 
-module FaEquals = MakeIcon({
+module FaEquals = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaEquals";
 });
 
-module FaEraser = MakeIcon({
+module FaEraser = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaEraser";
 });
 
-module FaEuroSign = MakeIcon({
+module FaEuroSign = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaEuroSign";
 });
 
-module FaExchangeAlt = MakeIcon({
+module FaExchangeAlt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaExchangeAlt";
 });
 
-module FaExclamationCircle = MakeIcon({
+module FaExclamationCircle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaExclamationCircle";
 });
 
-module FaExclamationTriangle = MakeIcon({
+module FaExclamationTriangle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaExclamationTriangle";
 });
 
-module FaExclamation = MakeIcon({
+module FaExclamation = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaExclamation";
 });
 
-module FaExpandArrowsAlt = MakeIcon({
+module FaExpandArrowsAlt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaExpandArrowsAlt";
 });
 
-module FaExpand = MakeIcon({
+module FaExpand = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaExpand";
 });
 
-module FaExternalLinkAlt = MakeIcon({
+module FaExternalLinkAlt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaExternalLinkAlt";
 });
 
-module FaExternalLinkSquareAlt = MakeIcon({
+module FaExternalLinkSquareAlt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaExternalLinkSquareAlt";
 });
 
-module FaEyeDropper = MakeIcon({
+module FaEyeDropper = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaEyeDropper";
 });
 
-module FaEyeSlash = MakeIcon({
+module FaEyeSlash = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaEyeSlash";
 });
 
-module FaEye = MakeIcon({
+module FaEye = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaEye";
 });
 
-module FaFastBackward = MakeIcon({
+module FaFastBackward = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaFastBackward";
 });
 
-module FaFastForward = MakeIcon({
+module FaFastForward = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaFastForward";
 });
 
-module FaFax = MakeIcon({
+module FaFax = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaFax";
 });
 
-module FaFeather = MakeIcon({
+module FaFeather = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaFeather";
 });
 
-module FaFemale = MakeIcon({
+module FaFemale = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaFemale";
 });
 
-module FaFighterJet = MakeIcon({
+module FaFighterJet = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaFighterJet";
 });
 
-module FaFileAlt = MakeIcon({
+module FaFileAlt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaFileAlt";
 });
 
-module FaFileArchive = MakeIcon({
+module FaFileArchive = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaFileArchive";
 });
 
-module FaFileAudio = MakeIcon({
+module FaFileAudio = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaFileAudio";
 });
 
-module FaFileCode = MakeIcon({
+module FaFileCode = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaFileCode";
 });
 
-module FaFileExcel = MakeIcon({
+module FaFileExcel = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaFileExcel";
 });
 
-module FaFileImage = MakeIcon({
+module FaFileImage = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaFileImage";
 });
 
-module FaFileMedicalAlt = MakeIcon({
+module FaFileMedicalAlt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaFileMedicalAlt";
 });
 
-module FaFileMedical = MakeIcon({
+module FaFileMedical = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaFileMedical";
 });
 
-module FaFilePdf = MakeIcon({
+module FaFilePdf = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaFilePdf";
 });
 
-module FaFilePowerpoint = MakeIcon({
+module FaFilePowerpoint = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaFilePowerpoint";
 });
 
-module FaFileVideo = MakeIcon({
+module FaFileVideo = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaFileVideo";
 });
 
-module FaFileWord = MakeIcon({
+module FaFileWord = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaFileWord";
 });
 
-module FaFile = MakeIcon({
+module FaFile = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaFile";
 });
 
-module FaFilm = MakeIcon({
+module FaFilm = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaFilm";
 });
 
-module FaFilter = MakeIcon({
+module FaFilter = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaFilter";
 });
 
-module FaFireExtinguisher = MakeIcon({
+module FaFireExtinguisher = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaFireExtinguisher";
 });
 
-module FaFire = MakeIcon({
+module FaFire = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaFire";
 });
 
-module FaFirstAid = MakeIcon({
+module FaFirstAid = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaFirstAid";
 });
 
-module FaFlagCheckered = MakeIcon({
+module FaFlagCheckered = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaFlagCheckered";
 });
 
-module FaFlag = MakeIcon({
+module FaFlag = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaFlag";
 });
 
-module FaFlask = MakeIcon({
+module FaFlask = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaFlask";
 });
 
-module FaFolderOpen = MakeIcon({
+module FaFolderOpen = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaFolderOpen";
 });
 
-module FaFolder = MakeIcon({
+module FaFolder = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaFolder";
 });
 
-module FaFont = MakeIcon({
+module FaFont = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaFont";
 });
 
-module FaFootballBall = MakeIcon({
+module FaFootballBall = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaFootballBall";
 });
 
-module FaForward = MakeIcon({
+module FaForward = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaForward";
 });
 
-module FaFrog = MakeIcon({
+module FaFrog = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaFrog";
 });
 
-module FaFrown = MakeIcon({
+module FaFrown = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaFrown";
 });
 
-module FaFutbol = MakeIcon({
+module FaFutbol = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaFutbol";
 });
 
-module FaGamepad = MakeIcon({
+module FaGamepad = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaGamepad";
 });
 
-module FaGasPump = MakeIcon({
+module FaGasPump = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaGasPump";
 });
 
-module FaGavel = MakeIcon({
+module FaGavel = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaGavel";
 });
 
-module FaGem = MakeIcon({
+module FaGem = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaGem";
 });
 
-module FaGenderless = MakeIcon({
+module FaGenderless = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaGenderless";
 });
 
-module FaGift = MakeIcon({
+module FaGift = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaGift";
 });
 
-module FaGlassMartini = MakeIcon({
+module FaGlassMartini = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaGlassMartini";
 });
 
-module FaGlasses = MakeIcon({
+module FaGlasses = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaGlasses";
 });
 
-module FaGlobe = MakeIcon({
+module FaGlobe = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaGlobe";
 });
 
-module FaGolfBall = MakeIcon({
+module FaGolfBall = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaGolfBall";
 });
 
-module FaGraduationCap = MakeIcon({
+module FaGraduationCap = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaGraduationCap";
 });
 
-module FaGreaterThanEqual = MakeIcon({
+module FaGreaterThanEqual = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaGreaterThanEqual";
 });
 
-module FaGreaterThan = MakeIcon({
+module FaGreaterThan = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaGreaterThan";
 });
 
-module FaHSquare = MakeIcon({
+module FaHSquare = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaHSquare";
 });
 
-module FaHandHoldingHeart = MakeIcon({
+module FaHandHoldingHeart = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaHandHoldingHeart";
 });
 
-module FaHandHoldingUsd = MakeIcon({
+module FaHandHoldingUsd = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaHandHoldingUsd";
 });
 
-module FaHandHolding = MakeIcon({
+module FaHandHolding = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaHandHolding";
 });
 
-module FaHandLizard = MakeIcon({
+module FaHandLizard = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaHandLizard";
 });
 
-module FaHandPaper = MakeIcon({
+module FaHandPaper = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaHandPaper";
 });
 
-module FaHandPeace = MakeIcon({
+module FaHandPeace = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaHandPeace";
 });
 
-module FaHandPointDown = MakeIcon({
+module FaHandPointDown = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaHandPointDown";
 });
 
-module FaHandPointLeft = MakeIcon({
+module FaHandPointLeft = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaHandPointLeft";
 });
 
-module FaHandPointRight = MakeIcon({
+module FaHandPointRight = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaHandPointRight";
 });
 
-module FaHandPointUp = MakeIcon({
+module FaHandPointUp = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaHandPointUp";
 });
 
-module FaHandPointer = MakeIcon({
+module FaHandPointer = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaHandPointer";
 });
 
-module FaHandRock = MakeIcon({
+module FaHandRock = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaHandRock";
 });
 
-module FaHandScissors = MakeIcon({
+module FaHandScissors = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaHandScissors";
 });
 
-module FaHandSpock = MakeIcon({
+module FaHandSpock = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaHandSpock";
 });
 
-module FaHandsHelping = MakeIcon({
+module FaHandsHelping = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaHandsHelping";
 });
 
-module FaHands = MakeIcon({
+module FaHands = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaHands";
 });
 
-module FaHandshake = MakeIcon({
+module FaHandshake = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaHandshake";
 });
 
-module FaHashtag = MakeIcon({
+module FaHashtag = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaHashtag";
 });
 
-module FaHdd = MakeIcon({
+module FaHdd = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaHdd";
 });
 
-module FaHeading = MakeIcon({
+module FaHeading = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaHeading";
 });
 
-module FaHeadphones = MakeIcon({
+module FaHeadphones = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaHeadphones";
 });
 
-module FaHeart = MakeIcon({
+module FaHeart = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaHeart";
 });
 
-module FaHeartbeat = MakeIcon({
+module FaHeartbeat = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaHeartbeat";
 });
 
-module FaHelicopter = MakeIcon({
+module FaHelicopter = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaHelicopter";
 });
 
-module FaHistory = MakeIcon({
+module FaHistory = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaHistory";
 });
 
-module FaHockeyPuck = MakeIcon({
+module FaHockeyPuck = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaHockeyPuck";
 });
 
-module FaHome = MakeIcon({
+module FaHome = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaHome";
 });
 
-module FaHospitalAlt = MakeIcon({
+module FaHospitalAlt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaHospitalAlt";
 });
 
-module FaHospitalSymbol = MakeIcon({
+module FaHospitalSymbol = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaHospitalSymbol";
 });
 
-module FaHospital = MakeIcon({
+module FaHospital = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaHospital";
 });
 
-module FaHourglassEnd = MakeIcon({
+module FaHourglassEnd = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaHourglassEnd";
 });
 
-module FaHourglassHalf = MakeIcon({
+module FaHourglassHalf = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaHourglassHalf";
 });
 
-module FaHourglassStart = MakeIcon({
+module FaHourglassStart = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaHourglassStart";
 });
 
-module FaHourglass = MakeIcon({
+module FaHourglass = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaHourglass";
 });
 
-module FaICursor = MakeIcon({
+module FaICursor = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaICursor";
 });
 
-module FaIdBadge = MakeIcon({
+module FaIdBadge = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaIdBadge";
 });
 
-module FaIdCardAlt = MakeIcon({
+module FaIdCardAlt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaIdCardAlt";
 });
 
-module FaIdCard = MakeIcon({
+module FaIdCard = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaIdCard";
 });
 
-module FaImage = MakeIcon({
+module FaImage = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaImage";
 });
 
-module FaImages = MakeIcon({
+module FaImages = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaImages";
 });
 
-module FaInbox = MakeIcon({
+module FaInbox = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaInbox";
 });
 
-module FaIndent = MakeIcon({
+module FaIndent = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaIndent";
 });
 
-module FaIndustry = MakeIcon({
+module FaIndustry = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaIndustry";
 });
 
-module FaInfinity = MakeIcon({
+module FaInfinity = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaInfinity";
 });
 
-module FaInfoCircle = MakeIcon({
+module FaInfoCircle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaInfoCircle";
 });
 
-module FaInfo = MakeIcon({
+module FaInfo = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaInfo";
 });
 
-module FaItalic = MakeIcon({
+module FaItalic = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaItalic";
 });
 
-module FaKey = MakeIcon({
+module FaKey = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaKey";
 });
 
-module FaKeyboard = MakeIcon({
+module FaKeyboard = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaKeyboard";
 });
 
-module FaKiwiBird = MakeIcon({
+module FaKiwiBird = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaKiwiBird";
 });
 
-module FaLanguage = MakeIcon({
+module FaLanguage = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaLanguage";
 });
 
-module FaLaptop = MakeIcon({
+module FaLaptop = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaLaptop";
 });
 
-module FaLeaf = MakeIcon({
+module FaLeaf = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaLeaf";
 });
 
-module FaLemon = MakeIcon({
+module FaLemon = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaLemon";
 });
 
-module FaLessThanEqual = MakeIcon({
+module FaLessThanEqual = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaLessThanEqual";
 });
 
-module FaLessThan = MakeIcon({
+module FaLessThan = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaLessThan";
 });
 
-module FaLevelDownAlt = MakeIcon({
+module FaLevelDownAlt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaLevelDownAlt";
 });
 
-module FaLevelUpAlt = MakeIcon({
+module FaLevelUpAlt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaLevelUpAlt";
 });
 
-module FaLifeRing = MakeIcon({
+module FaLifeRing = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaLifeRing";
 });
 
-module FaLightbulb = MakeIcon({
+module FaLightbulb = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaLightbulb";
 });
 
-module FaLink = MakeIcon({
+module FaLink = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaLink";
 });
 
-module FaLiraSign = MakeIcon({
+module FaLiraSign = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaLiraSign";
 });
 
-module FaListAlt = MakeIcon({
+module FaListAlt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaListAlt";
 });
 
-module FaListOl = MakeIcon({
+module FaListOl = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaListOl";
 });
 
-module FaListUl = MakeIcon({
+module FaListUl = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaListUl";
 });
 
-module FaList = MakeIcon({
+module FaList = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaList";
 });
 
-module FaLocationArrow = MakeIcon({
+module FaLocationArrow = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaLocationArrow";
 });
 
-module FaLockOpen = MakeIcon({
+module FaLockOpen = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaLockOpen";
 });
 
-module FaLock = MakeIcon({
+module FaLock = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaLock";
 });
 
-module FaLongArrowAltDown = MakeIcon({
+module FaLongArrowAltDown = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaLongArrowAltDown";
 });
 
-module FaLongArrowAltLeft = MakeIcon({
+module FaLongArrowAltLeft = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaLongArrowAltLeft";
 });
 
-module FaLongArrowAltRight = MakeIcon({
+module FaLongArrowAltRight = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaLongArrowAltRight";
 });
 
-module FaLongArrowAltUp = MakeIcon({
+module FaLongArrowAltUp = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaLongArrowAltUp";
 });
 
-module FaLowVision = MakeIcon({
+module FaLowVision = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaLowVision";
 });
 
-module FaMagic = MakeIcon({
+module FaMagic = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaMagic";
 });
 
-module FaMagnet = MakeIcon({
+module FaMagnet = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaMagnet";
 });
 
-module FaMale = MakeIcon({
+module FaMale = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaMale";
 });
 
-module FaMapMarkerAlt = MakeIcon({
+module FaMapMarkerAlt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaMapMarkerAlt";
 });
 
-module FaMapMarker = MakeIcon({
+module FaMapMarker = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaMapMarker";
 });
 
-module FaMapPin = MakeIcon({
+module FaMapPin = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaMapPin";
 });
 
-module FaMapSigns = MakeIcon({
+module FaMapSigns = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaMapSigns";
 });
 
-module FaMap = MakeIcon({
+module FaMap = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaMap";
 });
 
-module FaMarsDouble = MakeIcon({
+module FaMarsDouble = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaMarsDouble";
 });
 
-module FaMarsStrokeH = MakeIcon({
+module FaMarsStrokeH = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaMarsStrokeH";
 });
 
-module FaMarsStrokeV = MakeIcon({
+module FaMarsStrokeV = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaMarsStrokeV";
 });
 
-module FaMarsStroke = MakeIcon({
+module FaMarsStroke = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaMarsStroke";
 });
 
-module FaMars = MakeIcon({
+module FaMars = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaMars";
 });
 
-module FaMedkit = MakeIcon({
+module FaMedkit = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaMedkit";
 });
 
-module FaMeh = MakeIcon({
+module FaMeh = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaMeh";
 });
 
-module FaMemory = MakeIcon({
+module FaMemory = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaMemory";
 });
 
-module FaMercury = MakeIcon({
+module FaMercury = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaMercury";
 });
 
-module FaMicrochip = MakeIcon({
+module FaMicrochip = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaMicrochip";
 });
 
-module FaMicrophoneAltSlash = MakeIcon({
+module FaMicrophoneAltSlash = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaMicrophoneAltSlash";
 });
 
-module FaMicrophoneAlt = MakeIcon({
+module FaMicrophoneAlt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaMicrophoneAlt";
 });
 
-module FaMicrophoneSlash = MakeIcon({
+module FaMicrophoneSlash = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaMicrophoneSlash";
 });
 
-module FaMicrophone = MakeIcon({
+module FaMicrophone = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaMicrophone";
 });
 
-module FaMinusCircle = MakeIcon({
+module FaMinusCircle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaMinusCircle";
 });
 
-module FaMinusSquare = MakeIcon({
+module FaMinusSquare = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaMinusSquare";
 });
 
-module FaMinus = MakeIcon({
+module FaMinus = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaMinus";
 });
 
-module FaMobileAlt = MakeIcon({
+module FaMobileAlt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaMobileAlt";
 });
 
-module FaMobile = MakeIcon({
+module FaMobile = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaMobile";
 });
 
-module FaMoneyBillAlt = MakeIcon({
+module FaMoneyBillAlt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaMoneyBillAlt";
 });
 
-module FaMoneyBillWaveAlt = MakeIcon({
+module FaMoneyBillWaveAlt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaMoneyBillWaveAlt";
 });
 
-module FaMoneyBillWave = MakeIcon({
+module FaMoneyBillWave = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaMoneyBillWave";
 });
 
-module FaMoneyBill = MakeIcon({
+module FaMoneyBill = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaMoneyBill";
 });
 
-module FaMoneyCheckAlt = MakeIcon({
+module FaMoneyCheckAlt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaMoneyCheckAlt";
 });
 
-module FaMoneyCheck = MakeIcon({
+module FaMoneyCheck = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaMoneyCheck";
 });
 
-module FaMoon = MakeIcon({
+module FaMoon = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaMoon";
 });
 
-module FaMotorcycle = MakeIcon({
+module FaMotorcycle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaMotorcycle";
 });
 
-module FaMousePointer = MakeIcon({
+module FaMousePointer = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaMousePointer";
 });
 
-module FaMusic = MakeIcon({
+module FaMusic = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaMusic";
 });
 
-module FaNeuter = MakeIcon({
+module FaNeuter = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaNeuter";
 });
 
-module FaNewspaper = MakeIcon({
+module FaNewspaper = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaNewspaper";
 });
 
-module FaNotEqual = MakeIcon({
+module FaNotEqual = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaNotEqual";
 });
 
-module FaNotesMedical = MakeIcon({
+module FaNotesMedical = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaNotesMedical";
 });
 
-module FaObjectGroup = MakeIcon({
+module FaObjectGroup = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaObjectGroup";
 });
 
-module FaObjectUngroup = MakeIcon({
+module FaObjectUngroup = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaObjectUngroup";
 });
 
-module FaOutdent = MakeIcon({
+module FaOutdent = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaOutdent";
 });
 
-module FaPaintBrush = MakeIcon({
+module FaPaintBrush = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaPaintBrush";
 });
 
-module FaPalette = MakeIcon({
+module FaPalette = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaPalette";
 });
 
-module FaPallet = MakeIcon({
+module FaPallet = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaPallet";
 });
 
-module FaPaperPlane = MakeIcon({
+module FaPaperPlane = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaPaperPlane";
 });
 
-module FaPaperclip = MakeIcon({
+module FaPaperclip = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaPaperclip";
 });
 
-module FaParachuteBox = MakeIcon({
+module FaParachuteBox = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaParachuteBox";
 });
 
-module FaParagraph = MakeIcon({
+module FaParagraph = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaParagraph";
 });
 
-module FaParking = MakeIcon({
+module FaParking = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaParking";
 });
 
-module FaPaste = MakeIcon({
+module FaPaste = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaPaste";
 });
 
-module FaPauseCircle = MakeIcon({
+module FaPauseCircle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaPauseCircle";
 });
 
-module FaPause = MakeIcon({
+module FaPause = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaPause";
 });
 
-module FaPaw = MakeIcon({
+module FaPaw = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaPaw";
 });
 
-module FaPenSquare = MakeIcon({
+module FaPenSquare = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaPenSquare";
 });
 
-module FaPencilAlt = MakeIcon({
+module FaPencilAlt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaPencilAlt";
 });
 
-module FaPeopleCarry = MakeIcon({
+module FaPeopleCarry = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaPeopleCarry";
 });
 
-module FaPercent = MakeIcon({
+module FaPercent = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaPercent";
 });
 
-module FaPercentage = MakeIcon({
+module FaPercentage = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaPercentage";
 });
 
-module FaPhoneSlash = MakeIcon({
+module FaPhoneSlash = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaPhoneSlash";
 });
 
-module FaPhoneSquare = MakeIcon({
+module FaPhoneSquare = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaPhoneSquare";
 });
 
-module FaPhoneVolume = MakeIcon({
+module FaPhoneVolume = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaPhoneVolume";
 });
 
-module FaPhone = MakeIcon({
+module FaPhone = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaPhone";
 });
 
-module FaPiggyBank = MakeIcon({
+module FaPiggyBank = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaPiggyBank";
 });
 
-module FaPills = MakeIcon({
+module FaPills = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaPills";
 });
 
-module FaPlane = MakeIcon({
+module FaPlane = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaPlane";
 });
 
-module FaPlayCircle = MakeIcon({
+module FaPlayCircle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaPlayCircle";
 });
 
-module FaPlay = MakeIcon({
+module FaPlay = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaPlay";
 });
 
-module FaPlug = MakeIcon({
+module FaPlug = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaPlug";
 });
 
-module FaPlusCircle = MakeIcon({
+module FaPlusCircle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaPlusCircle";
 });
 
-module FaPlusSquare = MakeIcon({
+module FaPlusSquare = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaPlusSquare";
 });
 
-module FaPlus = MakeIcon({
+module FaPlus = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaPlus";
 });
 
-module FaPodcast = MakeIcon({
+module FaPodcast = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaPodcast";
 });
 
-module FaPoo = MakeIcon({
+module FaPoo = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaPoo";
 });
 
-module FaPortrait = MakeIcon({
+module FaPortrait = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaPortrait";
 });
 
-module FaPoundSign = MakeIcon({
+module FaPoundSign = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaPoundSign";
 });
 
-module FaPowerOff = MakeIcon({
+module FaPowerOff = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaPowerOff";
 });
 
-module FaPrescriptionBottleAlt = MakeIcon({
+module FaPrescriptionBottleAlt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaPrescriptionBottleAlt";
 });
 
-module FaPrescriptionBottle = MakeIcon({
+module FaPrescriptionBottle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaPrescriptionBottle";
 });
 
-module FaPrint = MakeIcon({
+module FaPrint = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaPrint";
 });
 
-module FaProcedures = MakeIcon({
+module FaProcedures = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaProcedures";
 });
 
-module FaProjectDiagram = MakeIcon({
+module FaProjectDiagram = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaProjectDiagram";
 });
 
-module FaPuzzlePiece = MakeIcon({
+module FaPuzzlePiece = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaPuzzlePiece";
 });
 
-module FaQrcode = MakeIcon({
+module FaQrcode = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaQrcode";
 });
 
-module FaQuestionCircle = MakeIcon({
+module FaQuestionCircle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaQuestionCircle";
 });
 
-module FaQuestion = MakeIcon({
+module FaQuestion = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaQuestion";
 });
 
-module FaQuidditch = MakeIcon({
+module FaQuidditch = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaQuidditch";
 });
 
-module FaQuoteLeft = MakeIcon({
+module FaQuoteLeft = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaQuoteLeft";
 });
 
-module FaQuoteRight = MakeIcon({
+module FaQuoteRight = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaQuoteRight";
 });
 
-module FaRandom = MakeIcon({
+module FaRandom = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaRandom";
 });
 
-module FaReceipt = MakeIcon({
+module FaReceipt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaReceipt";
 });
 
-module FaRecycle = MakeIcon({
+module FaRecycle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaRecycle";
 });
 
-module FaRedoAlt = MakeIcon({
+module FaRedoAlt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaRedoAlt";
 });
 
-module FaRedo = MakeIcon({
+module FaRedo = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaRedo";
 });
 
-module FaRegistered = MakeIcon({
+module FaRegistered = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaRegistered";
 });
 
-module FaReplyAll = MakeIcon({
+module FaReplyAll = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaReplyAll";
 });
 
-module FaReply = MakeIcon({
+module FaReply = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaReply";
 });
 
-module FaRetweet = MakeIcon({
+module FaRetweet = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaRetweet";
 });
 
-module FaRibbon = MakeIcon({
+module FaRibbon = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaRibbon";
 });
 
-module FaRoad = MakeIcon({
+module FaRoad = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaRoad";
 });
 
-module FaRobot = MakeIcon({
+module FaRobot = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaRobot";
 });
 
-module FaRocket = MakeIcon({
+module FaRocket = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaRocket";
 });
 
-module FaRssSquare = MakeIcon({
+module FaRssSquare = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaRssSquare";
 });
 
-module FaRss = MakeIcon({
+module FaRss = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaRss";
 });
 
-module FaRubleSign = MakeIcon({
+module FaRubleSign = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaRubleSign";
 });
 
-module FaRulerCombined = MakeIcon({
+module FaRulerCombined = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaRulerCombined";
 });
 
-module FaRulerHorizontal = MakeIcon({
+module FaRulerHorizontal = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaRulerHorizontal";
 });
 
-module FaRulerVertical = MakeIcon({
+module FaRulerVertical = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaRulerVertical";
 });
 
-module FaRuler = MakeIcon({
+module FaRuler = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaRuler";
 });
 
-module FaRupeeSign = MakeIcon({
+module FaRupeeSign = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaRupeeSign";
 });
 
-module FaSave = MakeIcon({
+module FaSave = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaSave";
 });
 
-module FaSchool = MakeIcon({
+module FaSchool = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaSchool";
 });
 
-module FaScrewdriver = MakeIcon({
+module FaScrewdriver = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaScrewdriver";
 });
 
-module FaSearchMinus = MakeIcon({
+module FaSearchMinus = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaSearchMinus";
 });
 
-module FaSearchPlus = MakeIcon({
+module FaSearchPlus = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaSearchPlus";
 });
 
-module FaSearch = MakeIcon({
+module FaSearch = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaSearch";
 });
 
-module FaSeedling = MakeIcon({
+module FaSeedling = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaSeedling";
 });
 
-module FaServer = MakeIcon({
+module FaServer = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaServer";
 });
 
-module FaShareAltSquare = MakeIcon({
+module FaShareAltSquare = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaShareAltSquare";
 });
 
-module FaShareAlt = MakeIcon({
+module FaShareAlt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaShareAlt";
 });
 
-module FaShareSquare = MakeIcon({
+module FaShareSquare = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaShareSquare";
 });
 
-module FaShare = MakeIcon({
+module FaShare = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaShare";
 });
 
-module FaShekelSign = MakeIcon({
+module FaShekelSign = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaShekelSign";
 });
 
-module FaShieldAlt = MakeIcon({
+module FaShieldAlt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaShieldAlt";
 });
 
-module FaShip = MakeIcon({
+module FaShip = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaShip";
 });
 
-module FaShippingFast = MakeIcon({
+module FaShippingFast = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaShippingFast";
 });
 
-module FaShoePrints = MakeIcon({
+module FaShoePrints = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaShoePrints";
 });
 
-module FaShoppingBag = MakeIcon({
+module FaShoppingBag = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaShoppingBag";
 });
 
-module FaShoppingBasket = MakeIcon({
+module FaShoppingBasket = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaShoppingBasket";
 });
 
-module FaShoppingCart = MakeIcon({
+module FaShoppingCart = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaShoppingCart";
 });
 
-module FaShower = MakeIcon({
+module FaShower = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaShower";
 });
 
-module FaSignInAlt = MakeIcon({
+module FaSignInAlt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaSignInAlt";
 });
 
-module FaSignLanguage = MakeIcon({
+module FaSignLanguage = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaSignLanguage";
 });
 
-module FaSignOutAlt = MakeIcon({
+module FaSignOutAlt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaSignOutAlt";
 });
 
-module FaSign = MakeIcon({
+module FaSign = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaSign";
 });
 
-module FaSignal = MakeIcon({
+module FaSignal = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaSignal";
 });
 
-module FaSitemap = MakeIcon({
+module FaSitemap = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaSitemap";
 });
 
-module FaSkull = MakeIcon({
+module FaSkull = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaSkull";
 });
 
-module FaSlidersH = MakeIcon({
+module FaSlidersH = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaSlidersH";
 });
 
-module FaSmile = MakeIcon({
+module FaSmile = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaSmile";
 });
 
-module FaSmokingBan = MakeIcon({
+module FaSmokingBan = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaSmokingBan";
 });
 
-module FaSmoking = MakeIcon({
+module FaSmoking = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaSmoking";
 });
 
-module FaSnowflake = MakeIcon({
+module FaSnowflake = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaSnowflake";
 });
 
-module FaSortAlphaDown = MakeIcon({
+module FaSortAlphaDown = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaSortAlphaDown";
 });
 
-module FaSortAlphaUp = MakeIcon({
+module FaSortAlphaUp = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaSortAlphaUp";
 });
 
-module FaSortAmountDown = MakeIcon({
+module FaSortAmountDown = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaSortAmountDown";
 });
 
-module FaSortAmountUp = MakeIcon({
+module FaSortAmountUp = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaSortAmountUp";
 });
 
-module FaSortDown = MakeIcon({
+module FaSortDown = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaSortDown";
 });
 
-module FaSortNumericDown = MakeIcon({
+module FaSortNumericDown = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaSortNumericDown";
 });
 
-module FaSortNumericUp = MakeIcon({
+module FaSortNumericUp = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaSortNumericUp";
 });
 
-module FaSortUp = MakeIcon({
+module FaSortUp = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaSortUp";
 });
 
-module FaSort = MakeIcon({
+module FaSort = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaSort";
 });
 
-module FaSpaceShuttle = MakeIcon({
+module FaSpaceShuttle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaSpaceShuttle";
 });
 
-module FaSpinner = MakeIcon({
+module FaSpinner = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaSpinner";
 });
 
-module FaSquareFull = MakeIcon({
+module FaSquareFull = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaSquareFull";
 });
 
-module FaSquare = MakeIcon({
+module FaSquare = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaSquare";
 });
 
-module FaStarHalf = MakeIcon({
+module FaStarHalf = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaStarHalf";
 });
 
-module FaStar = MakeIcon({
+module FaStar = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaStar";
 });
 
-module FaStepBackward = MakeIcon({
+module FaStepBackward = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaStepBackward";
 });
 
-module FaStepForward = MakeIcon({
+module FaStepForward = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaStepForward";
 });
 
-module FaStethoscope = MakeIcon({
+module FaStethoscope = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaStethoscope";
 });
 
-module FaStickyNote = MakeIcon({
+module FaStickyNote = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaStickyNote";
 });
 
-module FaStopCircle = MakeIcon({
+module FaStopCircle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaStopCircle";
 });
 
-module FaStop = MakeIcon({
+module FaStop = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaStop";
 });
 
-module FaStopwatch = MakeIcon({
+module FaStopwatch = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaStopwatch";
 });
 
-module FaStoreAlt = MakeIcon({
+module FaStoreAlt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaStoreAlt";
 });
 
-module FaStore = MakeIcon({
+module FaStore = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaStore";
 });
 
-module FaStream = MakeIcon({
+module FaStream = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaStream";
 });
 
-module FaStreetView = MakeIcon({
+module FaStreetView = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaStreetView";
 });
 
-module FaStrikethrough = MakeIcon({
+module FaStrikethrough = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaStrikethrough";
 });
 
-module FaStroopwafel = MakeIcon({
+module FaStroopwafel = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaStroopwafel";
 });
 
-module FaSubscript = MakeIcon({
+module FaSubscript = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaSubscript";
 });
 
-module FaSubway = MakeIcon({
+module FaSubway = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaSubway";
 });
 
-module FaSuitcase = MakeIcon({
+module FaSuitcase = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaSuitcase";
 });
 
-module FaSun = MakeIcon({
+module FaSun = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaSun";
 });
 
-module FaSuperscript = MakeIcon({
+module FaSuperscript = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaSuperscript";
 });
 
-module FaSyncAlt = MakeIcon({
+module FaSyncAlt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaSyncAlt";
 });
 
-module FaSync = MakeIcon({
+module FaSync = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaSync";
 });
 
-module FaSyringe = MakeIcon({
+module FaSyringe = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaSyringe";
 });
 
-module FaTableTennis = MakeIcon({
+module FaTableTennis = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaTableTennis";
 });
 
-module FaTable = MakeIcon({
+module FaTable = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaTable";
 });
 
-module FaTabletAlt = MakeIcon({
+module FaTabletAlt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaTabletAlt";
 });
 
-module FaTablet = MakeIcon({
+module FaTablet = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaTablet";
 });
 
-module FaTablets = MakeIcon({
+module FaTablets = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaTablets";
 });
 
-module FaTachometerAlt = MakeIcon({
+module FaTachometerAlt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaTachometerAlt";
 });
 
-module FaTag = MakeIcon({
+module FaTag = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaTag";
 });
 
-module FaTags = MakeIcon({
+module FaTags = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaTags";
 });
 
-module FaTape = MakeIcon({
+module FaTape = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaTape";
 });
 
-module FaTasks = MakeIcon({
+module FaTasks = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaTasks";
 });
 
-module FaTaxi = MakeIcon({
+module FaTaxi = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaTaxi";
 });
 
-module FaTerminal = MakeIcon({
+module FaTerminal = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaTerminal";
 });
 
-module FaTextHeight = MakeIcon({
+module FaTextHeight = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaTextHeight";
 });
 
-module FaTextWidth = MakeIcon({
+module FaTextWidth = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaTextWidth";
 });
 
-module FaThLarge = MakeIcon({
+module FaThLarge = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaThLarge";
 });
 
-module FaThList = MakeIcon({
+module FaThList = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaThList";
 });
 
-module FaTh = MakeIcon({
+module FaTh = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaTh";
 });
 
-module FaThermometerEmpty = MakeIcon({
+module FaThermometerEmpty = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaThermometerEmpty";
 });
 
-module FaThermometerFull = MakeIcon({
+module FaThermometerFull = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaThermometerFull";
 });
 
-module FaThermometerHalf = MakeIcon({
+module FaThermometerHalf = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaThermometerHalf";
 });
 
-module FaThermometerQuarter = MakeIcon({
+module FaThermometerQuarter = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaThermometerQuarter";
 });
 
-module FaThermometerThreeQuarters = MakeIcon({
+module FaThermometerThreeQuarters = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaThermometerThreeQuarters";
 });
 
-module FaThermometer = MakeIcon({
+module FaThermometer = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaThermometer";
 });
 
-module FaThumbsDown = MakeIcon({
+module FaThumbsDown = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaThumbsDown";
 });
 
-module FaThumbsUp = MakeIcon({
+module FaThumbsUp = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaThumbsUp";
 });
 
-module FaThumbtack = MakeIcon({
+module FaThumbtack = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaThumbtack";
 });
 
-module FaTicketAlt = MakeIcon({
+module FaTicketAlt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaTicketAlt";
 });
 
-module FaTimesCircle = MakeIcon({
+module FaTimesCircle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaTimesCircle";
 });
 
-module FaTimes = MakeIcon({
+module FaTimes = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaTimes";
 });
 
-module FaTint = MakeIcon({
+module FaTint = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaTint";
 });
 
-module FaToggleOff = MakeIcon({
+module FaToggleOff = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaToggleOff";
 });
 
-module FaToggleOn = MakeIcon({
+module FaToggleOn = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaToggleOn";
 });
 
-module FaToolbox = MakeIcon({
+module FaToolbox = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaToolbox";
 });
 
-module FaTrademark = MakeIcon({
+module FaTrademark = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaTrademark";
 });
 
-module FaTrain = MakeIcon({
+module FaTrain = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaTrain";
 });
 
-module FaTransgenderAlt = MakeIcon({
+module FaTransgenderAlt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaTransgenderAlt";
 });
 
-module FaTransgender = MakeIcon({
+module FaTransgender = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaTransgender";
 });
 
-module FaTrashAlt = MakeIcon({
+module FaTrashAlt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaTrashAlt";
 });
 
-module FaTrash = MakeIcon({
+module FaTrash = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaTrash";
 });
 
-module FaTree = MakeIcon({
+module FaTree = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaTree";
 });
 
-module FaTrophy = MakeIcon({
+module FaTrophy = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaTrophy";
 });
 
-module FaTruckLoading = MakeIcon({
+module FaTruckLoading = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaTruckLoading";
 });
 
-module FaTruckMoving = MakeIcon({
+module FaTruckMoving = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaTruckMoving";
 });
 
-module FaTruck = MakeIcon({
+module FaTruck = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaTruck";
 });
 
-module FaTshirt = MakeIcon({
+module FaTshirt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaTshirt";
 });
 
-module FaTty = MakeIcon({
+module FaTty = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaTty";
 });
 
-module FaTv = MakeIcon({
+module FaTv = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaTv";
 });
 
-module FaUmbrella = MakeIcon({
+module FaUmbrella = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaUmbrella";
 });
 
-module FaUnderline = MakeIcon({
+module FaUnderline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaUnderline";
 });
 
-module FaUndoAlt = MakeIcon({
+module FaUndoAlt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaUndoAlt";
 });
 
-module FaUndo = MakeIcon({
+module FaUndo = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaUndo";
 });
 
-module FaUniversalAccess = MakeIcon({
+module FaUniversalAccess = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaUniversalAccess";
 });
 
-module FaUniversity = MakeIcon({
+module FaUniversity = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaUniversity";
 });
 
-module FaUnlink = MakeIcon({
+module FaUnlink = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaUnlink";
 });
 
-module FaUnlockAlt = MakeIcon({
+module FaUnlockAlt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaUnlockAlt";
 });
 
-module FaUnlock = MakeIcon({
+module FaUnlock = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaUnlock";
 });
 
-module FaUpload = MakeIcon({
+module FaUpload = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaUpload";
 });
 
-module FaUserAltSlash = MakeIcon({
+module FaUserAltSlash = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaUserAltSlash";
 });
 
-module FaUserAlt = MakeIcon({
+module FaUserAlt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaUserAlt";
 });
 
-module FaUserAstronaut = MakeIcon({
+module FaUserAstronaut = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaUserAstronaut";
 });
 
-module FaUserCheck = MakeIcon({
+module FaUserCheck = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaUserCheck";
 });
 
-module FaUserCircle = MakeIcon({
+module FaUserCircle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaUserCircle";
 });
 
-module FaUserClock = MakeIcon({
+module FaUserClock = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaUserClock";
 });
 
-module FaUserCog = MakeIcon({
+module FaUserCog = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaUserCog";
 });
 
-module FaUserEdit = MakeIcon({
+module FaUserEdit = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaUserEdit";
 });
 
-module FaUserFriends = MakeIcon({
+module FaUserFriends = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaUserFriends";
 });
 
-module FaUserGraduate = MakeIcon({
+module FaUserGraduate = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaUserGraduate";
 });
 
-module FaUserLock = MakeIcon({
+module FaUserLock = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaUserLock";
 });
 
-module FaUserMd = MakeIcon({
+module FaUserMd = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaUserMd";
 });
 
-module FaUserMinus = MakeIcon({
+module FaUserMinus = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaUserMinus";
 });
 
-module FaUserNinja = MakeIcon({
+module FaUserNinja = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaUserNinja";
 });
 
-module FaUserPlus = MakeIcon({
+module FaUserPlus = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaUserPlus";
 });
 
-module FaUserSecret = MakeIcon({
+module FaUserSecret = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaUserSecret";
 });
 
-module FaUserShield = MakeIcon({
+module FaUserShield = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaUserShield";
 });
 
-module FaUserSlash = MakeIcon({
+module FaUserSlash = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaUserSlash";
 });
 
-module FaUserTag = MakeIcon({
+module FaUserTag = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaUserTag";
 });
 
-module FaUserTie = MakeIcon({
+module FaUserTie = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaUserTie";
 });
 
-module FaUserTimes = MakeIcon({
+module FaUserTimes = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaUserTimes";
 });
 
-module FaUser = MakeIcon({
+module FaUser = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaUser";
 });
 
-module FaUsersCog = MakeIcon({
+module FaUsersCog = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaUsersCog";
 });
 
-module FaUsers = MakeIcon({
+module FaUsers = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaUsers";
 });
 
-module FaUtensilSpoon = MakeIcon({
+module FaUtensilSpoon = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaUtensilSpoon";
 });
 
-module FaUtensils = MakeIcon({
+module FaUtensils = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaUtensils";
 });
 
-module FaVenusDouble = MakeIcon({
+module FaVenusDouble = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaVenusDouble";
 });
 
-module FaVenusMars = MakeIcon({
+module FaVenusMars = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaVenusMars";
 });
 
-module FaVenus = MakeIcon({
+module FaVenus = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaVenus";
 });
 
-module FaVial = MakeIcon({
+module FaVial = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaVial";
 });
 
-module FaVials = MakeIcon({
+module FaVials = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaVials";
 });
 
-module FaVideoSlash = MakeIcon({
+module FaVideoSlash = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaVideoSlash";
 });
 
-module FaVideo = MakeIcon({
+module FaVideo = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaVideo";
 });
 
-module FaVolleyballBall = MakeIcon({
+module FaVolleyballBall = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaVolleyballBall";
 });
 
-module FaVolumeDown = MakeIcon({
+module FaVolumeDown = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaVolumeDown";
 });
 
-module FaVolumeOff = MakeIcon({
+module FaVolumeOff = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaVolumeOff";
 });
 
-module FaVolumeUp = MakeIcon({
+module FaVolumeUp = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaVolumeUp";
 });
 
-module FaWalking = MakeIcon({
+module FaWalking = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaWalking";
 });
 
-module FaWallet = MakeIcon({
+module FaWallet = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaWallet";
 });
 
-module FaWarehouse = MakeIcon({
+module FaWarehouse = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaWarehouse";
 });
 
-module FaWeight = MakeIcon({
+module FaWeight = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaWeight";
 });
 
-module FaWheelchair = MakeIcon({
+module FaWheelchair = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaWheelchair";
 });
 
-module FaWifi = MakeIcon({
+module FaWifi = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaWifi";
 });
 
-module FaWindowClose = MakeIcon({
+module FaWindowClose = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaWindowClose";
 });
 
-module FaWindowMaximize = MakeIcon({
+module FaWindowMaximize = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaWindowMaximize";
 });
 
-module FaWindowMinimize = MakeIcon({
+module FaWindowMinimize = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaWindowMinimize";
 });
 
-module FaWindowRestore = MakeIcon({
+module FaWindowRestore = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaWindowRestore";
 });
 
-module FaWineGlass = MakeIcon({
+module FaWineGlass = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaWineGlass";
 });
 
-module FaWonSign = MakeIcon({
+module FaWonSign = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaWonSign";
 });
 
-module FaWrench = MakeIcon({
+module FaWrench = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaWrench";
 });
 
-module FaXRay = MakeIcon({
+module FaXRay = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaXRay";
 });
 
-module FaYenSign = MakeIcon({
+module FaYenSign = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fa"] 
   external reactClass : ReasonReact.reactClass = "FaYenSign";
 });
 
-module IoIosAddCircleOutline = MakeIcon({
+module IoIosAddCircleOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosAddCircleOutline";
 });
 
-module IoIosAddCircle = MakeIcon({
+module IoIosAddCircle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosAddCircle";
 });
 
-module IoIosAdd = MakeIcon({
+module IoIosAdd = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosAdd";
 });
 
-module IoIosAirplane = MakeIcon({
+module IoIosAirplane = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosAirplane";
 });
 
-module IoIosAlarm = MakeIcon({
+module IoIosAlarm = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosAlarm";
 });
 
-module IoIosAlbums = MakeIcon({
+module IoIosAlbums = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosAlbums";
 });
 
-module IoIosAlert = MakeIcon({
+module IoIosAlert = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosAlert";
 });
 
-module IoIosAmericanFootball = MakeIcon({
+module IoIosAmericanFootball = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosAmericanFootball";
 });
 
-module IoIosAnalytics = MakeIcon({
+module IoIosAnalytics = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosAnalytics";
 });
 
-module IoIosAperture = MakeIcon({
+module IoIosAperture = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosAperture";
 });
 
-module IoIosApps = MakeIcon({
+module IoIosApps = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosApps";
 });
 
-module IoIosAppstore = MakeIcon({
+module IoIosAppstore = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosAppstore";
 });
 
-module IoIosArchive = MakeIcon({
+module IoIosArchive = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosArchive";
 });
 
-module IoIosArrowBack = MakeIcon({
+module IoIosArrowBack = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosArrowBack";
 });
 
-module IoIosArrowDown = MakeIcon({
+module IoIosArrowDown = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosArrowDown";
 });
 
-module IoIosArrowDropdownCircle = MakeIcon({
+module IoIosArrowDropdownCircle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosArrowDropdownCircle";
 });
 
-module IoIosArrowDropdown = MakeIcon({
+module IoIosArrowDropdown = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosArrowDropdown";
 });
 
-module IoIosArrowDropleftCircle = MakeIcon({
+module IoIosArrowDropleftCircle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosArrowDropleftCircle";
 });
 
-module IoIosArrowDropleft = MakeIcon({
+module IoIosArrowDropleft = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosArrowDropleft";
 });
 
-module IoIosArrowDroprightCircle = MakeIcon({
+module IoIosArrowDroprightCircle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosArrowDroprightCircle";
 });
 
-module IoIosArrowDropright = MakeIcon({
+module IoIosArrowDropright = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosArrowDropright";
 });
 
-module IoIosArrowDropupCircle = MakeIcon({
+module IoIosArrowDropupCircle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosArrowDropupCircle";
 });
 
-module IoIosArrowDropup = MakeIcon({
+module IoIosArrowDropup = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosArrowDropup";
 });
 
-module IoIosArrowForward = MakeIcon({
+module IoIosArrowForward = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosArrowForward";
 });
 
-module IoIosArrowRoundBack = MakeIcon({
+module IoIosArrowRoundBack = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosArrowRoundBack";
 });
 
-module IoIosArrowRoundDown = MakeIcon({
+module IoIosArrowRoundDown = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosArrowRoundDown";
 });
 
-module IoIosArrowRoundForward = MakeIcon({
+module IoIosArrowRoundForward = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosArrowRoundForward";
 });
 
-module IoIosArrowRoundUp = MakeIcon({
+module IoIosArrowRoundUp = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosArrowRoundUp";
 });
 
-module IoIosArrowUp = MakeIcon({
+module IoIosArrowUp = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosArrowUp";
 });
 
-module IoIosAt = MakeIcon({
+module IoIosAt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosAt";
 });
 
-module IoIosAttach = MakeIcon({
+module IoIosAttach = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosAttach";
 });
 
-module IoIosBackspace = MakeIcon({
+module IoIosBackspace = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosBackspace";
 });
 
-module IoIosBarcode = MakeIcon({
+module IoIosBarcode = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosBarcode";
 });
 
-module IoIosBaseball = MakeIcon({
+module IoIosBaseball = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosBaseball";
 });
 
-module IoIosBasket = MakeIcon({
+module IoIosBasket = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosBasket";
 });
 
-module IoIosBasketball = MakeIcon({
+module IoIosBasketball = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosBasketball";
 });
 
-module IoIosBatteryCharging = MakeIcon({
+module IoIosBatteryCharging = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosBatteryCharging";
 });
 
-module IoIosBatteryDead = MakeIcon({
+module IoIosBatteryDead = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosBatteryDead";
 });
 
-module IoIosBatteryFull = MakeIcon({
+module IoIosBatteryFull = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosBatteryFull";
 });
 
-module IoIosBeaker = MakeIcon({
+module IoIosBeaker = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosBeaker";
 });
 
-module IoIosBed = MakeIcon({
+module IoIosBed = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosBed";
 });
 
-module IoIosBeer = MakeIcon({
+module IoIosBeer = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosBeer";
 });
 
-module IoIosBicycle = MakeIcon({
+module IoIosBicycle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosBicycle";
 });
 
-module IoIosBluetooth = MakeIcon({
+module IoIosBluetooth = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosBluetooth";
 });
 
-module IoIosBoat = MakeIcon({
+module IoIosBoat = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosBoat";
 });
 
-module IoIosBody = MakeIcon({
+module IoIosBody = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosBody";
 });
 
-module IoIosBonfire = MakeIcon({
+module IoIosBonfire = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosBonfire";
 });
 
-module IoIosBook = MakeIcon({
+module IoIosBook = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosBook";
 });
 
-module IoIosBookmark = MakeIcon({
+module IoIosBookmark = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosBookmark";
 });
 
-module IoIosBookmarks = MakeIcon({
+module IoIosBookmarks = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosBookmarks";
 });
 
-module IoIosBowtie = MakeIcon({
+module IoIosBowtie = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosBowtie";
 });
 
-module IoIosBriefcase = MakeIcon({
+module IoIosBriefcase = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosBriefcase";
 });
 
-module IoIosBrowsers = MakeIcon({
+module IoIosBrowsers = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosBrowsers";
 });
 
-module IoIosBrush = MakeIcon({
+module IoIosBrush = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosBrush";
 });
 
-module IoIosBug = MakeIcon({
+module IoIosBug = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosBug";
 });
 
-module IoIosBuild = MakeIcon({
+module IoIosBuild = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosBuild";
 });
 
-module IoIosBulb = MakeIcon({
+module IoIosBulb = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosBulb";
 });
 
-module IoIosBus = MakeIcon({
+module IoIosBus = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosBus";
 });
 
-module IoIosBusiness = MakeIcon({
+module IoIosBusiness = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosBusiness";
 });
 
-module IoIosCafe = MakeIcon({
+module IoIosCafe = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosCafe";
 });
 
-module IoIosCalculator = MakeIcon({
+module IoIosCalculator = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosCalculator";
 });
 
-module IoIosCalendar = MakeIcon({
+module IoIosCalendar = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosCalendar";
 });
 
-module IoIosCall = MakeIcon({
+module IoIosCall = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosCall";
 });
 
-module IoIosCamera = MakeIcon({
+module IoIosCamera = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosCamera";
 });
 
-module IoIosCar = MakeIcon({
+module IoIosCar = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosCar";
 });
 
-module IoIosCard = MakeIcon({
+module IoIosCard = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosCard";
 });
 
-module IoIosCart = MakeIcon({
+module IoIosCart = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosCart";
 });
 
-module IoIosCash = MakeIcon({
+module IoIosCash = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosCash";
 });
 
-module IoIosCellular = MakeIcon({
+module IoIosCellular = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosCellular";
 });
 
-module IoIosChatboxes = MakeIcon({
+module IoIosChatboxes = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosChatboxes";
 });
 
-module IoIosChatbubbles = MakeIcon({
+module IoIosChatbubbles = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosChatbubbles";
 });
 
-module IoIosCheckboxOutline = MakeIcon({
+module IoIosCheckboxOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosCheckboxOutline";
 });
 
-module IoIosCheckbox = MakeIcon({
+module IoIosCheckbox = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosCheckbox";
 });
 
-module IoIosCheckmarkCircleOutline = MakeIcon({
+module IoIosCheckmarkCircleOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosCheckmarkCircleOutline";
 });
 
-module IoIosCheckmarkCircle = MakeIcon({
+module IoIosCheckmarkCircle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosCheckmarkCircle";
 });
 
-module IoIosCheckmark = MakeIcon({
+module IoIosCheckmark = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosCheckmark";
 });
 
-module IoIosClipboard = MakeIcon({
+module IoIosClipboard = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosClipboard";
 });
 
-module IoIosClock = MakeIcon({
+module IoIosClock = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosClock";
 });
 
-module IoIosCloseCircleOutline = MakeIcon({
+module IoIosCloseCircleOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosCloseCircleOutline";
 });
 
-module IoIosCloseCircle = MakeIcon({
+module IoIosCloseCircle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosCloseCircle";
 });
 
-module IoIosClose = MakeIcon({
+module IoIosClose = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosClose";
 });
 
-module IoIosCloudCircle = MakeIcon({
+module IoIosCloudCircle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosCloudCircle";
 });
 
-module IoIosCloudDone = MakeIcon({
+module IoIosCloudDone = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosCloudDone";
 });
 
-module IoIosCloudDownload = MakeIcon({
+module IoIosCloudDownload = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosCloudDownload";
 });
 
-module IoIosCloudOutline = MakeIcon({
+module IoIosCloudOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosCloudOutline";
 });
 
-module IoIosCloudUpload = MakeIcon({
+module IoIosCloudUpload = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosCloudUpload";
 });
 
-module IoIosCloud = MakeIcon({
+module IoIosCloud = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosCloud";
 });
 
-module IoIosCloudyNight = MakeIcon({
+module IoIosCloudyNight = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosCloudyNight";
 });
 
-module IoIosCloudy = MakeIcon({
+module IoIosCloudy = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosCloudy";
 });
 
-module IoIosCodeDownload = MakeIcon({
+module IoIosCodeDownload = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosCodeDownload";
 });
 
-module IoIosCodeWorking = MakeIcon({
+module IoIosCodeWorking = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosCodeWorking";
 });
 
-module IoIosCode = MakeIcon({
+module IoIosCode = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosCode";
 });
 
-module IoIosCog = MakeIcon({
+module IoIosCog = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosCog";
 });
 
-module IoIosColorFill = MakeIcon({
+module IoIosColorFill = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosColorFill";
 });
 
-module IoIosColorFilter = MakeIcon({
+module IoIosColorFilter = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosColorFilter";
 });
 
-module IoIosColorPalette = MakeIcon({
+module IoIosColorPalette = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosColorPalette";
 });
 
-module IoIosColorWand = MakeIcon({
+module IoIosColorWand = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosColorWand";
 });
 
-module IoIosCompass = MakeIcon({
+module IoIosCompass = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosCompass";
 });
 
-module IoIosConstruct = MakeIcon({
+module IoIosConstruct = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosConstruct";
 });
 
-module IoIosContact = MakeIcon({
+module IoIosContact = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosContact";
 });
 
-module IoIosContacts = MakeIcon({
+module IoIosContacts = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosContacts";
 });
 
-module IoIosContract = MakeIcon({
+module IoIosContract = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosContract";
 });
 
-module IoIosContrast = MakeIcon({
+module IoIosContrast = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosContrast";
 });
 
-module IoIosCopy = MakeIcon({
+module IoIosCopy = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosCopy";
 });
 
-module IoIosCreate = MakeIcon({
+module IoIosCreate = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosCreate";
 });
 
-module IoIosCrop = MakeIcon({
+module IoIosCrop = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosCrop";
 });
 
-module IoIosCube = MakeIcon({
+module IoIosCube = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosCube";
 });
 
-module IoIosCut = MakeIcon({
+module IoIosCut = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosCut";
 });
 
-module IoIosDesktop = MakeIcon({
+module IoIosDesktop = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosDesktop";
 });
 
-module IoIosDisc = MakeIcon({
+module IoIosDisc = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosDisc";
 });
 
-module IoIosDocument = MakeIcon({
+module IoIosDocument = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosDocument";
 });
 
-module IoIosDoneAll = MakeIcon({
+module IoIosDoneAll = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosDoneAll";
 });
 
-module IoIosDownload = MakeIcon({
+module IoIosDownload = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosDownload";
 });
 
-module IoIosEasel = MakeIcon({
+module IoIosEasel = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosEasel";
 });
 
-module IoIosEgg = MakeIcon({
+module IoIosEgg = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosEgg";
 });
 
-module IoIosExit = MakeIcon({
+module IoIosExit = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosExit";
 });
 
-module IoIosExpand = MakeIcon({
+module IoIosExpand = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosExpand";
 });
 
-module IoIosEyeOff = MakeIcon({
+module IoIosEyeOff = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosEyeOff";
 });
 
-module IoIosEye = MakeIcon({
+module IoIosEye = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosEye";
 });
 
-module IoIosFastforward = MakeIcon({
+module IoIosFastforward = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosFastforward";
 });
 
-module IoIosFemale = MakeIcon({
+module IoIosFemale = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosFemale";
 });
 
-module IoIosFiling = MakeIcon({
+module IoIosFiling = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosFiling";
 });
 
-module IoIosFilm = MakeIcon({
+module IoIosFilm = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosFilm";
 });
 
-module IoIosFingerPrint = MakeIcon({
+module IoIosFingerPrint = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosFingerPrint";
 });
 
-module IoIosFitness = MakeIcon({
+module IoIosFitness = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosFitness";
 });
 
-module IoIosFlag = MakeIcon({
+module IoIosFlag = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosFlag";
 });
 
-module IoIosFlame = MakeIcon({
+module IoIosFlame = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosFlame";
 });
 
-module IoIosFlashOff = MakeIcon({
+module IoIosFlashOff = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosFlashOff";
 });
 
-module IoIosFlash = MakeIcon({
+module IoIosFlash = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosFlash";
 });
 
-module IoIosFlashlight = MakeIcon({
+module IoIosFlashlight = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosFlashlight";
 });
 
-module IoIosFlask = MakeIcon({
+module IoIosFlask = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosFlask";
 });
 
-module IoIosFlower = MakeIcon({
+module IoIosFlower = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosFlower";
 });
 
-module IoIosFolderOpen = MakeIcon({
+module IoIosFolderOpen = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosFolderOpen";
 });
 
-module IoIosFolder = MakeIcon({
+module IoIosFolder = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosFolder";
 });
 
-module IoIosFootball = MakeIcon({
+module IoIosFootball = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosFootball";
 });
 
-module IoIosFunnel = MakeIcon({
+module IoIosFunnel = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosFunnel";
 });
 
-module IoIosGift = MakeIcon({
+module IoIosGift = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosGift";
 });
 
-module IoIosGitBranch = MakeIcon({
+module IoIosGitBranch = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosGitBranch";
 });
 
-module IoIosGitCommit = MakeIcon({
+module IoIosGitCommit = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosGitCommit";
 });
 
-module IoIosGitCompare = MakeIcon({
+module IoIosGitCompare = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosGitCompare";
 });
 
-module IoIosGitMerge = MakeIcon({
+module IoIosGitMerge = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosGitMerge";
 });
 
-module IoIosGitNetwork = MakeIcon({
+module IoIosGitNetwork = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosGitNetwork";
 });
 
-module IoIosGitPullRequest = MakeIcon({
+module IoIosGitPullRequest = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosGitPullRequest";
 });
 
-module IoIosGlasses = MakeIcon({
+module IoIosGlasses = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosGlasses";
 });
 
-module IoIosGlobe = MakeIcon({
+module IoIosGlobe = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosGlobe";
 });
 
-module IoIosGrid = MakeIcon({
+module IoIosGrid = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosGrid";
 });
 
-module IoIosHammer = MakeIcon({
+module IoIosHammer = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosHammer";
 });
 
-module IoIosHand = MakeIcon({
+module IoIosHand = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosHand";
 });
 
-module IoIosHappy = MakeIcon({
+module IoIosHappy = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosHappy";
 });
 
-module IoIosHeadset = MakeIcon({
+module IoIosHeadset = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosHeadset";
 });
 
-module IoIosHeartDislike = MakeIcon({
+module IoIosHeartDislike = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosHeartDislike";
 });
 
-module IoIosHeartEmpty = MakeIcon({
+module IoIosHeartEmpty = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosHeartEmpty";
 });
 
-module IoIosHeartHalf = MakeIcon({
+module IoIosHeartHalf = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosHeartHalf";
 });
 
-module IoIosHeart = MakeIcon({
+module IoIosHeart = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosHeart";
 });
 
-module IoIosHelpBuoy = MakeIcon({
+module IoIosHelpBuoy = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosHelpBuoy";
 });
 
-module IoIosHelpCircleOutline = MakeIcon({
+module IoIosHelpCircleOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosHelpCircleOutline";
 });
 
-module IoIosHelpCircle = MakeIcon({
+module IoIosHelpCircle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosHelpCircle";
 });
 
-module IoIosHelp = MakeIcon({
+module IoIosHelp = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosHelp";
 });
 
-module IoIosHome = MakeIcon({
+module IoIosHome = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosHome";
 });
 
-module IoIosHourglass = MakeIcon({
+module IoIosHourglass = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosHourglass";
 });
 
-module IoIosIceCream = MakeIcon({
+module IoIosIceCream = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosIceCream";
 });
 
-module IoIosImage = MakeIcon({
+module IoIosImage = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosImage";
 });
 
-module IoIosImages = MakeIcon({
+module IoIosImages = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosImages";
 });
 
-module IoIosInfinite = MakeIcon({
+module IoIosInfinite = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosInfinite";
 });
 
-module IoIosInformationCircleOutline = MakeIcon({
+module IoIosInformationCircleOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosInformationCircleOutline";
 });
 
-module IoIosInformationCircle = MakeIcon({
+module IoIosInformationCircle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosInformationCircle";
 });
 
-module IoIosInformation = MakeIcon({
+module IoIosInformation = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosInformation";
 });
 
-module IoIosJet = MakeIcon({
+module IoIosJet = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosJet";
 });
 
-module IoIosJournal = MakeIcon({
+module IoIosJournal = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosJournal";
 });
 
-module IoIosKey = MakeIcon({
+module IoIosKey = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosKey";
 });
 
-module IoIosKeypad = MakeIcon({
+module IoIosKeypad = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosKeypad";
 });
 
-module IoIosLaptop = MakeIcon({
+module IoIosLaptop = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosLaptop";
 });
 
-module IoIosLeaf = MakeIcon({
+module IoIosLeaf = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosLeaf";
 });
 
-module IoIosLink = MakeIcon({
+module IoIosLink = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosLink";
 });
 
-module IoIosListBox = MakeIcon({
+module IoIosListBox = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosListBox";
 });
 
-module IoIosList = MakeIcon({
+module IoIosList = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosList";
 });
 
-module IoIosLocate = MakeIcon({
+module IoIosLocate = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosLocate";
 });
 
-module IoIosLock = MakeIcon({
+module IoIosLock = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosLock";
 });
 
-module IoIosLogIn = MakeIcon({
+module IoIosLogIn = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosLogIn";
 });
 
-module IoIosLogOut = MakeIcon({
+module IoIosLogOut = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosLogOut";
 });
 
-module IoIosMagnet = MakeIcon({
+module IoIosMagnet = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosMagnet";
 });
 
-module IoIosMailOpen = MakeIcon({
+module IoIosMailOpen = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosMailOpen";
 });
 
-module IoIosMailUnread = MakeIcon({
+module IoIosMailUnread = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosMailUnread";
 });
 
-module IoIosMail = MakeIcon({
+module IoIosMail = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosMail";
 });
 
-module IoIosMale = MakeIcon({
+module IoIosMale = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosMale";
 });
 
-module IoIosMan = MakeIcon({
+module IoIosMan = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosMan";
 });
 
-module IoIosMap = MakeIcon({
+module IoIosMap = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosMap";
 });
 
-module IoIosMedal = MakeIcon({
+module IoIosMedal = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosMedal";
 });
 
-module IoIosMedical = MakeIcon({
+module IoIosMedical = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosMedical";
 });
 
-module IoIosMedkit = MakeIcon({
+module IoIosMedkit = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosMedkit";
 });
 
-module IoIosMegaphone = MakeIcon({
+module IoIosMegaphone = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosMegaphone";
 });
 
-module IoIosMenu = MakeIcon({
+module IoIosMenu = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosMenu";
 });
 
-module IoIosMicOff = MakeIcon({
+module IoIosMicOff = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosMicOff";
 });
 
-module IoIosMic = MakeIcon({
+module IoIosMic = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosMic";
 });
 
-module IoIosMicrophone = MakeIcon({
+module IoIosMicrophone = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosMicrophone";
 });
 
-module IoIosMoon = MakeIcon({
+module IoIosMoon = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosMoon";
 });
 
-module IoIosMore = MakeIcon({
+module IoIosMore = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosMore";
 });
 
-module IoIosMove = MakeIcon({
+module IoIosMove = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosMove";
 });
 
-module IoIosMusicalNote = MakeIcon({
+module IoIosMusicalNote = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosMusicalNote";
 });
 
-module IoIosMusicalNotes = MakeIcon({
+module IoIosMusicalNotes = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosMusicalNotes";
 });
 
-module IoIosNavigate = MakeIcon({
+module IoIosNavigate = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosNavigate";
 });
 
-module IoIosNotificationsOff = MakeIcon({
+module IoIosNotificationsOff = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosNotificationsOff";
 });
 
-module IoIosNotificationsOutline = MakeIcon({
+module IoIosNotificationsOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosNotificationsOutline";
 });
 
-module IoIosNotifications = MakeIcon({
+module IoIosNotifications = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosNotifications";
 });
 
-module IoIosNuclear = MakeIcon({
+module IoIosNuclear = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosNuclear";
 });
 
-module IoIosNutrition = MakeIcon({
+module IoIosNutrition = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosNutrition";
 });
 
-module IoIosOpen = MakeIcon({
+module IoIosOpen = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosOpen";
 });
 
-module IoIosOptions = MakeIcon({
+module IoIosOptions = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosOptions";
 });
 
-module IoIosOutlet = MakeIcon({
+module IoIosOutlet = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosOutlet";
 });
 
-module IoIosPaperPlane = MakeIcon({
+module IoIosPaperPlane = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosPaperPlane";
 });
 
-module IoIosPaper = MakeIcon({
+module IoIosPaper = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosPaper";
 });
 
-module IoIosPartlySunny = MakeIcon({
+module IoIosPartlySunny = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosPartlySunny";
 });
 
-module IoIosPause = MakeIcon({
+module IoIosPause = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosPause";
 });
 
-module IoIosPaw = MakeIcon({
+module IoIosPaw = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosPaw";
 });
 
-module IoIosPeople = MakeIcon({
+module IoIosPeople = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosPeople";
 });
 
-module IoIosPersonAdd = MakeIcon({
+module IoIosPersonAdd = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosPersonAdd";
 });
 
-module IoIosPerson = MakeIcon({
+module IoIosPerson = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosPerson";
 });
 
-module IoIosPhoneLandscape = MakeIcon({
+module IoIosPhoneLandscape = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosPhoneLandscape";
 });
 
-module IoIosPhonePortrait = MakeIcon({
+module IoIosPhonePortrait = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosPhonePortrait";
 });
 
-module IoIosPhotos = MakeIcon({
+module IoIosPhotos = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosPhotos";
 });
 
-module IoIosPie = MakeIcon({
+module IoIosPie = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosPie";
 });
 
-module IoIosPin = MakeIcon({
+module IoIosPin = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosPin";
 });
 
-module IoIosPint = MakeIcon({
+module IoIosPint = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosPint";
 });
 
-module IoIosPizza = MakeIcon({
+module IoIosPizza = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosPizza";
 });
 
-module IoIosPlanet = MakeIcon({
+module IoIosPlanet = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosPlanet";
 });
 
-module IoIosPlayCircle = MakeIcon({
+module IoIosPlayCircle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosPlayCircle";
 });
 
-module IoIosPlay = MakeIcon({
+module IoIosPlay = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosPlay";
 });
 
-module IoIosPodium = MakeIcon({
+module IoIosPodium = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosPodium";
 });
 
-module IoIosPower = MakeIcon({
+module IoIosPower = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosPower";
 });
 
-module IoIosPricetag = MakeIcon({
+module IoIosPricetag = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosPricetag";
 });
 
-module IoIosPricetags = MakeIcon({
+module IoIosPricetags = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosPricetags";
 });
 
-module IoIosPrint = MakeIcon({
+module IoIosPrint = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosPrint";
 });
 
-module IoIosPulse = MakeIcon({
+module IoIosPulse = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosPulse";
 });
 
-module IoIosQrScanner = MakeIcon({
+module IoIosQrScanner = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosQrScanner";
 });
 
-module IoIosQuote = MakeIcon({
+module IoIosQuote = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosQuote";
 });
 
-module IoIosRadioButtonOff = MakeIcon({
+module IoIosRadioButtonOff = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosRadioButtonOff";
 });
 
-module IoIosRadioButtonOn = MakeIcon({
+module IoIosRadioButtonOn = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosRadioButtonOn";
 });
 
-module IoIosRadio = MakeIcon({
+module IoIosRadio = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosRadio";
 });
 
-module IoIosRainy = MakeIcon({
+module IoIosRainy = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosRainy";
 });
 
-module IoIosRecording = MakeIcon({
+module IoIosRecording = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosRecording";
 });
 
-module IoIosRedo = MakeIcon({
+module IoIosRedo = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosRedo";
 });
 
-module IoIosRefreshCircle = MakeIcon({
+module IoIosRefreshCircle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosRefreshCircle";
 });
 
-module IoIosRefresh = MakeIcon({
+module IoIosRefresh = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosRefresh";
 });
 
-module IoIosRemoveCircleOutline = MakeIcon({
+module IoIosRemoveCircleOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosRemoveCircleOutline";
 });
 
-module IoIosRemoveCircle = MakeIcon({
+module IoIosRemoveCircle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosRemoveCircle";
 });
 
-module IoIosRemove = MakeIcon({
+module IoIosRemove = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosRemove";
 });
 
-module IoIosReorder = MakeIcon({
+module IoIosReorder = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosReorder";
 });
 
-module IoIosRepeat = MakeIcon({
+module IoIosRepeat = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosRepeat";
 });
 
-module IoIosResize = MakeIcon({
+module IoIosResize = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosResize";
 });
 
-module IoIosRestaurant = MakeIcon({
+module IoIosRestaurant = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosRestaurant";
 });
 
-module IoIosReturnLeft = MakeIcon({
+module IoIosReturnLeft = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosReturnLeft";
 });
 
-module IoIosReturnRight = MakeIcon({
+module IoIosReturnRight = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosReturnRight";
 });
 
-module IoIosReverseCamera = MakeIcon({
+module IoIosReverseCamera = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosReverseCamera";
 });
 
-module IoIosRewind = MakeIcon({
+module IoIosRewind = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosRewind";
 });
 
-module IoIosRibbon = MakeIcon({
+module IoIosRibbon = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosRibbon";
 });
 
-module IoIosRocket = MakeIcon({
+module IoIosRocket = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosRocket";
 });
 
-module IoIosRose = MakeIcon({
+module IoIosRose = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosRose";
 });
 
-module IoIosSad = MakeIcon({
+module IoIosSad = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosSad";
 });
 
-module IoIosSave = MakeIcon({
+module IoIosSave = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosSave";
 });
 
-module IoIosSchool = MakeIcon({
+module IoIosSchool = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosSchool";
 });
 
-module IoIosSearch = MakeIcon({
+module IoIosSearch = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosSearch";
 });
 
-module IoIosSend = MakeIcon({
+module IoIosSend = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosSend";
 });
 
-module IoIosSettings = MakeIcon({
+module IoIosSettings = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosSettings";
 });
 
-module IoIosShareAlt = MakeIcon({
+module IoIosShareAlt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosShareAlt";
 });
 
-module IoIosShare = MakeIcon({
+module IoIosShare = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosShare";
 });
 
-module IoIosShirt = MakeIcon({
+module IoIosShirt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosShirt";
 });
 
-module IoIosShuffle = MakeIcon({
+module IoIosShuffle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosShuffle";
 });
 
-module IoIosSkipBackward = MakeIcon({
+module IoIosSkipBackward = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosSkipBackward";
 });
 
-module IoIosSkipForward = MakeIcon({
+module IoIosSkipForward = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosSkipForward";
 });
 
-module IoIosSnow = MakeIcon({
+module IoIosSnow = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosSnow";
 });
 
-module IoIosSpeedometer = MakeIcon({
+module IoIosSpeedometer = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosSpeedometer";
 });
 
-module IoIosSquareOutline = MakeIcon({
+module IoIosSquareOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosSquareOutline";
 });
 
-module IoIosSquare = MakeIcon({
+module IoIosSquare = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosSquare";
 });
 
-module IoIosStarHalf = MakeIcon({
+module IoIosStarHalf = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosStarHalf";
 });
 
-module IoIosStarOutline = MakeIcon({
+module IoIosStarOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosStarOutline";
 });
 
-module IoIosStar = MakeIcon({
+module IoIosStar = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosStar";
 });
 
-module IoIosStats = MakeIcon({
+module IoIosStats = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosStats";
 });
 
-module IoIosStopwatch = MakeIcon({
+module IoIosStopwatch = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosStopwatch";
 });
 
-module IoIosSubway = MakeIcon({
+module IoIosSubway = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosSubway";
 });
 
-module IoIosSunny = MakeIcon({
+module IoIosSunny = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosSunny";
 });
 
-module IoIosSwap = MakeIcon({
+module IoIosSwap = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosSwap";
 });
 
-module IoIosSwitch = MakeIcon({
+module IoIosSwitch = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosSwitch";
 });
 
-module IoIosSync = MakeIcon({
+module IoIosSync = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosSync";
 });
 
-module IoIosTabletLandscape = MakeIcon({
+module IoIosTabletLandscape = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosTabletLandscape";
 });
 
-module IoIosTabletPortrait = MakeIcon({
+module IoIosTabletPortrait = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosTabletPortrait";
 });
 
-module IoIosTennisball = MakeIcon({
+module IoIosTennisball = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosTennisball";
 });
 
-module IoIosText = MakeIcon({
+module IoIosText = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosText";
 });
 
-module IoIosThermometer = MakeIcon({
+module IoIosThermometer = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosThermometer";
 });
 
-module IoIosThumbsDown = MakeIcon({
+module IoIosThumbsDown = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosThumbsDown";
 });
 
-module IoIosThumbsUp = MakeIcon({
+module IoIosThumbsUp = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosThumbsUp";
 });
 
-module IoIosThunderstorm = MakeIcon({
+module IoIosThunderstorm = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosThunderstorm";
 });
 
-module IoIosTime = MakeIcon({
+module IoIosTime = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosTime";
 });
 
-module IoIosTimer = MakeIcon({
+module IoIosTimer = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosTimer";
 });
 
-module IoIosToday = MakeIcon({
+module IoIosToday = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosToday";
 });
 
-module IoIosTrain = MakeIcon({
+module IoIosTrain = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosTrain";
 });
 
-module IoIosTransgender = MakeIcon({
+module IoIosTransgender = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosTransgender";
 });
 
-module IoIosTrash = MakeIcon({
+module IoIosTrash = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosTrash";
 });
 
-module IoIosTrendingDown = MakeIcon({
+module IoIosTrendingDown = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosTrendingDown";
 });
 
-module IoIosTrendingUp = MakeIcon({
+module IoIosTrendingUp = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosTrendingUp";
 });
 
-module IoIosTrophy = MakeIcon({
+module IoIosTrophy = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosTrophy";
 });
 
-module IoIosTv = MakeIcon({
+module IoIosTv = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosTv";
 });
 
-module IoIosUmbrella = MakeIcon({
+module IoIosUmbrella = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosUmbrella";
 });
 
-module IoIosUndo = MakeIcon({
+module IoIosUndo = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosUndo";
 });
 
-module IoIosUnlock = MakeIcon({
+module IoIosUnlock = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosUnlock";
 });
 
-module IoIosVideocam = MakeIcon({
+module IoIosVideocam = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosVideocam";
 });
 
-module IoIosVolumeHigh = MakeIcon({
+module IoIosVolumeHigh = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosVolumeHigh";
 });
 
-module IoIosVolumeLow = MakeIcon({
+module IoIosVolumeLow = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosVolumeLow";
 });
 
-module IoIosVolumeMute = MakeIcon({
+module IoIosVolumeMute = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosVolumeMute";
 });
 
-module IoIosVolumeOff = MakeIcon({
+module IoIosVolumeOff = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosVolumeOff";
 });
 
-module IoIosWalk = MakeIcon({
+module IoIosWalk = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosWalk";
 });
 
-module IoIosWallet = MakeIcon({
+module IoIosWallet = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosWallet";
 });
 
-module IoIosWarning = MakeIcon({
+module IoIosWarning = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosWarning";
 });
 
-module IoIosWatch = MakeIcon({
+module IoIosWatch = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosWatch";
 });
 
-module IoIosWater = MakeIcon({
+module IoIosWater = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosWater";
 });
 
-module IoIosWifi = MakeIcon({
+module IoIosWifi = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosWifi";
 });
 
-module IoIosWine = MakeIcon({
+module IoIosWine = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosWine";
 });
 
-module IoIosWoman = MakeIcon({
+module IoIosWoman = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoIosWoman";
 });
 
-module IoLogoAndroid = MakeIcon({
+module IoLogoAndroid = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoLogoAndroid";
 });
 
-module IoLogoAngular = MakeIcon({
+module IoLogoAngular = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoLogoAngular";
 });
 
-module IoLogoApple = MakeIcon({
+module IoLogoApple = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoLogoApple";
 });
 
-module IoLogoBitbucket = MakeIcon({
+module IoLogoBitbucket = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoLogoBitbucket";
 });
 
-module IoLogoBitcoin = MakeIcon({
+module IoLogoBitcoin = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoLogoBitcoin";
 });
 
-module IoLogoBuffer = MakeIcon({
+module IoLogoBuffer = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoLogoBuffer";
 });
 
-module IoLogoChrome = MakeIcon({
+module IoLogoChrome = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoLogoChrome";
 });
 
-module IoLogoClosedCaptioning = MakeIcon({
+module IoLogoClosedCaptioning = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoLogoClosedCaptioning";
 });
 
-module IoLogoCodepen = MakeIcon({
+module IoLogoCodepen = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoLogoCodepen";
 });
 
-module IoLogoCss3 = MakeIcon({
+module IoLogoCss3 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoLogoCss3";
 });
 
-module IoLogoDesignernews = MakeIcon({
+module IoLogoDesignernews = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoLogoDesignernews";
 });
 
-module IoLogoDribbble = MakeIcon({
+module IoLogoDribbble = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoLogoDribbble";
 });
 
-module IoLogoDropbox = MakeIcon({
+module IoLogoDropbox = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoLogoDropbox";
 });
 
-module IoLogoEuro = MakeIcon({
+module IoLogoEuro = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoLogoEuro";
 });
 
-module IoLogoFacebook = MakeIcon({
+module IoLogoFacebook = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoLogoFacebook";
 });
 
-module IoLogoFlickr = MakeIcon({
+module IoLogoFlickr = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoLogoFlickr";
 });
 
-module IoLogoFoursquare = MakeIcon({
+module IoLogoFoursquare = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoLogoFoursquare";
 });
 
-module IoLogoFreebsdDevil = MakeIcon({
+module IoLogoFreebsdDevil = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoLogoFreebsdDevil";
 });
 
-module IoLogoGameControllerA = MakeIcon({
+module IoLogoGameControllerA = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoLogoGameControllerA";
 });
 
-module IoLogoGameControllerB = MakeIcon({
+module IoLogoGameControllerB = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoLogoGameControllerB";
 });
 
-module IoLogoGithub = MakeIcon({
+module IoLogoGithub = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoLogoGithub";
 });
 
-module IoLogoGoogle = MakeIcon({
+module IoLogoGoogle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoLogoGoogle";
 });
 
-module IoLogoGoogleplus = MakeIcon({
+module IoLogoGoogleplus = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoLogoGoogleplus";
 });
 
-module IoLogoHackernews = MakeIcon({
+module IoLogoHackernews = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoLogoHackernews";
 });
 
-module IoLogoHtml5 = MakeIcon({
+module IoLogoHtml5 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoLogoHtml5";
 });
 
-module IoLogoInstagram = MakeIcon({
+module IoLogoInstagram = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoLogoInstagram";
 });
 
-module IoLogoIonic = MakeIcon({
+module IoLogoIonic = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoLogoIonic";
 });
 
-module IoLogoIonitron = MakeIcon({
+module IoLogoIonitron = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoLogoIonitron";
 });
 
-module IoLogoJavascript = MakeIcon({
+module IoLogoJavascript = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoLogoJavascript";
 });
 
-module IoLogoLinkedin = MakeIcon({
+module IoLogoLinkedin = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoLogoLinkedin";
 });
 
-module IoLogoMarkdown = MakeIcon({
+module IoLogoMarkdown = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoLogoMarkdown";
 });
 
-module IoLogoModelS = MakeIcon({
+module IoLogoModelS = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoLogoModelS";
 });
 
-module IoLogoNoSmoking = MakeIcon({
+module IoLogoNoSmoking = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoLogoNoSmoking";
 });
 
-module IoLogoNodejs = MakeIcon({
+module IoLogoNodejs = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoLogoNodejs";
 });
 
-module IoLogoNpm = MakeIcon({
+module IoLogoNpm = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoLogoNpm";
 });
 
-module IoLogoOctocat = MakeIcon({
+module IoLogoOctocat = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoLogoOctocat";
 });
 
-module IoLogoPinterest = MakeIcon({
+module IoLogoPinterest = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoLogoPinterest";
 });
 
-module IoLogoPlaystation = MakeIcon({
+module IoLogoPlaystation = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoLogoPlaystation";
 });
 
-module IoLogoPolymer = MakeIcon({
+module IoLogoPolymer = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoLogoPolymer";
 });
 
-module IoLogoPython = MakeIcon({
+module IoLogoPython = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoLogoPython";
 });
 
-module IoLogoReddit = MakeIcon({
+module IoLogoReddit = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoLogoReddit";
 });
 
-module IoLogoRss = MakeIcon({
+module IoLogoRss = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoLogoRss";
 });
 
-module IoLogoSass = MakeIcon({
+module IoLogoSass = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoLogoSass";
 });
 
-module IoLogoSkype = MakeIcon({
+module IoLogoSkype = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoLogoSkype";
 });
 
-module IoLogoSlack = MakeIcon({
+module IoLogoSlack = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoLogoSlack";
 });
 
-module IoLogoSnapchat = MakeIcon({
+module IoLogoSnapchat = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoLogoSnapchat";
 });
 
-module IoLogoSteam = MakeIcon({
+module IoLogoSteam = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoLogoSteam";
 });
 
-module IoLogoTumblr = MakeIcon({
+module IoLogoTumblr = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoLogoTumblr";
 });
 
-module IoLogoTux = MakeIcon({
+module IoLogoTux = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoLogoTux";
 });
 
-module IoLogoTwitch = MakeIcon({
+module IoLogoTwitch = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoLogoTwitch";
 });
 
-module IoLogoTwitter = MakeIcon({
+module IoLogoTwitter = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoLogoTwitter";
 });
 
-module IoLogoUsd = MakeIcon({
+module IoLogoUsd = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoLogoUsd";
 });
 
-module IoLogoVimeo = MakeIcon({
+module IoLogoVimeo = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoLogoVimeo";
 });
 
-module IoLogoVk = MakeIcon({
+module IoLogoVk = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoLogoVk";
 });
 
-module IoLogoWhatsapp = MakeIcon({
+module IoLogoWhatsapp = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoLogoWhatsapp";
 });
 
-module IoLogoWindows = MakeIcon({
+module IoLogoWindows = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoLogoWindows";
 });
 
-module IoLogoWordpress = MakeIcon({
+module IoLogoWordpress = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoLogoWordpress";
 });
 
-module IoLogoXbox = MakeIcon({
+module IoLogoXbox = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoLogoXbox";
 });
 
-module IoLogoXing = MakeIcon({
+module IoLogoXing = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoLogoXing";
 });
 
-module IoLogoYahoo = MakeIcon({
+module IoLogoYahoo = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoLogoYahoo";
 });
 
-module IoLogoYen = MakeIcon({
+module IoLogoYen = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoLogoYen";
 });
 
-module IoLogoYoutube = MakeIcon({
+module IoLogoYoutube = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoLogoYoutube";
 });
 
-module IoMdAddCircleOutline = MakeIcon({
+module IoMdAddCircleOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdAddCircleOutline";
 });
 
-module IoMdAddCircle = MakeIcon({
+module IoMdAddCircle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdAddCircle";
 });
 
-module IoMdAdd = MakeIcon({
+module IoMdAdd = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdAdd";
 });
 
-module IoMdAirplane = MakeIcon({
+module IoMdAirplane = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdAirplane";
 });
 
-module IoMdAlarm = MakeIcon({
+module IoMdAlarm = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdAlarm";
 });
 
-module IoMdAlbums = MakeIcon({
+module IoMdAlbums = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdAlbums";
 });
 
-module IoMdAlert = MakeIcon({
+module IoMdAlert = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdAlert";
 });
 
-module IoMdAmericanFootball = MakeIcon({
+module IoMdAmericanFootball = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdAmericanFootball";
 });
 
-module IoMdAnalytics = MakeIcon({
+module IoMdAnalytics = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdAnalytics";
 });
 
-module IoMdAperture = MakeIcon({
+module IoMdAperture = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdAperture";
 });
 
-module IoMdApps = MakeIcon({
+module IoMdApps = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdApps";
 });
 
-module IoMdAppstore = MakeIcon({
+module IoMdAppstore = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdAppstore";
 });
 
-module IoMdArchive = MakeIcon({
+module IoMdArchive = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdArchive";
 });
 
-module IoMdArrowBack = MakeIcon({
+module IoMdArrowBack = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdArrowBack";
 });
 
-module IoMdArrowDown = MakeIcon({
+module IoMdArrowDown = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdArrowDown";
 });
 
-module IoMdArrowDropdownCircle = MakeIcon({
+module IoMdArrowDropdownCircle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdArrowDropdownCircle";
 });
 
-module IoMdArrowDropdown = MakeIcon({
+module IoMdArrowDropdown = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdArrowDropdown";
 });
 
-module IoMdArrowDropleftCircle = MakeIcon({
+module IoMdArrowDropleftCircle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdArrowDropleftCircle";
 });
 
-module IoMdArrowDropleft = MakeIcon({
+module IoMdArrowDropleft = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdArrowDropleft";
 });
 
-module IoMdArrowDroprightCircle = MakeIcon({
+module IoMdArrowDroprightCircle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdArrowDroprightCircle";
 });
 
-module IoMdArrowDropright = MakeIcon({
+module IoMdArrowDropright = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdArrowDropright";
 });
 
-module IoMdArrowDropupCircle = MakeIcon({
+module IoMdArrowDropupCircle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdArrowDropupCircle";
 });
 
-module IoMdArrowDropup = MakeIcon({
+module IoMdArrowDropup = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdArrowDropup";
 });
 
-module IoMdArrowForward = MakeIcon({
+module IoMdArrowForward = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdArrowForward";
 });
 
-module IoMdArrowRoundBack = MakeIcon({
+module IoMdArrowRoundBack = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdArrowRoundBack";
 });
 
-module IoMdArrowRoundDown = MakeIcon({
+module IoMdArrowRoundDown = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdArrowRoundDown";
 });
 
-module IoMdArrowRoundForward = MakeIcon({
+module IoMdArrowRoundForward = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdArrowRoundForward";
 });
 
-module IoMdArrowRoundUp = MakeIcon({
+module IoMdArrowRoundUp = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdArrowRoundUp";
 });
 
-module IoMdArrowUp = MakeIcon({
+module IoMdArrowUp = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdArrowUp";
 });
 
-module IoMdAt = MakeIcon({
+module IoMdAt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdAt";
 });
 
-module IoMdAttach = MakeIcon({
+module IoMdAttach = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdAttach";
 });
 
-module IoMdBackspace = MakeIcon({
+module IoMdBackspace = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdBackspace";
 });
 
-module IoMdBarcode = MakeIcon({
+module IoMdBarcode = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdBarcode";
 });
 
-module IoMdBaseball = MakeIcon({
+module IoMdBaseball = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdBaseball";
 });
 
-module IoMdBasket = MakeIcon({
+module IoMdBasket = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdBasket";
 });
 
-module IoMdBasketball = MakeIcon({
+module IoMdBasketball = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdBasketball";
 });
 
-module IoMdBatteryCharging = MakeIcon({
+module IoMdBatteryCharging = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdBatteryCharging";
 });
 
-module IoMdBatteryDead = MakeIcon({
+module IoMdBatteryDead = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdBatteryDead";
 });
 
-module IoMdBatteryFull = MakeIcon({
+module IoMdBatteryFull = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdBatteryFull";
 });
 
-module IoMdBeaker = MakeIcon({
+module IoMdBeaker = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdBeaker";
 });
 
-module IoMdBed = MakeIcon({
+module IoMdBed = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdBed";
 });
 
-module IoMdBeer = MakeIcon({
+module IoMdBeer = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdBeer";
 });
 
-module IoMdBicycle = MakeIcon({
+module IoMdBicycle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdBicycle";
 });
 
-module IoMdBluetooth = MakeIcon({
+module IoMdBluetooth = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdBluetooth";
 });
 
-module IoMdBoat = MakeIcon({
+module IoMdBoat = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdBoat";
 });
 
-module IoMdBody = MakeIcon({
+module IoMdBody = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdBody";
 });
 
-module IoMdBonfire = MakeIcon({
+module IoMdBonfire = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdBonfire";
 });
 
-module IoMdBook = MakeIcon({
+module IoMdBook = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdBook";
 });
 
-module IoMdBookmark = MakeIcon({
+module IoMdBookmark = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdBookmark";
 });
 
-module IoMdBookmarks = MakeIcon({
+module IoMdBookmarks = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdBookmarks";
 });
 
-module IoMdBowtie = MakeIcon({
+module IoMdBowtie = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdBowtie";
 });
 
-module IoMdBriefcase = MakeIcon({
+module IoMdBriefcase = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdBriefcase";
 });
 
-module IoMdBrowsers = MakeIcon({
+module IoMdBrowsers = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdBrowsers";
 });
 
-module IoMdBrush = MakeIcon({
+module IoMdBrush = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdBrush";
 });
 
-module IoMdBug = MakeIcon({
+module IoMdBug = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdBug";
 });
 
-module IoMdBuild = MakeIcon({
+module IoMdBuild = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdBuild";
 });
 
-module IoMdBulb = MakeIcon({
+module IoMdBulb = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdBulb";
 });
 
-module IoMdBus = MakeIcon({
+module IoMdBus = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdBus";
 });
 
-module IoMdBusiness = MakeIcon({
+module IoMdBusiness = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdBusiness";
 });
 
-module IoMdCafe = MakeIcon({
+module IoMdCafe = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdCafe";
 });
 
-module IoMdCalculator = MakeIcon({
+module IoMdCalculator = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdCalculator";
 });
 
-module IoMdCalendar = MakeIcon({
+module IoMdCalendar = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdCalendar";
 });
 
-module IoMdCall = MakeIcon({
+module IoMdCall = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdCall";
 });
 
-module IoMdCamera = MakeIcon({
+module IoMdCamera = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdCamera";
 });
 
-module IoMdCar = MakeIcon({
+module IoMdCar = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdCar";
 });
 
-module IoMdCard = MakeIcon({
+module IoMdCard = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdCard";
 });
 
-module IoMdCart = MakeIcon({
+module IoMdCart = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdCart";
 });
 
-module IoMdCash = MakeIcon({
+module IoMdCash = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdCash";
 });
 
-module IoMdCellular = MakeIcon({
+module IoMdCellular = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdCellular";
 });
 
-module IoMdChatboxes = MakeIcon({
+module IoMdChatboxes = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdChatboxes";
 });
 
-module IoMdChatbubbles = MakeIcon({
+module IoMdChatbubbles = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdChatbubbles";
 });
 
-module IoMdCheckboxOutline = MakeIcon({
+module IoMdCheckboxOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdCheckboxOutline";
 });
 
-module IoMdCheckbox = MakeIcon({
+module IoMdCheckbox = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdCheckbox";
 });
 
-module IoMdCheckmarkCircleOutline = MakeIcon({
+module IoMdCheckmarkCircleOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdCheckmarkCircleOutline";
 });
 
-module IoMdCheckmarkCircle = MakeIcon({
+module IoMdCheckmarkCircle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdCheckmarkCircle";
 });
 
-module IoMdCheckmark = MakeIcon({
+module IoMdCheckmark = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdCheckmark";
 });
 
-module IoMdClipboard = MakeIcon({
+module IoMdClipboard = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdClipboard";
 });
 
-module IoMdClock = MakeIcon({
+module IoMdClock = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdClock";
 });
 
-module IoMdCloseCircleOutline = MakeIcon({
+module IoMdCloseCircleOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdCloseCircleOutline";
 });
 
-module IoMdCloseCircle = MakeIcon({
+module IoMdCloseCircle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdCloseCircle";
 });
 
-module IoMdClose = MakeIcon({
+module IoMdClose = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdClose";
 });
 
-module IoMdCloudCircle = MakeIcon({
+module IoMdCloudCircle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdCloudCircle";
 });
 
-module IoMdCloudDone = MakeIcon({
+module IoMdCloudDone = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdCloudDone";
 });
 
-module IoMdCloudDownload = MakeIcon({
+module IoMdCloudDownload = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdCloudDownload";
 });
 
-module IoMdCloudOutline = MakeIcon({
+module IoMdCloudOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdCloudOutline";
 });
 
-module IoMdCloudUpload = MakeIcon({
+module IoMdCloudUpload = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdCloudUpload";
 });
 
-module IoMdCloud = MakeIcon({
+module IoMdCloud = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdCloud";
 });
 
-module IoMdCloudyNight = MakeIcon({
+module IoMdCloudyNight = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdCloudyNight";
 });
 
-module IoMdCloudy = MakeIcon({
+module IoMdCloudy = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdCloudy";
 });
 
-module IoMdCodeDownload = MakeIcon({
+module IoMdCodeDownload = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdCodeDownload";
 });
 
-module IoMdCodeWorking = MakeIcon({
+module IoMdCodeWorking = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdCodeWorking";
 });
 
-module IoMdCode = MakeIcon({
+module IoMdCode = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdCode";
 });
 
-module IoMdCog = MakeIcon({
+module IoMdCog = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdCog";
 });
 
-module IoMdColorFill = MakeIcon({
+module IoMdColorFill = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdColorFill";
 });
 
-module IoMdColorFilter = MakeIcon({
+module IoMdColorFilter = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdColorFilter";
 });
 
-module IoMdColorPalette = MakeIcon({
+module IoMdColorPalette = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdColorPalette";
 });
 
-module IoMdColorWand = MakeIcon({
+module IoMdColorWand = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdColorWand";
 });
 
-module IoMdCompass = MakeIcon({
+module IoMdCompass = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdCompass";
 });
 
-module IoMdConstruct = MakeIcon({
+module IoMdConstruct = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdConstruct";
 });
 
-module IoMdContact = MakeIcon({
+module IoMdContact = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdContact";
 });
 
-module IoMdContacts = MakeIcon({
+module IoMdContacts = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdContacts";
 });
 
-module IoMdContract = MakeIcon({
+module IoMdContract = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdContract";
 });
 
-module IoMdContrast = MakeIcon({
+module IoMdContrast = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdContrast";
 });
 
-module IoMdCopy = MakeIcon({
+module IoMdCopy = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdCopy";
 });
 
-module IoMdCreate = MakeIcon({
+module IoMdCreate = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdCreate";
 });
 
-module IoMdCrop = MakeIcon({
+module IoMdCrop = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdCrop";
 });
 
-module IoMdCube = MakeIcon({
+module IoMdCube = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdCube";
 });
 
-module IoMdCut = MakeIcon({
+module IoMdCut = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdCut";
 });
 
-module IoMdDesktop = MakeIcon({
+module IoMdDesktop = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdDesktop";
 });
 
-module IoMdDisc = MakeIcon({
+module IoMdDisc = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdDisc";
 });
 
-module IoMdDocument = MakeIcon({
+module IoMdDocument = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdDocument";
 });
 
-module IoMdDoneAll = MakeIcon({
+module IoMdDoneAll = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdDoneAll";
 });
 
-module IoMdDownload = MakeIcon({
+module IoMdDownload = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdDownload";
 });
 
-module IoMdEasel = MakeIcon({
+module IoMdEasel = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdEasel";
 });
 
-module IoMdEgg = MakeIcon({
+module IoMdEgg = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdEgg";
 });
 
-module IoMdExit = MakeIcon({
+module IoMdExit = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdExit";
 });
 
-module IoMdExpand = MakeIcon({
+module IoMdExpand = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdExpand";
 });
 
-module IoMdEyeOff = MakeIcon({
+module IoMdEyeOff = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdEyeOff";
 });
 
-module IoMdEye = MakeIcon({
+module IoMdEye = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdEye";
 });
 
-module IoMdFastforward = MakeIcon({
+module IoMdFastforward = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdFastforward";
 });
 
-module IoMdFemale = MakeIcon({
+module IoMdFemale = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdFemale";
 });
 
-module IoMdFiling = MakeIcon({
+module IoMdFiling = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdFiling";
 });
 
-module IoMdFilm = MakeIcon({
+module IoMdFilm = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdFilm";
 });
 
-module IoMdFingerPrint = MakeIcon({
+module IoMdFingerPrint = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdFingerPrint";
 });
 
-module IoMdFitness = MakeIcon({
+module IoMdFitness = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdFitness";
 });
 
-module IoMdFlag = MakeIcon({
+module IoMdFlag = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdFlag";
 });
 
-module IoMdFlame = MakeIcon({
+module IoMdFlame = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdFlame";
 });
 
-module IoMdFlashOff = MakeIcon({
+module IoMdFlashOff = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdFlashOff";
 });
 
-module IoMdFlash = MakeIcon({
+module IoMdFlash = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdFlash";
 });
 
-module IoMdFlashlight = MakeIcon({
+module IoMdFlashlight = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdFlashlight";
 });
 
-module IoMdFlask = MakeIcon({
+module IoMdFlask = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdFlask";
 });
 
-module IoMdFlower = MakeIcon({
+module IoMdFlower = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdFlower";
 });
 
-module IoMdFolderOpen = MakeIcon({
+module IoMdFolderOpen = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdFolderOpen";
 });
 
-module IoMdFolder = MakeIcon({
+module IoMdFolder = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdFolder";
 });
 
-module IoMdFootball = MakeIcon({
+module IoMdFootball = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdFootball";
 });
 
-module IoMdFunnel = MakeIcon({
+module IoMdFunnel = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdFunnel";
 });
 
-module IoMdGift = MakeIcon({
+module IoMdGift = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdGift";
 });
 
-module IoMdGitBranch = MakeIcon({
+module IoMdGitBranch = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdGitBranch";
 });
 
-module IoMdGitCommit = MakeIcon({
+module IoMdGitCommit = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdGitCommit";
 });
 
-module IoMdGitCompare = MakeIcon({
+module IoMdGitCompare = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdGitCompare";
 });
 
-module IoMdGitMerge = MakeIcon({
+module IoMdGitMerge = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdGitMerge";
 });
 
-module IoMdGitNetwork = MakeIcon({
+module IoMdGitNetwork = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdGitNetwork";
 });
 
-module IoMdGitPullRequest = MakeIcon({
+module IoMdGitPullRequest = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdGitPullRequest";
 });
 
-module IoMdGlasses = MakeIcon({
+module IoMdGlasses = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdGlasses";
 });
 
-module IoMdGlobe = MakeIcon({
+module IoMdGlobe = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdGlobe";
 });
 
-module IoMdGrid = MakeIcon({
+module IoMdGrid = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdGrid";
 });
 
-module IoMdHammer = MakeIcon({
+module IoMdHammer = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdHammer";
 });
 
-module IoMdHand = MakeIcon({
+module IoMdHand = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdHand";
 });
 
-module IoMdHappy = MakeIcon({
+module IoMdHappy = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdHappy";
 });
 
-module IoMdHeadset = MakeIcon({
+module IoMdHeadset = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdHeadset";
 });
 
-module IoMdHeartDislike = MakeIcon({
+module IoMdHeartDislike = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdHeartDislike";
 });
 
-module IoMdHeartEmpty = MakeIcon({
+module IoMdHeartEmpty = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdHeartEmpty";
 });
 
-module IoMdHeartHalf = MakeIcon({
+module IoMdHeartHalf = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdHeartHalf";
 });
 
-module IoMdHeart = MakeIcon({
+module IoMdHeart = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdHeart";
 });
 
-module IoMdHelpBuoy = MakeIcon({
+module IoMdHelpBuoy = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdHelpBuoy";
 });
 
-module IoMdHelpCircleOutline = MakeIcon({
+module IoMdHelpCircleOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdHelpCircleOutline";
 });
 
-module IoMdHelpCircle = MakeIcon({
+module IoMdHelpCircle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdHelpCircle";
 });
 
-module IoMdHelp = MakeIcon({
+module IoMdHelp = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdHelp";
 });
 
-module IoMdHome = MakeIcon({
+module IoMdHome = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdHome";
 });
 
-module IoMdHourglass = MakeIcon({
+module IoMdHourglass = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdHourglass";
 });
 
-module IoMdIceCream = MakeIcon({
+module IoMdIceCream = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdIceCream";
 });
 
-module IoMdImage = MakeIcon({
+module IoMdImage = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdImage";
 });
 
-module IoMdImages = MakeIcon({
+module IoMdImages = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdImages";
 });
 
-module IoMdInfinite = MakeIcon({
+module IoMdInfinite = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdInfinite";
 });
 
-module IoMdInformationCircleOutline = MakeIcon({
+module IoMdInformationCircleOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdInformationCircleOutline";
 });
 
-module IoMdInformationCircle = MakeIcon({
+module IoMdInformationCircle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdInformationCircle";
 });
 
-module IoMdInformation = MakeIcon({
+module IoMdInformation = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdInformation";
 });
 
-module IoMdJet = MakeIcon({
+module IoMdJet = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdJet";
 });
 
-module IoMdJournal = MakeIcon({
+module IoMdJournal = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdJournal";
 });
 
-module IoMdKey = MakeIcon({
+module IoMdKey = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdKey";
 });
 
-module IoMdKeypad = MakeIcon({
+module IoMdKeypad = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdKeypad";
 });
 
-module IoMdLaptop = MakeIcon({
+module IoMdLaptop = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdLaptop";
 });
 
-module IoMdLeaf = MakeIcon({
+module IoMdLeaf = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdLeaf";
 });
 
-module IoMdLink = MakeIcon({
+module IoMdLink = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdLink";
 });
 
-module IoMdListBox = MakeIcon({
+module IoMdListBox = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdListBox";
 });
 
-module IoMdList = MakeIcon({
+module IoMdList = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdList";
 });
 
-module IoMdLocate = MakeIcon({
+module IoMdLocate = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdLocate";
 });
 
-module IoMdLock = MakeIcon({
+module IoMdLock = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdLock";
 });
 
-module IoMdLogIn = MakeIcon({
+module IoMdLogIn = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdLogIn";
 });
 
-module IoMdLogOut = MakeIcon({
+module IoMdLogOut = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdLogOut";
 });
 
-module IoMdMagnet = MakeIcon({
+module IoMdMagnet = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdMagnet";
 });
 
-module IoMdMailOpen = MakeIcon({
+module IoMdMailOpen = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdMailOpen";
 });
 
-module IoMdMailUnread = MakeIcon({
+module IoMdMailUnread = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdMailUnread";
 });
 
-module IoMdMail = MakeIcon({
+module IoMdMail = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdMail";
 });
 
-module IoMdMale = MakeIcon({
+module IoMdMale = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdMale";
 });
 
-module IoMdMan = MakeIcon({
+module IoMdMan = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdMan";
 });
 
-module IoMdMap = MakeIcon({
+module IoMdMap = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdMap";
 });
 
-module IoMdMedal = MakeIcon({
+module IoMdMedal = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdMedal";
 });
 
-module IoMdMedical = MakeIcon({
+module IoMdMedical = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdMedical";
 });
 
-module IoMdMedkit = MakeIcon({
+module IoMdMedkit = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdMedkit";
 });
 
-module IoMdMegaphone = MakeIcon({
+module IoMdMegaphone = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdMegaphone";
 });
 
-module IoMdMenu = MakeIcon({
+module IoMdMenu = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdMenu";
 });
 
-module IoMdMicOff = MakeIcon({
+module IoMdMicOff = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdMicOff";
 });
 
-module IoMdMic = MakeIcon({
+module IoMdMic = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdMic";
 });
 
-module IoMdMicrophone = MakeIcon({
+module IoMdMicrophone = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdMicrophone";
 });
 
-module IoMdMoon = MakeIcon({
+module IoMdMoon = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdMoon";
 });
 
-module IoMdMore = MakeIcon({
+module IoMdMore = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdMore";
 });
 
-module IoMdMove = MakeIcon({
+module IoMdMove = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdMove";
 });
 
-module IoMdMusicalNote = MakeIcon({
+module IoMdMusicalNote = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdMusicalNote";
 });
 
-module IoMdMusicalNotes = MakeIcon({
+module IoMdMusicalNotes = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdMusicalNotes";
 });
 
-module IoMdNavigate = MakeIcon({
+module IoMdNavigate = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdNavigate";
 });
 
-module IoMdNotificationsOff = MakeIcon({
+module IoMdNotificationsOff = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdNotificationsOff";
 });
 
-module IoMdNotificationsOutline = MakeIcon({
+module IoMdNotificationsOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdNotificationsOutline";
 });
 
-module IoMdNotifications = MakeIcon({
+module IoMdNotifications = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdNotifications";
 });
 
-module IoMdNuclear = MakeIcon({
+module IoMdNuclear = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdNuclear";
 });
 
-module IoMdNutrition = MakeIcon({
+module IoMdNutrition = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdNutrition";
 });
 
-module IoMdOpen = MakeIcon({
+module IoMdOpen = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdOpen";
 });
 
-module IoMdOptions = MakeIcon({
+module IoMdOptions = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdOptions";
 });
 
-module IoMdOutlet = MakeIcon({
+module IoMdOutlet = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdOutlet";
 });
 
-module IoMdPaperPlane = MakeIcon({
+module IoMdPaperPlane = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdPaperPlane";
 });
 
-module IoMdPaper = MakeIcon({
+module IoMdPaper = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdPaper";
 });
 
-module IoMdPartlySunny = MakeIcon({
+module IoMdPartlySunny = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdPartlySunny";
 });
 
-module IoMdPause = MakeIcon({
+module IoMdPause = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdPause";
 });
 
-module IoMdPaw = MakeIcon({
+module IoMdPaw = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdPaw";
 });
 
-module IoMdPeople = MakeIcon({
+module IoMdPeople = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdPeople";
 });
 
-module IoMdPersonAdd = MakeIcon({
+module IoMdPersonAdd = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdPersonAdd";
 });
 
-module IoMdPerson = MakeIcon({
+module IoMdPerson = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdPerson";
 });
 
-module IoMdPhoneLandscape = MakeIcon({
+module IoMdPhoneLandscape = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdPhoneLandscape";
 });
 
-module IoMdPhonePortrait = MakeIcon({
+module IoMdPhonePortrait = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdPhonePortrait";
 });
 
-module IoMdPhotos = MakeIcon({
+module IoMdPhotos = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdPhotos";
 });
 
-module IoMdPie = MakeIcon({
+module IoMdPie = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdPie";
 });
 
-module IoMdPin = MakeIcon({
+module IoMdPin = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdPin";
 });
 
-module IoMdPint = MakeIcon({
+module IoMdPint = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdPint";
 });
 
-module IoMdPizza = MakeIcon({
+module IoMdPizza = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdPizza";
 });
 
-module IoMdPlanet = MakeIcon({
+module IoMdPlanet = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdPlanet";
 });
 
-module IoMdPlayCircle = MakeIcon({
+module IoMdPlayCircle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdPlayCircle";
 });
 
-module IoMdPlay = MakeIcon({
+module IoMdPlay = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdPlay";
 });
 
-module IoMdPodium = MakeIcon({
+module IoMdPodium = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdPodium";
 });
 
-module IoMdPower = MakeIcon({
+module IoMdPower = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdPower";
 });
 
-module IoMdPricetag = MakeIcon({
+module IoMdPricetag = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdPricetag";
 });
 
-module IoMdPricetags = MakeIcon({
+module IoMdPricetags = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdPricetags";
 });
 
-module IoMdPrint = MakeIcon({
+module IoMdPrint = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdPrint";
 });
 
-module IoMdPulse = MakeIcon({
+module IoMdPulse = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdPulse";
 });
 
-module IoMdQrScanner = MakeIcon({
+module IoMdQrScanner = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdQrScanner";
 });
 
-module IoMdQuote = MakeIcon({
+module IoMdQuote = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdQuote";
 });
 
-module IoMdRadioButtonOff = MakeIcon({
+module IoMdRadioButtonOff = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdRadioButtonOff";
 });
 
-module IoMdRadioButtonOn = MakeIcon({
+module IoMdRadioButtonOn = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdRadioButtonOn";
 });
 
-module IoMdRadio = MakeIcon({
+module IoMdRadio = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdRadio";
 });
 
-module IoMdRainy = MakeIcon({
+module IoMdRainy = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdRainy";
 });
 
-module IoMdRecording = MakeIcon({
+module IoMdRecording = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdRecording";
 });
 
-module IoMdRedo = MakeIcon({
+module IoMdRedo = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdRedo";
 });
 
-module IoMdRefreshCircle = MakeIcon({
+module IoMdRefreshCircle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdRefreshCircle";
 });
 
-module IoMdRefresh = MakeIcon({
+module IoMdRefresh = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdRefresh";
 });
 
-module IoMdRemoveCircleOutline = MakeIcon({
+module IoMdRemoveCircleOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdRemoveCircleOutline";
 });
 
-module IoMdRemoveCircle = MakeIcon({
+module IoMdRemoveCircle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdRemoveCircle";
 });
 
-module IoMdRemove = MakeIcon({
+module IoMdRemove = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdRemove";
 });
 
-module IoMdReorder = MakeIcon({
+module IoMdReorder = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdReorder";
 });
 
-module IoMdRepeat = MakeIcon({
+module IoMdRepeat = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdRepeat";
 });
 
-module IoMdResize = MakeIcon({
+module IoMdResize = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdResize";
 });
 
-module IoMdRestaurant = MakeIcon({
+module IoMdRestaurant = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdRestaurant";
 });
 
-module IoMdReturnLeft = MakeIcon({
+module IoMdReturnLeft = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdReturnLeft";
 });
 
-module IoMdReturnRight = MakeIcon({
+module IoMdReturnRight = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdReturnRight";
 });
 
-module IoMdReverseCamera = MakeIcon({
+module IoMdReverseCamera = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdReverseCamera";
 });
 
-module IoMdRewind = MakeIcon({
+module IoMdRewind = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdRewind";
 });
 
-module IoMdRibbon = MakeIcon({
+module IoMdRibbon = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdRibbon";
 });
 
-module IoMdRocket = MakeIcon({
+module IoMdRocket = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdRocket";
 });
 
-module IoMdRose = MakeIcon({
+module IoMdRose = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdRose";
 });
 
-module IoMdSad = MakeIcon({
+module IoMdSad = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdSad";
 });
 
-module IoMdSave = MakeIcon({
+module IoMdSave = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdSave";
 });
 
-module IoMdSchool = MakeIcon({
+module IoMdSchool = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdSchool";
 });
 
-module IoMdSearch = MakeIcon({
+module IoMdSearch = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdSearch";
 });
 
-module IoMdSend = MakeIcon({
+module IoMdSend = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdSend";
 });
 
-module IoMdSettings = MakeIcon({
+module IoMdSettings = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdSettings";
 });
 
-module IoMdShareAlt = MakeIcon({
+module IoMdShareAlt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdShareAlt";
 });
 
-module IoMdShare = MakeIcon({
+module IoMdShare = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdShare";
 });
 
-module IoMdShirt = MakeIcon({
+module IoMdShirt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdShirt";
 });
 
-module IoMdShuffle = MakeIcon({
+module IoMdShuffle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdShuffle";
 });
 
-module IoMdSkipBackward = MakeIcon({
+module IoMdSkipBackward = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdSkipBackward";
 });
 
-module IoMdSkipForward = MakeIcon({
+module IoMdSkipForward = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdSkipForward";
 });
 
-module IoMdSnow = MakeIcon({
+module IoMdSnow = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdSnow";
 });
 
-module IoMdSpeedometer = MakeIcon({
+module IoMdSpeedometer = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdSpeedometer";
 });
 
-module IoMdSquareOutline = MakeIcon({
+module IoMdSquareOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdSquareOutline";
 });
 
-module IoMdSquare = MakeIcon({
+module IoMdSquare = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdSquare";
 });
 
-module IoMdStarHalf = MakeIcon({
+module IoMdStarHalf = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdStarHalf";
 });
 
-module IoMdStarOutline = MakeIcon({
+module IoMdStarOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdStarOutline";
 });
 
-module IoMdStar = MakeIcon({
+module IoMdStar = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdStar";
 });
 
-module IoMdStats = MakeIcon({
+module IoMdStats = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdStats";
 });
 
-module IoMdStopwatch = MakeIcon({
+module IoMdStopwatch = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdStopwatch";
 });
 
-module IoMdSubway = MakeIcon({
+module IoMdSubway = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdSubway";
 });
 
-module IoMdSunny = MakeIcon({
+module IoMdSunny = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdSunny";
 });
 
-module IoMdSwap = MakeIcon({
+module IoMdSwap = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdSwap";
 });
 
-module IoMdSwitch = MakeIcon({
+module IoMdSwitch = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdSwitch";
 });
 
-module IoMdSync = MakeIcon({
+module IoMdSync = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdSync";
 });
 
-module IoMdTabletLandscape = MakeIcon({
+module IoMdTabletLandscape = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdTabletLandscape";
 });
 
-module IoMdTabletPortrait = MakeIcon({
+module IoMdTabletPortrait = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdTabletPortrait";
 });
 
-module IoMdTennisball = MakeIcon({
+module IoMdTennisball = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdTennisball";
 });
 
-module IoMdText = MakeIcon({
+module IoMdText = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdText";
 });
 
-module IoMdThermometer = MakeIcon({
+module IoMdThermometer = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdThermometer";
 });
 
-module IoMdThumbsDown = MakeIcon({
+module IoMdThumbsDown = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdThumbsDown";
 });
 
-module IoMdThumbsUp = MakeIcon({
+module IoMdThumbsUp = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdThumbsUp";
 });
 
-module IoMdThunderstorm = MakeIcon({
+module IoMdThunderstorm = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdThunderstorm";
 });
 
-module IoMdTime = MakeIcon({
+module IoMdTime = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdTime";
 });
 
-module IoMdTimer = MakeIcon({
+module IoMdTimer = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdTimer";
 });
 
-module IoMdToday = MakeIcon({
+module IoMdToday = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdToday";
 });
 
-module IoMdTrain = MakeIcon({
+module IoMdTrain = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdTrain";
 });
 
-module IoMdTransgender = MakeIcon({
+module IoMdTransgender = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdTransgender";
 });
 
-module IoMdTrash = MakeIcon({
+module IoMdTrash = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdTrash";
 });
 
-module IoMdTrendingDown = MakeIcon({
+module IoMdTrendingDown = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdTrendingDown";
 });
 
-module IoMdTrendingUp = MakeIcon({
+module IoMdTrendingUp = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdTrendingUp";
 });
 
-module IoMdTrophy = MakeIcon({
+module IoMdTrophy = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdTrophy";
 });
 
-module IoMdTv = MakeIcon({
+module IoMdTv = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdTv";
 });
 
-module IoMdUmbrella = MakeIcon({
+module IoMdUmbrella = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdUmbrella";
 });
 
-module IoMdUndo = MakeIcon({
+module IoMdUndo = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdUndo";
 });
 
-module IoMdUnlock = MakeIcon({
+module IoMdUnlock = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdUnlock";
 });
 
-module IoMdVideocam = MakeIcon({
+module IoMdVideocam = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdVideocam";
 });
 
-module IoMdVolumeHigh = MakeIcon({
+module IoMdVolumeHigh = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdVolumeHigh";
 });
 
-module IoMdVolumeLow = MakeIcon({
+module IoMdVolumeLow = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdVolumeLow";
 });
 
-module IoMdVolumeMute = MakeIcon({
+module IoMdVolumeMute = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdVolumeMute";
 });
 
-module IoMdVolumeOff = MakeIcon({
+module IoMdVolumeOff = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdVolumeOff";
 });
 
-module IoMdWalk = MakeIcon({
+module IoMdWalk = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdWalk";
 });
 
-module IoMdWallet = MakeIcon({
+module IoMdWallet = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdWallet";
 });
 
-module IoMdWarning = MakeIcon({
+module IoMdWarning = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdWarning";
 });
 
-module IoMdWatch = MakeIcon({
+module IoMdWatch = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdWatch";
 });
 
-module IoMdWater = MakeIcon({
+module IoMdWater = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdWater";
 });
 
-module IoMdWifi = MakeIcon({
+module IoMdWifi = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdWifi";
 });
 
-module IoMdWine = MakeIcon({
+module IoMdWine = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdWine";
 });
 
-module IoMdWoman = MakeIcon({
+module IoMdWoman = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/io"] 
   external reactClass : ReasonReact.reactClass = "IoMdWoman";
 });
 
-module Md3dRotation = MakeIcon({
+module Md3dRotation = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "Md3dRotation";
 });
 
-module MdAccessibility = MakeIcon({
+module MdAccessibility = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdAccessibility";
 });
 
-module MdAccessible = MakeIcon({
+module MdAccessible = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdAccessible";
 });
 
-module MdAccountBalance = MakeIcon({
+module MdAccountBalance = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdAccountBalance";
 });
 
-module MdAccountBalanceWallet = MakeIcon({
+module MdAccountBalanceWallet = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdAccountBalanceWallet";
 });
 
-module MdAccountBox = MakeIcon({
+module MdAccountBox = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdAccountBox";
 });
 
-module MdAccountCircle = MakeIcon({
+module MdAccountCircle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdAccountCircle";
 });
 
-module MdAddShoppingCart = MakeIcon({
+module MdAddShoppingCart = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdAddShoppingCart";
 });
 
-module MdAlarm = MakeIcon({
+module MdAlarm = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdAlarm";
 });
 
-module MdAlarmAdd = MakeIcon({
+module MdAlarmAdd = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdAlarmAdd";
 });
 
-module MdAlarmOff = MakeIcon({
+module MdAlarmOff = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdAlarmOff";
 });
 
-module MdAlarmOn = MakeIcon({
+module MdAlarmOn = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdAlarmOn";
 });
 
-module MdAllOut = MakeIcon({
+module MdAllOut = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdAllOut";
 });
 
-module MdAndroid = MakeIcon({
+module MdAndroid = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdAndroid";
 });
 
-module MdAnnouncement = MakeIcon({
+module MdAnnouncement = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdAnnouncement";
 });
 
-module MdAspectRatio = MakeIcon({
+module MdAspectRatio = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdAspectRatio";
 });
 
-module MdAssessment = MakeIcon({
+module MdAssessment = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdAssessment";
 });
 
-module MdAssignment = MakeIcon({
+module MdAssignment = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdAssignment";
 });
 
-module MdAssignmentInd = MakeIcon({
+module MdAssignmentInd = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdAssignmentInd";
 });
 
-module MdAssignmentLate = MakeIcon({
+module MdAssignmentLate = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdAssignmentLate";
 });
 
-module MdAssignmentReturn = MakeIcon({
+module MdAssignmentReturn = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdAssignmentReturn";
 });
 
-module MdAssignmentReturned = MakeIcon({
+module MdAssignmentReturned = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdAssignmentReturned";
 });
 
-module MdAssignmentTurnedIn = MakeIcon({
+module MdAssignmentTurnedIn = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdAssignmentTurnedIn";
 });
 
-module MdAutorenew = MakeIcon({
+module MdAutorenew = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdAutorenew";
 });
 
-module MdBackup = MakeIcon({
+module MdBackup = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBackup";
 });
 
-module MdBook = MakeIcon({
+module MdBook = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBook";
 });
 
-module MdBookmark = MakeIcon({
+module MdBookmark = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBookmark";
 });
 
-module MdBookmarkBorder = MakeIcon({
+module MdBookmarkBorder = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBookmarkBorder";
 });
 
-module MdBugReport = MakeIcon({
+module MdBugReport = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBugReport";
 });
 
-module MdBuild = MakeIcon({
+module MdBuild = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBuild";
 });
 
-module MdCached = MakeIcon({
+module MdCached = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdCached";
 });
 
-module MdCameraEnhance = MakeIcon({
+module MdCameraEnhance = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdCameraEnhance";
 });
 
-module MdCardGiftcard = MakeIcon({
+module MdCardGiftcard = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdCardGiftcard";
 });
 
-module MdCardMembership = MakeIcon({
+module MdCardMembership = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdCardMembership";
 });
 
-module MdCardTravel = MakeIcon({
+module MdCardTravel = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdCardTravel";
 });
 
-module MdChangeHistory = MakeIcon({
+module MdChangeHistory = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdChangeHistory";
 });
 
-module MdCheckCircle = MakeIcon({
+module MdCheckCircle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdCheckCircle";
 });
 
-module MdChromeReaderMode = MakeIcon({
+module MdChromeReaderMode = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdChromeReaderMode";
 });
 
-module MdClass = MakeIcon({
+module MdClass = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdClass";
 });
 
-module MdCode = MakeIcon({
+module MdCode = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdCode";
 });
 
-module MdCompareArrows = MakeIcon({
+module MdCompareArrows = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdCompareArrows";
 });
 
-module MdCopyright = MakeIcon({
+module MdCopyright = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdCopyright";
 });
 
-module MdCreditCard = MakeIcon({
+module MdCreditCard = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdCreditCard";
 });
 
-module MdDashboard = MakeIcon({
+module MdDashboard = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdDashboard";
 });
 
-module MdDateRange = MakeIcon({
+module MdDateRange = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdDateRange";
 });
 
-module MdDelete = MakeIcon({
+module MdDelete = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdDelete";
 });
 
-module MdDeleteForever = MakeIcon({
+module MdDeleteForever = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdDeleteForever";
 });
 
-module MdDescription = MakeIcon({
+module MdDescription = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdDescription";
 });
 
-module MdDns = MakeIcon({
+module MdDns = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdDns";
 });
 
-module MdDone = MakeIcon({
+module MdDone = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdDone";
 });
 
-module MdDoneAll = MakeIcon({
+module MdDoneAll = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdDoneAll";
 });
 
-module MdDonutLarge = MakeIcon({
+module MdDonutLarge = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdDonutLarge";
 });
 
-module MdDonutSmall = MakeIcon({
+module MdDonutSmall = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdDonutSmall";
 });
 
-module MdEject = MakeIcon({
+module MdEject = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdEject";
 });
 
-module MdEuroSymbol = MakeIcon({
+module MdEuroSymbol = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdEuroSymbol";
 });
 
-module MdEvent = MakeIcon({
+module MdEvent = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdEvent";
 });
 
-module MdEventSeat = MakeIcon({
+module MdEventSeat = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdEventSeat";
 });
 
-module MdExitToApp = MakeIcon({
+module MdExitToApp = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdExitToApp";
 });
 
-module MdExplore = MakeIcon({
+module MdExplore = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdExplore";
 });
 
-module MdExtension = MakeIcon({
+module MdExtension = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdExtension";
 });
 
-module MdFace = MakeIcon({
+module MdFace = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFace";
 });
 
-module MdFavorite = MakeIcon({
+module MdFavorite = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFavorite";
 });
 
-module MdFavoriteBorder = MakeIcon({
+module MdFavoriteBorder = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFavoriteBorder";
 });
 
-module MdFeedback = MakeIcon({
+module MdFeedback = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFeedback";
 });
 
-module MdFindInPage = MakeIcon({
+module MdFindInPage = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFindInPage";
 });
 
-module MdFindReplace = MakeIcon({
+module MdFindReplace = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFindReplace";
 });
 
-module MdFingerprint = MakeIcon({
+module MdFingerprint = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFingerprint";
 });
 
-module MdFlightLand = MakeIcon({
+module MdFlightLand = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFlightLand";
 });
 
-module MdFlightTakeoff = MakeIcon({
+module MdFlightTakeoff = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFlightTakeoff";
 });
 
-module MdFlipToBack = MakeIcon({
+module MdFlipToBack = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFlipToBack";
 });
 
-module MdFlipToFront = MakeIcon({
+module MdFlipToFront = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFlipToFront";
 });
 
-module MdGTranslate = MakeIcon({
+module MdGTranslate = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdGTranslate";
 });
 
-module MdGavel = MakeIcon({
+module MdGavel = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdGavel";
 });
 
-module MdGetApp = MakeIcon({
+module MdGetApp = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdGetApp";
 });
 
-module MdGif = MakeIcon({
+module MdGif = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdGif";
 });
 
-module MdGrade = MakeIcon({
+module MdGrade = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdGrade";
 });
 
-module MdGroupWork = MakeIcon({
+module MdGroupWork = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdGroupWork";
 });
 
-module MdHelp = MakeIcon({
+module MdHelp = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdHelp";
 });
 
-module MdHelpOutline = MakeIcon({
+module MdHelpOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdHelpOutline";
 });
 
-module MdHighlightOff = MakeIcon({
+module MdHighlightOff = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdHighlightOff";
 });
 
-module MdHistory = MakeIcon({
+module MdHistory = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdHistory";
 });
 
-module MdHome = MakeIcon({
+module MdHome = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdHome";
 });
 
-module MdHourglassEmpty = MakeIcon({
+module MdHourglassEmpty = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdHourglassEmpty";
 });
 
-module MdHourglassFull = MakeIcon({
+module MdHourglassFull = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdHourglassFull";
 });
 
-module MdHttp = MakeIcon({
+module MdHttp = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdHttp";
 });
 
-module MdHttps = MakeIcon({
+module MdHttps = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdHttps";
 });
 
-module MdImportantDevices = MakeIcon({
+module MdImportantDevices = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdImportantDevices";
 });
 
-module MdInfo = MakeIcon({
+module MdInfo = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdInfo";
 });
 
-module MdInfoOutline = MakeIcon({
+module MdInfoOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdInfoOutline";
 });
 
-module MdInput = MakeIcon({
+module MdInput = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdInput";
 });
 
-module MdInvertColors = MakeIcon({
+module MdInvertColors = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdInvertColors";
 });
 
-module MdLabel = MakeIcon({
+module MdLabel = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLabel";
 });
 
-module MdLabelOutline = MakeIcon({
+module MdLabelOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLabelOutline";
 });
 
-module MdLanguage = MakeIcon({
+module MdLanguage = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLanguage";
 });
 
-module MdLaunch = MakeIcon({
+module MdLaunch = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLaunch";
 });
 
-module MdLightbulbOutline = MakeIcon({
+module MdLightbulbOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLightbulbOutline";
 });
 
-module MdLineStyle = MakeIcon({
+module MdLineStyle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLineStyle";
 });
 
-module MdLineWeight = MakeIcon({
+module MdLineWeight = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLineWeight";
 });
 
-module MdList = MakeIcon({
+module MdList = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdList";
 });
 
-module MdLock = MakeIcon({
+module MdLock = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLock";
 });
 
-module MdLockOpen = MakeIcon({
+module MdLockOpen = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLockOpen";
 });
 
-module MdLockOutline = MakeIcon({
+module MdLockOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLockOutline";
 });
 
-module MdLoyalty = MakeIcon({
+module MdLoyalty = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLoyalty";
 });
 
-module MdMarkunreadMailbox = MakeIcon({
+module MdMarkunreadMailbox = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdMarkunreadMailbox";
 });
 
-module MdMotorcycle = MakeIcon({
+module MdMotorcycle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdMotorcycle";
 });
 
-module MdNoteAdd = MakeIcon({
+module MdNoteAdd = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdNoteAdd";
 });
 
-module MdOfflinePin = MakeIcon({
+module MdOfflinePin = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdOfflinePin";
 });
 
-module MdOpacity = MakeIcon({
+module MdOpacity = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdOpacity";
 });
 
-module MdOpenInBrowser = MakeIcon({
+module MdOpenInBrowser = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdOpenInBrowser";
 });
 
-module MdOpenInNew = MakeIcon({
+module MdOpenInNew = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdOpenInNew";
 });
 
-module MdOpenWith = MakeIcon({
+module MdOpenWith = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdOpenWith";
 });
 
-module MdPageview = MakeIcon({
+module MdPageview = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPageview";
 });
 
-module MdPanTool = MakeIcon({
+module MdPanTool = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPanTool";
 });
 
-module MdPayment = MakeIcon({
+module MdPayment = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPayment";
 });
 
-module MdPermCameraMic = MakeIcon({
+module MdPermCameraMic = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPermCameraMic";
 });
 
-module MdPermContactCalendar = MakeIcon({
+module MdPermContactCalendar = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPermContactCalendar";
 });
 
-module MdPermDataSetting = MakeIcon({
+module MdPermDataSetting = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPermDataSetting";
 });
 
-module MdPermDeviceInformation = MakeIcon({
+module MdPermDeviceInformation = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPermDeviceInformation";
 });
 
-module MdPermIdentity = MakeIcon({
+module MdPermIdentity = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPermIdentity";
 });
 
-module MdPermMedia = MakeIcon({
+module MdPermMedia = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPermMedia";
 });
 
-module MdPermPhoneMsg = MakeIcon({
+module MdPermPhoneMsg = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPermPhoneMsg";
 });
 
-module MdPermScanWifi = MakeIcon({
+module MdPermScanWifi = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPermScanWifi";
 });
 
-module MdPets = MakeIcon({
+module MdPets = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPets";
 });
 
-module MdPictureInPicture = MakeIcon({
+module MdPictureInPicture = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPictureInPicture";
 });
 
-module MdPictureInPictureAlt = MakeIcon({
+module MdPictureInPictureAlt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPictureInPictureAlt";
 });
 
-module MdPlayForWork = MakeIcon({
+module MdPlayForWork = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPlayForWork";
 });
 
-module MdPolymer = MakeIcon({
+module MdPolymer = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPolymer";
 });
 
-module MdPowerSettingsNew = MakeIcon({
+module MdPowerSettingsNew = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPowerSettingsNew";
 });
 
-module MdPregnantWoman = MakeIcon({
+module MdPregnantWoman = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPregnantWoman";
 });
 
-module MdPrint = MakeIcon({
+module MdPrint = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPrint";
 });
 
-module MdQueryBuilder = MakeIcon({
+module MdQueryBuilder = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdQueryBuilder";
 });
 
-module MdQuestionAnswer = MakeIcon({
+module MdQuestionAnswer = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdQuestionAnswer";
 });
 
-module MdReceipt = MakeIcon({
+module MdReceipt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdReceipt";
 });
 
-module MdRecordVoiceOver = MakeIcon({
+module MdRecordVoiceOver = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdRecordVoiceOver";
 });
 
-module MdRedeem = MakeIcon({
+module MdRedeem = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdRedeem";
 });
 
-module MdRemoveShoppingCart = MakeIcon({
+module MdRemoveShoppingCart = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdRemoveShoppingCart";
 });
 
-module MdReorder = MakeIcon({
+module MdReorder = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdReorder";
 });
 
-module MdReportProblem = MakeIcon({
+module MdReportProblem = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdReportProblem";
 });
 
-module MdRestore = MakeIcon({
+module MdRestore = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdRestore";
 });
 
-module MdRestorePage = MakeIcon({
+module MdRestorePage = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdRestorePage";
 });
 
-module MdRoom = MakeIcon({
+module MdRoom = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdRoom";
 });
 
-module MdRoundedCorner = MakeIcon({
+module MdRoundedCorner = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdRoundedCorner";
 });
 
-module MdRowing = MakeIcon({
+module MdRowing = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdRowing";
 });
 
-module MdSchedule = MakeIcon({
+module MdSchedule = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSchedule";
 });
 
-module MdSearch = MakeIcon({
+module MdSearch = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSearch";
 });
 
-module MdSettings = MakeIcon({
+module MdSettings = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSettings";
 });
 
-module MdSettingsApplications = MakeIcon({
+module MdSettingsApplications = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSettingsApplications";
 });
 
-module MdSettingsBackupRestore = MakeIcon({
+module MdSettingsBackupRestore = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSettingsBackupRestore";
 });
 
-module MdSettingsBluetooth = MakeIcon({
+module MdSettingsBluetooth = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSettingsBluetooth";
 });
 
-module MdSettingsBrightness = MakeIcon({
+module MdSettingsBrightness = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSettingsBrightness";
 });
 
-module MdSettingsCell = MakeIcon({
+module MdSettingsCell = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSettingsCell";
 });
 
-module MdSettingsEthernet = MakeIcon({
+module MdSettingsEthernet = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSettingsEthernet";
 });
 
-module MdSettingsInputAntenna = MakeIcon({
+module MdSettingsInputAntenna = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSettingsInputAntenna";
 });
 
-module MdSettingsInputComponent = MakeIcon({
+module MdSettingsInputComponent = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSettingsInputComponent";
 });
 
-module MdSettingsInputComposite = MakeIcon({
+module MdSettingsInputComposite = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSettingsInputComposite";
 });
 
-module MdSettingsInputHdmi = MakeIcon({
+module MdSettingsInputHdmi = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSettingsInputHdmi";
 });
 
-module MdSettingsInputSvideo = MakeIcon({
+module MdSettingsInputSvideo = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSettingsInputSvideo";
 });
 
-module MdSettingsOverscan = MakeIcon({
+module MdSettingsOverscan = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSettingsOverscan";
 });
 
-module MdSettingsPhone = MakeIcon({
+module MdSettingsPhone = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSettingsPhone";
 });
 
-module MdSettingsPower = MakeIcon({
+module MdSettingsPower = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSettingsPower";
 });
 
-module MdSettingsRemote = MakeIcon({
+module MdSettingsRemote = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSettingsRemote";
 });
 
-module MdSettingsVoice = MakeIcon({
+module MdSettingsVoice = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSettingsVoice";
 });
 
-module MdShop = MakeIcon({
+module MdShop = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdShop";
 });
 
-module MdShopTwo = MakeIcon({
+module MdShopTwo = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdShopTwo";
 });
 
-module MdShoppingBasket = MakeIcon({
+module MdShoppingBasket = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdShoppingBasket";
 });
 
-module MdShoppingCart = MakeIcon({
+module MdShoppingCart = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdShoppingCart";
 });
 
-module MdSpeakerNotes = MakeIcon({
+module MdSpeakerNotes = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSpeakerNotes";
 });
 
-module MdSpeakerNotesOff = MakeIcon({
+module MdSpeakerNotesOff = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSpeakerNotesOff";
 });
 
-module MdSpellcheck = MakeIcon({
+module MdSpellcheck = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSpellcheck";
 });
 
-module MdStars = MakeIcon({
+module MdStars = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdStars";
 });
 
-module MdStore = MakeIcon({
+module MdStore = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdStore";
 });
 
-module MdSubject = MakeIcon({
+module MdSubject = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSubject";
 });
 
-module MdSupervisorAccount = MakeIcon({
+module MdSupervisorAccount = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSupervisorAccount";
 });
 
-module MdSwapHoriz = MakeIcon({
+module MdSwapHoriz = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSwapHoriz";
 });
 
-module MdSwapVert = MakeIcon({
+module MdSwapVert = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSwapVert";
 });
 
-module MdSwapVerticalCircle = MakeIcon({
+module MdSwapVerticalCircle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSwapVerticalCircle";
 });
 
-module MdSystemUpdateAlt = MakeIcon({
+module MdSystemUpdateAlt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSystemUpdateAlt";
 });
 
-module MdTab = MakeIcon({
+module MdTab = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdTab";
 });
 
-module MdTabUnselected = MakeIcon({
+module MdTabUnselected = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdTabUnselected";
 });
 
-module MdTheaters = MakeIcon({
+module MdTheaters = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdTheaters";
 });
 
-module MdThumbDown = MakeIcon({
+module MdThumbDown = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdThumbDown";
 });
 
-module MdThumbUp = MakeIcon({
+module MdThumbUp = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdThumbUp";
 });
 
-module MdThumbsUpDown = MakeIcon({
+module MdThumbsUpDown = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdThumbsUpDown";
 });
 
-module MdTimeline = MakeIcon({
+module MdTimeline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdTimeline";
 });
 
-module MdToc = MakeIcon({
+module MdToc = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdToc";
 });
 
-module MdToday = MakeIcon({
+module MdToday = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdToday";
 });
 
-module MdToll = MakeIcon({
+module MdToll = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdToll";
 });
 
-module MdTouchApp = MakeIcon({
+module MdTouchApp = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdTouchApp";
 });
 
-module MdTrackChanges = MakeIcon({
+module MdTrackChanges = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdTrackChanges";
 });
 
-module MdTranslate = MakeIcon({
+module MdTranslate = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdTranslate";
 });
 
-module MdTrendingDown = MakeIcon({
+module MdTrendingDown = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdTrendingDown";
 });
 
-module MdTrendingFlat = MakeIcon({
+module MdTrendingFlat = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdTrendingFlat";
 });
 
-module MdTrendingUp = MakeIcon({
+module MdTrendingUp = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdTrendingUp";
 });
 
-module MdTurnedIn = MakeIcon({
+module MdTurnedIn = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdTurnedIn";
 });
 
-module MdTurnedInNot = MakeIcon({
+module MdTurnedInNot = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdTurnedInNot";
 });
 
-module MdUpdate = MakeIcon({
+module MdUpdate = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdUpdate";
 });
 
-module MdVerifiedUser = MakeIcon({
+module MdVerifiedUser = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdVerifiedUser";
 });
 
-module MdViewAgenda = MakeIcon({
+module MdViewAgenda = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdViewAgenda";
 });
 
-module MdViewArray = MakeIcon({
+module MdViewArray = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdViewArray";
 });
 
-module MdViewCarousel = MakeIcon({
+module MdViewCarousel = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdViewCarousel";
 });
 
-module MdViewColumn = MakeIcon({
+module MdViewColumn = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdViewColumn";
 });
 
-module MdViewDay = MakeIcon({
+module MdViewDay = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdViewDay";
 });
 
-module MdViewHeadline = MakeIcon({
+module MdViewHeadline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdViewHeadline";
 });
 
-module MdViewList = MakeIcon({
+module MdViewList = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdViewList";
 });
 
-module MdViewModule = MakeIcon({
+module MdViewModule = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdViewModule";
 });
 
-module MdViewQuilt = MakeIcon({
+module MdViewQuilt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdViewQuilt";
 });
 
-module MdViewStream = MakeIcon({
+module MdViewStream = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdViewStream";
 });
 
-module MdViewWeek = MakeIcon({
+module MdViewWeek = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdViewWeek";
 });
 
-module MdVisibility = MakeIcon({
+module MdVisibility = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdVisibility";
 });
 
-module MdVisibilityOff = MakeIcon({
+module MdVisibilityOff = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdVisibilityOff";
 });
 
-module MdWatchLater = MakeIcon({
+module MdWatchLater = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdWatchLater";
 });
 
-module MdWork = MakeIcon({
+module MdWork = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdWork";
 });
 
-module MdYoutubeSearchedFor = MakeIcon({
+module MdYoutubeSearchedFor = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdYoutubeSearchedFor";
 });
 
-module MdZoomIn = MakeIcon({
+module MdZoomIn = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdZoomIn";
 });
 
-module MdZoomOut = MakeIcon({
+module MdZoomOut = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdZoomOut";
 });
 
-module MdAddAlert = MakeIcon({
+module MdAddAlert = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdAddAlert";
 });
 
-module MdError = MakeIcon({
+module MdError = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdError";
 });
 
-module MdErrorOutline = MakeIcon({
+module MdErrorOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdErrorOutline";
 });
 
-module MdWarning = MakeIcon({
+module MdWarning = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdWarning";
 });
 
-module MdAddToQueue = MakeIcon({
+module MdAddToQueue = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdAddToQueue";
 });
 
-module MdAirplay = MakeIcon({
+module MdAirplay = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdAirplay";
 });
 
-module MdAlbum = MakeIcon({
+module MdAlbum = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdAlbum";
 });
 
-module MdArtTrack = MakeIcon({
+module MdArtTrack = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdArtTrack";
 });
 
-module MdAvTimer = MakeIcon({
+module MdAvTimer = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdAvTimer";
 });
 
-module MdBrandingWatermark = MakeIcon({
+module MdBrandingWatermark = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBrandingWatermark";
 });
 
-module MdCallToAction = MakeIcon({
+module MdCallToAction = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdCallToAction";
 });
 
-module MdClosedCaption = MakeIcon({
+module MdClosedCaption = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdClosedCaption";
 });
 
-module MdEqualizer = MakeIcon({
+module MdEqualizer = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdEqualizer";
 });
 
-module MdExplicit = MakeIcon({
+module MdExplicit = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdExplicit";
 });
 
-module MdFastForward = MakeIcon({
+module MdFastForward = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFastForward";
 });
 
-module MdFastRewind = MakeIcon({
+module MdFastRewind = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFastRewind";
 });
 
-module MdFeaturedPlayList = MakeIcon({
+module MdFeaturedPlayList = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFeaturedPlayList";
 });
 
-module MdFeaturedVideo = MakeIcon({
+module MdFeaturedVideo = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFeaturedVideo";
 });
 
-module MdFiberDvr = MakeIcon({
+module MdFiberDvr = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFiberDvr";
 });
 
-module MdFiberManualRecord = MakeIcon({
+module MdFiberManualRecord = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFiberManualRecord";
 });
 
-module MdFiberNew = MakeIcon({
+module MdFiberNew = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFiberNew";
 });
 
-module MdFiberPin = MakeIcon({
+module MdFiberPin = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFiberPin";
 });
 
-module MdFiberSmartRecord = MakeIcon({
+module MdFiberSmartRecord = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFiberSmartRecord";
 });
 
-module MdForward10 = MakeIcon({
+module MdForward10 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdForward10";
 });
 
-module MdForward30 = MakeIcon({
+module MdForward30 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdForward30";
 });
 
-module MdForward5 = MakeIcon({
+module MdForward5 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdForward5";
 });
 
-module MdGames = MakeIcon({
+module MdGames = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdGames";
 });
 
-module MdHd = MakeIcon({
+module MdHd = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdHd";
 });
 
-module MdHearing = MakeIcon({
+module MdHearing = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdHearing";
 });
 
-module MdHighQuality = MakeIcon({
+module MdHighQuality = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdHighQuality";
 });
 
-module MdLibraryAdd = MakeIcon({
+module MdLibraryAdd = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLibraryAdd";
 });
 
-module MdLibraryBooks = MakeIcon({
+module MdLibraryBooks = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLibraryBooks";
 });
 
-module MdLibraryMusic = MakeIcon({
+module MdLibraryMusic = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLibraryMusic";
 });
 
-module MdLoop = MakeIcon({
+module MdLoop = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLoop";
 });
 
-module MdMic = MakeIcon({
+module MdMic = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdMic";
 });
 
-module MdMicNone = MakeIcon({
+module MdMicNone = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdMicNone";
 });
 
-module MdMicOff = MakeIcon({
+module MdMicOff = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdMicOff";
 });
 
-module MdMovie = MakeIcon({
+module MdMovie = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdMovie";
 });
 
-module MdMusicVideo = MakeIcon({
+module MdMusicVideo = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdMusicVideo";
 });
 
-module MdNewReleases = MakeIcon({
+module MdNewReleases = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdNewReleases";
 });
 
-module MdNotInterested = MakeIcon({
+module MdNotInterested = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdNotInterested";
 });
 
-module MdNote = MakeIcon({
+module MdNote = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdNote";
 });
 
-module MdPause = MakeIcon({
+module MdPause = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPause";
 });
 
-module MdPauseCircleFilled = MakeIcon({
+module MdPauseCircleFilled = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPauseCircleFilled";
 });
 
-module MdPauseCircleOutline = MakeIcon({
+module MdPauseCircleOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPauseCircleOutline";
 });
 
-module MdPlayArrow = MakeIcon({
+module MdPlayArrow = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPlayArrow";
 });
 
-module MdPlayCircleFilled = MakeIcon({
+module MdPlayCircleFilled = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPlayCircleFilled";
 });
 
-module MdPlayCircleOutline = MakeIcon({
+module MdPlayCircleOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPlayCircleOutline";
 });
 
-module MdPlaylistAdd = MakeIcon({
+module MdPlaylistAdd = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPlaylistAdd";
 });
 
-module MdPlaylistAddCheck = MakeIcon({
+module MdPlaylistAddCheck = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPlaylistAddCheck";
 });
 
-module MdPlaylistPlay = MakeIcon({
+module MdPlaylistPlay = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPlaylistPlay";
 });
 
-module MdQueue = MakeIcon({
+module MdQueue = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdQueue";
 });
 
-module MdQueueMusic = MakeIcon({
+module MdQueueMusic = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdQueueMusic";
 });
 
-module MdQueuePlayNext = MakeIcon({
+module MdQueuePlayNext = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdQueuePlayNext";
 });
 
-module MdRadio = MakeIcon({
+module MdRadio = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdRadio";
 });
 
-module MdRecentActors = MakeIcon({
+module MdRecentActors = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdRecentActors";
 });
 
-module MdRemoveFromQueue = MakeIcon({
+module MdRemoveFromQueue = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdRemoveFromQueue";
 });
 
-module MdRepeat = MakeIcon({
+module MdRepeat = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdRepeat";
 });
 
-module MdRepeatOne = MakeIcon({
+module MdRepeatOne = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdRepeatOne";
 });
 
-module MdReplay10 = MakeIcon({
+module MdReplay10 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdReplay10";
 });
 
-module MdReplay = MakeIcon({
+module MdReplay = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdReplay";
 });
 
-module MdReplay30 = MakeIcon({
+module MdReplay30 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdReplay30";
 });
 
-module MdReplay5 = MakeIcon({
+module MdReplay5 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdReplay5";
 });
 
-module MdShuffle = MakeIcon({
+module MdShuffle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdShuffle";
 });
 
-module MdSkipNext = MakeIcon({
+module MdSkipNext = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSkipNext";
 });
 
-module MdSkipPrevious = MakeIcon({
+module MdSkipPrevious = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSkipPrevious";
 });
 
-module MdSlowMotionVideo = MakeIcon({
+module MdSlowMotionVideo = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSlowMotionVideo";
 });
 
-module MdSnooze = MakeIcon({
+module MdSnooze = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSnooze";
 });
 
-module MdSortByAlpha = MakeIcon({
+module MdSortByAlpha = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSortByAlpha";
 });
 
-module MdStop = MakeIcon({
+module MdStop = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdStop";
 });
 
-module MdSubscriptions = MakeIcon({
+module MdSubscriptions = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSubscriptions";
 });
 
-module MdSubtitles = MakeIcon({
+module MdSubtitles = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSubtitles";
 });
 
-module MdSurroundSound = MakeIcon({
+module MdSurroundSound = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSurroundSound";
 });
 
-module MdVideoCall = MakeIcon({
+module MdVideoCall = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdVideoCall";
 });
 
-module MdVideoLabel = MakeIcon({
+module MdVideoLabel = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdVideoLabel";
 });
 
-module MdVideoLibrary = MakeIcon({
+module MdVideoLibrary = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdVideoLibrary";
 });
 
-module MdVideocam = MakeIcon({
+module MdVideocam = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdVideocam";
 });
 
-module MdVideocamOff = MakeIcon({
+module MdVideocamOff = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdVideocamOff";
 });
 
-module MdVolumeDown = MakeIcon({
+module MdVolumeDown = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdVolumeDown";
 });
 
-module MdVolumeMute = MakeIcon({
+module MdVolumeMute = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdVolumeMute";
 });
 
-module MdVolumeOff = MakeIcon({
+module MdVolumeOff = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdVolumeOff";
 });
 
-module MdVolumeUp = MakeIcon({
+module MdVolumeUp = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdVolumeUp";
 });
 
-module MdWeb = MakeIcon({
+module MdWeb = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdWeb";
 });
 
-module MdWebAsset = MakeIcon({
+module MdWebAsset = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdWebAsset";
 });
 
-module MdBusiness = MakeIcon({
+module MdBusiness = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBusiness";
 });
 
-module MdCall = MakeIcon({
+module MdCall = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdCall";
 });
 
-module MdCallEnd = MakeIcon({
+module MdCallEnd = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdCallEnd";
 });
 
-module MdCallMade = MakeIcon({
+module MdCallMade = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdCallMade";
 });
 
-module MdCallMerge = MakeIcon({
+module MdCallMerge = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdCallMerge";
 });
 
-module MdCallMissed = MakeIcon({
+module MdCallMissed = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdCallMissed";
 });
 
-module MdCallMissedOutgoing = MakeIcon({
+module MdCallMissedOutgoing = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdCallMissedOutgoing";
 });
 
-module MdCallReceived = MakeIcon({
+module MdCallReceived = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdCallReceived";
 });
 
-module MdCallSplit = MakeIcon({
+module MdCallSplit = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdCallSplit";
 });
 
-module MdChat = MakeIcon({
+module MdChat = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdChat";
 });
 
-module MdChatBubble = MakeIcon({
+module MdChatBubble = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdChatBubble";
 });
 
-module MdChatBubbleOutline = MakeIcon({
+module MdChatBubbleOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdChatBubbleOutline";
 });
 
-module MdClearAll = MakeIcon({
+module MdClearAll = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdClearAll";
 });
 
-module MdComment = MakeIcon({
+module MdComment = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdComment";
 });
 
-module MdContactMail = MakeIcon({
+module MdContactMail = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdContactMail";
 });
 
-module MdContactPhone = MakeIcon({
+module MdContactPhone = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdContactPhone";
 });
 
-module MdContacts = MakeIcon({
+module MdContacts = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdContacts";
 });
 
-module MdDialerSip = MakeIcon({
+module MdDialerSip = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdDialerSip";
 });
 
-module MdDialpad = MakeIcon({
+module MdDialpad = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdDialpad";
 });
 
-module MdEmail = MakeIcon({
+module MdEmail = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdEmail";
 });
 
-module MdForum = MakeIcon({
+module MdForum = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdForum";
 });
 
-module MdImportContacts = MakeIcon({
+module MdImportContacts = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdImportContacts";
 });
 
-module MdImportExport = MakeIcon({
+module MdImportExport = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdImportExport";
 });
 
-module MdInvertColorsOff = MakeIcon({
+module MdInvertColorsOff = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdInvertColorsOff";
 });
 
-module MdLiveHelp = MakeIcon({
+module MdLiveHelp = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLiveHelp";
 });
 
-module MdLocationOff = MakeIcon({
+module MdLocationOff = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLocationOff";
 });
 
-module MdLocationOn = MakeIcon({
+module MdLocationOn = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLocationOn";
 });
 
-module MdMailOutline = MakeIcon({
+module MdMailOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdMailOutline";
 });
 
-module MdMessage = MakeIcon({
+module MdMessage = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdMessage";
 });
 
-module MdNoSim = MakeIcon({
+module MdNoSim = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdNoSim";
 });
 
-module MdPhone = MakeIcon({
+module MdPhone = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPhone";
 });
 
-module MdPhonelinkErase = MakeIcon({
+module MdPhonelinkErase = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPhonelinkErase";
 });
 
-module MdPhonelinkLock = MakeIcon({
+module MdPhonelinkLock = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPhonelinkLock";
 });
 
-module MdPhonelinkRing = MakeIcon({
+module MdPhonelinkRing = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPhonelinkRing";
 });
 
-module MdPhonelinkSetup = MakeIcon({
+module MdPhonelinkSetup = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPhonelinkSetup";
 });
 
-module MdPortableWifiOff = MakeIcon({
+module MdPortableWifiOff = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPortableWifiOff";
 });
 
-module MdPresentToAll = MakeIcon({
+module MdPresentToAll = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPresentToAll";
 });
 
-module MdRingVolume = MakeIcon({
+module MdRingVolume = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdRingVolume";
 });
 
-module MdRssFeed = MakeIcon({
+module MdRssFeed = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdRssFeed";
 });
 
-module MdScreenShare = MakeIcon({
+module MdScreenShare = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdScreenShare";
 });
 
-module MdSpeakerPhone = MakeIcon({
+module MdSpeakerPhone = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSpeakerPhone";
 });
 
-module MdStayCurrentLandscape = MakeIcon({
+module MdStayCurrentLandscape = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdStayCurrentLandscape";
 });
 
-module MdStayCurrentPortrait = MakeIcon({
+module MdStayCurrentPortrait = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdStayCurrentPortrait";
 });
 
-module MdStayPrimaryLandscape = MakeIcon({
+module MdStayPrimaryLandscape = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdStayPrimaryLandscape";
 });
 
-module MdStayPrimaryPortrait = MakeIcon({
+module MdStayPrimaryPortrait = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdStayPrimaryPortrait";
 });
 
-module MdStopScreenShare = MakeIcon({
+module MdStopScreenShare = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdStopScreenShare";
 });
 
-module MdSwapCalls = MakeIcon({
+module MdSwapCalls = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSwapCalls";
 });
 
-module MdTextsms = MakeIcon({
+module MdTextsms = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdTextsms";
 });
 
-module MdVoicemail = MakeIcon({
+module MdVoicemail = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdVoicemail";
 });
 
-module MdVpnKey = MakeIcon({
+module MdVpnKey = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdVpnKey";
 });
 
-module MdAdd = MakeIcon({
+module MdAdd = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdAdd";
 });
 
-module MdAddBox = MakeIcon({
+module MdAddBox = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdAddBox";
 });
 
-module MdAddCircle = MakeIcon({
+module MdAddCircle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdAddCircle";
 });
 
-module MdAddCircleOutline = MakeIcon({
+module MdAddCircleOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdAddCircleOutline";
 });
 
-module MdArchive = MakeIcon({
+module MdArchive = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdArchive";
 });
 
-module MdBackspace = MakeIcon({
+module MdBackspace = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBackspace";
 });
 
-module MdBlock = MakeIcon({
+module MdBlock = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBlock";
 });
 
-module MdClear = MakeIcon({
+module MdClear = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdClear";
 });
 
-module MdContentCopy = MakeIcon({
+module MdContentCopy = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdContentCopy";
 });
 
-module MdContentCut = MakeIcon({
+module MdContentCut = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdContentCut";
 });
 
-module MdContentPaste = MakeIcon({
+module MdContentPaste = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdContentPaste";
 });
 
-module MdCreate = MakeIcon({
+module MdCreate = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdCreate";
 });
 
-module MdDeleteSweep = MakeIcon({
+module MdDeleteSweep = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdDeleteSweep";
 });
 
-module MdDrafts = MakeIcon({
+module MdDrafts = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdDrafts";
 });
 
-module MdFilterList = MakeIcon({
+module MdFilterList = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFilterList";
 });
 
-module MdFlag = MakeIcon({
+module MdFlag = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFlag";
 });
 
-module MdFontDownload = MakeIcon({
+module MdFontDownload = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFontDownload";
 });
 
-module MdForward = MakeIcon({
+module MdForward = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdForward";
 });
 
-module MdGesture = MakeIcon({
+module MdGesture = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdGesture";
 });
 
-module MdInbox = MakeIcon({
+module MdInbox = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdInbox";
 });
 
-module MdLink = MakeIcon({
+module MdLink = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLink";
 });
 
-module MdLowPriority = MakeIcon({
+module MdLowPriority = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLowPriority";
 });
 
-module MdMail = MakeIcon({
+module MdMail = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdMail";
 });
 
-module MdMarkunread = MakeIcon({
+module MdMarkunread = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdMarkunread";
 });
 
-module MdMoveToInbox = MakeIcon({
+module MdMoveToInbox = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdMoveToInbox";
 });
 
-module MdNextWeek = MakeIcon({
+module MdNextWeek = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdNextWeek";
 });
 
-module MdRedo = MakeIcon({
+module MdRedo = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdRedo";
 });
 
-module MdRemove = MakeIcon({
+module MdRemove = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdRemove";
 });
 
-module MdRemoveCircle = MakeIcon({
+module MdRemoveCircle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdRemoveCircle";
 });
 
-module MdRemoveCircleOutline = MakeIcon({
+module MdRemoveCircleOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdRemoveCircleOutline";
 });
 
-module MdReply = MakeIcon({
+module MdReply = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdReply";
 });
 
-module MdReplyAll = MakeIcon({
+module MdReplyAll = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdReplyAll";
 });
 
-module MdReport = MakeIcon({
+module MdReport = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdReport";
 });
 
-module MdSave = MakeIcon({
+module MdSave = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSave";
 });
 
-module MdSelectAll = MakeIcon({
+module MdSelectAll = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSelectAll";
 });
 
-module MdSend = MakeIcon({
+module MdSend = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSend";
 });
 
-module MdSort = MakeIcon({
+module MdSort = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSort";
 });
 
-module MdTextFormat = MakeIcon({
+module MdTextFormat = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdTextFormat";
 });
 
-module MdUnarchive = MakeIcon({
+module MdUnarchive = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdUnarchive";
 });
 
-module MdUndo = MakeIcon({
+module MdUndo = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdUndo";
 });
 
-module MdWeekend = MakeIcon({
+module MdWeekend = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdWeekend";
 });
 
-module MdAccessAlarm = MakeIcon({
+module MdAccessAlarm = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdAccessAlarm";
 });
 
-module MdAccessAlarms = MakeIcon({
+module MdAccessAlarms = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdAccessAlarms";
 });
 
-module MdAccessTime = MakeIcon({
+module MdAccessTime = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdAccessTime";
 });
 
-module MdAddAlarm = MakeIcon({
+module MdAddAlarm = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdAddAlarm";
 });
 
-module MdAirplanemodeActive = MakeIcon({
+module MdAirplanemodeActive = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdAirplanemodeActive";
 });
 
-module MdAirplanemodeInactive = MakeIcon({
+module MdAirplanemodeInactive = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdAirplanemodeInactive";
 });
 
-module MdBattery20 = MakeIcon({
+module MdBattery20 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBattery20";
 });
 
-module MdBattery30 = MakeIcon({
+module MdBattery30 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBattery30";
 });
 
-module MdBattery50 = MakeIcon({
+module MdBattery50 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBattery50";
 });
 
-module MdBattery60 = MakeIcon({
+module MdBattery60 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBattery60";
 });
 
-module MdBattery80 = MakeIcon({
+module MdBattery80 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBattery80";
 });
 
-module MdBattery90 = MakeIcon({
+module MdBattery90 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBattery90";
 });
 
-module MdBatteryAlert = MakeIcon({
+module MdBatteryAlert = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBatteryAlert";
 });
 
-module MdBatteryCharging20 = MakeIcon({
+module MdBatteryCharging20 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBatteryCharging20";
 });
 
-module MdBatteryCharging30 = MakeIcon({
+module MdBatteryCharging30 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBatteryCharging30";
 });
 
-module MdBatteryCharging50 = MakeIcon({
+module MdBatteryCharging50 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBatteryCharging50";
 });
 
-module MdBatteryCharging60 = MakeIcon({
+module MdBatteryCharging60 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBatteryCharging60";
 });
 
-module MdBatteryCharging80 = MakeIcon({
+module MdBatteryCharging80 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBatteryCharging80";
 });
 
-module MdBatteryCharging90 = MakeIcon({
+module MdBatteryCharging90 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBatteryCharging90";
 });
 
-module MdBatteryChargingFull = MakeIcon({
+module MdBatteryChargingFull = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBatteryChargingFull";
 });
 
-module MdBatteryFull = MakeIcon({
+module MdBatteryFull = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBatteryFull";
 });
 
-module MdBatteryStd = MakeIcon({
+module MdBatteryStd = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBatteryStd";
 });
 
-module MdBatteryUnknown = MakeIcon({
+module MdBatteryUnknown = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBatteryUnknown";
 });
 
-module MdBluetooth = MakeIcon({
+module MdBluetooth = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBluetooth";
 });
 
-module MdBluetoothConnected = MakeIcon({
+module MdBluetoothConnected = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBluetoothConnected";
 });
 
-module MdBluetoothDisabled = MakeIcon({
+module MdBluetoothDisabled = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBluetoothDisabled";
 });
 
-module MdBluetoothSearching = MakeIcon({
+module MdBluetoothSearching = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBluetoothSearching";
 });
 
-module MdBrightnessAuto = MakeIcon({
+module MdBrightnessAuto = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBrightnessAuto";
 });
 
-module MdBrightnessHigh = MakeIcon({
+module MdBrightnessHigh = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBrightnessHigh";
 });
 
-module MdBrightnessLow = MakeIcon({
+module MdBrightnessLow = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBrightnessLow";
 });
 
-module MdBrightnessMedium = MakeIcon({
+module MdBrightnessMedium = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBrightnessMedium";
 });
 
-module MdDataUsage = MakeIcon({
+module MdDataUsage = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdDataUsage";
 });
 
-module MdDeveloperMode = MakeIcon({
+module MdDeveloperMode = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdDeveloperMode";
 });
 
-module MdDevices = MakeIcon({
+module MdDevices = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdDevices";
 });
 
-module MdDvr = MakeIcon({
+module MdDvr = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdDvr";
 });
 
-module MdGpsFixed = MakeIcon({
+module MdGpsFixed = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdGpsFixed";
 });
 
-module MdGpsNotFixed = MakeIcon({
+module MdGpsNotFixed = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdGpsNotFixed";
 });
 
-module MdGpsOff = MakeIcon({
+module MdGpsOff = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdGpsOff";
 });
 
-module MdGraphicEq = MakeIcon({
+module MdGraphicEq = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdGraphicEq";
 });
 
-module MdLocationDisabled = MakeIcon({
+module MdLocationDisabled = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLocationDisabled";
 });
 
-module MdLocationSearching = MakeIcon({
+module MdLocationSearching = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLocationSearching";
 });
 
-module MdNetworkCell = MakeIcon({
+module MdNetworkCell = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdNetworkCell";
 });
 
-module MdNetworkWifi = MakeIcon({
+module MdNetworkWifi = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdNetworkWifi";
 });
 
-module MdNfc = MakeIcon({
+module MdNfc = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdNfc";
 });
 
-module MdScreenLockLandscape = MakeIcon({
+module MdScreenLockLandscape = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdScreenLockLandscape";
 });
 
-module MdScreenLockPortrait = MakeIcon({
+module MdScreenLockPortrait = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdScreenLockPortrait";
 });
 
-module MdScreenLockRotation = MakeIcon({
+module MdScreenLockRotation = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdScreenLockRotation";
 });
 
-module MdScreenRotation = MakeIcon({
+module MdScreenRotation = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdScreenRotation";
 });
 
-module MdSdStorage = MakeIcon({
+module MdSdStorage = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSdStorage";
 });
 
-module MdSettingsSystemDaydream = MakeIcon({
+module MdSettingsSystemDaydream = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSettingsSystemDaydream";
 });
 
-module MdSignalCellular0Bar = MakeIcon({
+module MdSignalCellular0Bar = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSignalCellular0Bar";
 });
 
-module MdSignalCellular1Bar = MakeIcon({
+module MdSignalCellular1Bar = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSignalCellular1Bar";
 });
 
-module MdSignalCellular2Bar = MakeIcon({
+module MdSignalCellular2Bar = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSignalCellular2Bar";
 });
 
-module MdSignalCellular3Bar = MakeIcon({
+module MdSignalCellular3Bar = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSignalCellular3Bar";
 });
 
-module MdSignalCellular4Bar = MakeIcon({
+module MdSignalCellular4Bar = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSignalCellular4Bar";
 });
 
-module MdSignalCellularConnectedNoInternet0Bar = MakeIcon({
+module MdSignalCellularConnectedNoInternet0Bar = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSignalCellularConnectedNoInternet0Bar";
 });
 
-module MdSignalCellularConnectedNoInternet1Bar = MakeIcon({
+module MdSignalCellularConnectedNoInternet1Bar = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSignalCellularConnectedNoInternet1Bar";
 });
 
-module MdSignalCellularConnectedNoInternet2Bar = MakeIcon({
+module MdSignalCellularConnectedNoInternet2Bar = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSignalCellularConnectedNoInternet2Bar";
 });
 
-module MdSignalCellularConnectedNoInternet3Bar = MakeIcon({
+module MdSignalCellularConnectedNoInternet3Bar = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSignalCellularConnectedNoInternet3Bar";
 });
 
-module MdSignalCellularConnectedNoInternet4Bar = MakeIcon({
+module MdSignalCellularConnectedNoInternet4Bar = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSignalCellularConnectedNoInternet4Bar";
 });
 
-module MdSignalCellularNoSim = MakeIcon({
+module MdSignalCellularNoSim = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSignalCellularNoSim";
 });
 
-module MdSignalCellularNull = MakeIcon({
+module MdSignalCellularNull = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSignalCellularNull";
 });
 
-module MdSignalCellularOff = MakeIcon({
+module MdSignalCellularOff = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSignalCellularOff";
 });
 
-module MdSignalWifi0Bar = MakeIcon({
+module MdSignalWifi0Bar = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSignalWifi0Bar";
 });
 
-module MdSignalWifi1Bar = MakeIcon({
+module MdSignalWifi1Bar = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSignalWifi1Bar";
 });
 
-module MdSignalWifi1BarLock = MakeIcon({
+module MdSignalWifi1BarLock = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSignalWifi1BarLock";
 });
 
-module MdSignalWifi2Bar = MakeIcon({
+module MdSignalWifi2Bar = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSignalWifi2Bar";
 });
 
-module MdSignalWifi2BarLock = MakeIcon({
+module MdSignalWifi2BarLock = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSignalWifi2BarLock";
 });
 
-module MdSignalWifi3Bar = MakeIcon({
+module MdSignalWifi3Bar = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSignalWifi3Bar";
 });
 
-module MdSignalWifi3BarLock = MakeIcon({
+module MdSignalWifi3BarLock = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSignalWifi3BarLock";
 });
 
-module MdSignalWifi4Bar = MakeIcon({
+module MdSignalWifi4Bar = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSignalWifi4Bar";
 });
 
-module MdSignalWifi4BarLock = MakeIcon({
+module MdSignalWifi4BarLock = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSignalWifi4BarLock";
 });
 
-module MdSignalWifiOff = MakeIcon({
+module MdSignalWifiOff = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSignalWifiOff";
 });
 
-module MdStorage = MakeIcon({
+module MdStorage = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdStorage";
 });
 
-module MdUsb = MakeIcon({
+module MdUsb = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdUsb";
 });
 
-module MdWallpaper = MakeIcon({
+module MdWallpaper = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdWallpaper";
 });
 
-module MdWidgets = MakeIcon({
+module MdWidgets = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdWidgets";
 });
 
-module MdWifiLock = MakeIcon({
+module MdWifiLock = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdWifiLock";
 });
 
-module MdWifiTethering = MakeIcon({
+module MdWifiTethering = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdWifiTethering";
 });
 
-module MdAttachFile = MakeIcon({
+module MdAttachFile = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdAttachFile";
 });
 
-module MdAttachMoney = MakeIcon({
+module MdAttachMoney = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdAttachMoney";
 });
 
-module MdBorderAll = MakeIcon({
+module MdBorderAll = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBorderAll";
 });
 
-module MdBorderBottom = MakeIcon({
+module MdBorderBottom = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBorderBottom";
 });
 
-module MdBorderClear = MakeIcon({
+module MdBorderClear = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBorderClear";
 });
 
-module MdBorderColor = MakeIcon({
+module MdBorderColor = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBorderColor";
 });
 
-module MdBorderHorizontal = MakeIcon({
+module MdBorderHorizontal = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBorderHorizontal";
 });
 
-module MdBorderInner = MakeIcon({
+module MdBorderInner = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBorderInner";
 });
 
-module MdBorderLeft = MakeIcon({
+module MdBorderLeft = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBorderLeft";
 });
 
-module MdBorderOuter = MakeIcon({
+module MdBorderOuter = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBorderOuter";
 });
 
-module MdBorderRight = MakeIcon({
+module MdBorderRight = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBorderRight";
 });
 
-module MdBorderStyle = MakeIcon({
+module MdBorderStyle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBorderStyle";
 });
 
-module MdBorderTop = MakeIcon({
+module MdBorderTop = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBorderTop";
 });
 
-module MdBorderVertical = MakeIcon({
+module MdBorderVertical = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBorderVertical";
 });
 
-module MdBubbleChart = MakeIcon({
+module MdBubbleChart = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBubbleChart";
 });
 
-module MdDragHandle = MakeIcon({
+module MdDragHandle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdDragHandle";
 });
 
-module MdFormatAlignCenter = MakeIcon({
+module MdFormatAlignCenter = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFormatAlignCenter";
 });
 
-module MdFormatAlignJustify = MakeIcon({
+module MdFormatAlignJustify = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFormatAlignJustify";
 });
 
-module MdFormatAlignLeft = MakeIcon({
+module MdFormatAlignLeft = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFormatAlignLeft";
 });
 
-module MdFormatAlignRight = MakeIcon({
+module MdFormatAlignRight = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFormatAlignRight";
 });
 
-module MdFormatBold = MakeIcon({
+module MdFormatBold = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFormatBold";
 });
 
-module MdFormatClear = MakeIcon({
+module MdFormatClear = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFormatClear";
 });
 
-module MdFormatColorFill = MakeIcon({
+module MdFormatColorFill = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFormatColorFill";
 });
 
-module MdFormatColorReset = MakeIcon({
+module MdFormatColorReset = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFormatColorReset";
 });
 
-module MdFormatColorText = MakeIcon({
+module MdFormatColorText = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFormatColorText";
 });
 
-module MdFormatIndentDecrease = MakeIcon({
+module MdFormatIndentDecrease = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFormatIndentDecrease";
 });
 
-module MdFormatIndentIncrease = MakeIcon({
+module MdFormatIndentIncrease = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFormatIndentIncrease";
 });
 
-module MdFormatItalic = MakeIcon({
+module MdFormatItalic = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFormatItalic";
 });
 
-module MdFormatLineSpacing = MakeIcon({
+module MdFormatLineSpacing = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFormatLineSpacing";
 });
 
-module MdFormatListBulleted = MakeIcon({
+module MdFormatListBulleted = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFormatListBulleted";
 });
 
-module MdFormatListNumbered = MakeIcon({
+module MdFormatListNumbered = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFormatListNumbered";
 });
 
-module MdFormatPaint = MakeIcon({
+module MdFormatPaint = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFormatPaint";
 });
 
-module MdFormatQuote = MakeIcon({
+module MdFormatQuote = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFormatQuote";
 });
 
-module MdFormatShapes = MakeIcon({
+module MdFormatShapes = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFormatShapes";
 });
 
-module MdFormatSize = MakeIcon({
+module MdFormatSize = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFormatSize";
 });
 
-module MdFormatStrikethrough = MakeIcon({
+module MdFormatStrikethrough = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFormatStrikethrough";
 });
 
-module MdFormatTextdirectionLToR = MakeIcon({
+module MdFormatTextdirectionLToR = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFormatTextdirectionLToR";
 });
 
-module MdFormatTextdirectionRToL = MakeIcon({
+module MdFormatTextdirectionRToL = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFormatTextdirectionRToL";
 });
 
-module MdFormatUnderlined = MakeIcon({
+module MdFormatUnderlined = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFormatUnderlined";
 });
 
-module MdFunctions = MakeIcon({
+module MdFunctions = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFunctions";
 });
 
-module MdHighlight = MakeIcon({
+module MdHighlight = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdHighlight";
 });
 
-module MdInsertChart = MakeIcon({
+module MdInsertChart = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdInsertChart";
 });
 
-module MdInsertComment = MakeIcon({
+module MdInsertComment = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdInsertComment";
 });
 
-module MdInsertDriveFile = MakeIcon({
+module MdInsertDriveFile = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdInsertDriveFile";
 });
 
-module MdInsertEmoticon = MakeIcon({
+module MdInsertEmoticon = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdInsertEmoticon";
 });
 
-module MdInsertInvitation = MakeIcon({
+module MdInsertInvitation = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdInsertInvitation";
 });
 
-module MdInsertLink = MakeIcon({
+module MdInsertLink = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdInsertLink";
 });
 
-module MdInsertPhoto = MakeIcon({
+module MdInsertPhoto = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdInsertPhoto";
 });
 
-module MdLinearScale = MakeIcon({
+module MdLinearScale = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLinearScale";
 });
 
-module MdMergeType = MakeIcon({
+module MdMergeType = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdMergeType";
 });
 
-module MdModeComment = MakeIcon({
+module MdModeComment = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdModeComment";
 });
 
-module MdModeEdit = MakeIcon({
+module MdModeEdit = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdModeEdit";
 });
 
-module MdMonetizationOn = MakeIcon({
+module MdMonetizationOn = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdMonetizationOn";
 });
 
-module MdMoneyOff = MakeIcon({
+module MdMoneyOff = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdMoneyOff";
 });
 
-module MdMultilineChart = MakeIcon({
+module MdMultilineChart = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdMultilineChart";
 });
 
-module MdPieChart = MakeIcon({
+module MdPieChart = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPieChart";
 });
 
-module MdPieChartOutlined = MakeIcon({
+module MdPieChartOutlined = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPieChartOutlined";
 });
 
-module MdPublish = MakeIcon({
+module MdPublish = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPublish";
 });
 
-module MdShortText = MakeIcon({
+module MdShortText = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdShortText";
 });
 
-module MdShowChart = MakeIcon({
+module MdShowChart = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdShowChart";
 });
 
-module MdSpaceBar = MakeIcon({
+module MdSpaceBar = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSpaceBar";
 });
 
-module MdStrikethroughS = MakeIcon({
+module MdStrikethroughS = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdStrikethroughS";
 });
 
-module MdTextFields = MakeIcon({
+module MdTextFields = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdTextFields";
 });
 
-module MdTitle = MakeIcon({
+module MdTitle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdTitle";
 });
 
-module MdVerticalAlignBottom = MakeIcon({
+module MdVerticalAlignBottom = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdVerticalAlignBottom";
 });
 
-module MdVerticalAlignCenter = MakeIcon({
+module MdVerticalAlignCenter = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdVerticalAlignCenter";
 });
 
-module MdVerticalAlignTop = MakeIcon({
+module MdVerticalAlignTop = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdVerticalAlignTop";
 });
 
-module MdWrapText = MakeIcon({
+module MdWrapText = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdWrapText";
 });
 
-module MdAttachment = MakeIcon({
+module MdAttachment = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdAttachment";
 });
 
-module MdCloud = MakeIcon({
+module MdCloud = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdCloud";
 });
 
-module MdCloudCircle = MakeIcon({
+module MdCloudCircle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdCloudCircle";
 });
 
-module MdCloudDone = MakeIcon({
+module MdCloudDone = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdCloudDone";
 });
 
-module MdCloudDownload = MakeIcon({
+module MdCloudDownload = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdCloudDownload";
 });
 
-module MdCloudOff = MakeIcon({
+module MdCloudOff = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdCloudOff";
 });
 
-module MdCloudQueue = MakeIcon({
+module MdCloudQueue = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdCloudQueue";
 });
 
-module MdCloudUpload = MakeIcon({
+module MdCloudUpload = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdCloudUpload";
 });
 
-module MdCreateNewFolder = MakeIcon({
+module MdCreateNewFolder = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdCreateNewFolder";
 });
 
-module MdFileDownload = MakeIcon({
+module MdFileDownload = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFileDownload";
 });
 
-module MdFileUpload = MakeIcon({
+module MdFileUpload = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFileUpload";
 });
 
-module MdFolder = MakeIcon({
+module MdFolder = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFolder";
 });
 
-module MdFolderOpen = MakeIcon({
+module MdFolderOpen = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFolderOpen";
 });
 
-module MdFolderShared = MakeIcon({
+module MdFolderShared = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFolderShared";
 });
 
-module MdCast = MakeIcon({
+module MdCast = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdCast";
 });
 
-module MdCastConnected = MakeIcon({
+module MdCastConnected = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdCastConnected";
 });
 
-module MdComputer = MakeIcon({
+module MdComputer = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdComputer";
 });
 
-module MdDesktopMac = MakeIcon({
+module MdDesktopMac = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdDesktopMac";
 });
 
-module MdDesktopWindows = MakeIcon({
+module MdDesktopWindows = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdDesktopWindows";
 });
 
-module MdDeveloperBoard = MakeIcon({
+module MdDeveloperBoard = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdDeveloperBoard";
 });
 
-module MdDeviceHub = MakeIcon({
+module MdDeviceHub = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdDeviceHub";
 });
 
-module MdDevicesOther = MakeIcon({
+module MdDevicesOther = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdDevicesOther";
 });
 
-module MdDock = MakeIcon({
+module MdDock = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdDock";
 });
 
-module MdGamepad = MakeIcon({
+module MdGamepad = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdGamepad";
 });
 
-module MdHeadset = MakeIcon({
+module MdHeadset = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdHeadset";
 });
 
-module MdHeadsetMic = MakeIcon({
+module MdHeadsetMic = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdHeadsetMic";
 });
 
-module MdKeyboard = MakeIcon({
+module MdKeyboard = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdKeyboard";
 });
 
-module MdKeyboardArrowDown = MakeIcon({
+module MdKeyboardArrowDown = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdKeyboardArrowDown";
 });
 
-module MdKeyboardArrowLeft = MakeIcon({
+module MdKeyboardArrowLeft = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdKeyboardArrowLeft";
 });
 
-module MdKeyboardArrowRight = MakeIcon({
+module MdKeyboardArrowRight = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdKeyboardArrowRight";
 });
 
-module MdKeyboardArrowUp = MakeIcon({
+module MdKeyboardArrowUp = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdKeyboardArrowUp";
 });
 
-module MdKeyboardBackspace = MakeIcon({
+module MdKeyboardBackspace = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdKeyboardBackspace";
 });
 
-module MdKeyboardCapslock = MakeIcon({
+module MdKeyboardCapslock = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdKeyboardCapslock";
 });
 
-module MdKeyboardHide = MakeIcon({
+module MdKeyboardHide = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdKeyboardHide";
 });
 
-module MdKeyboardReturn = MakeIcon({
+module MdKeyboardReturn = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdKeyboardReturn";
 });
 
-module MdKeyboardTab = MakeIcon({
+module MdKeyboardTab = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdKeyboardTab";
 });
 
-module MdKeyboardVoice = MakeIcon({
+module MdKeyboardVoice = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdKeyboardVoice";
 });
 
-module MdLaptop = MakeIcon({
+module MdLaptop = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLaptop";
 });
 
-module MdLaptopChromebook = MakeIcon({
+module MdLaptopChromebook = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLaptopChromebook";
 });
 
-module MdLaptopMac = MakeIcon({
+module MdLaptopMac = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLaptopMac";
 });
 
-module MdLaptopWindows = MakeIcon({
+module MdLaptopWindows = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLaptopWindows";
 });
 
-module MdMemory = MakeIcon({
+module MdMemory = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdMemory";
 });
 
-module MdMouse = MakeIcon({
+module MdMouse = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdMouse";
 });
 
-module MdPhoneAndroid = MakeIcon({
+module MdPhoneAndroid = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPhoneAndroid";
 });
 
-module MdPhoneIphone = MakeIcon({
+module MdPhoneIphone = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPhoneIphone";
 });
 
-module MdPhonelink = MakeIcon({
+module MdPhonelink = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPhonelink";
 });
 
-module MdPhonelinkOff = MakeIcon({
+module MdPhonelinkOff = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPhonelinkOff";
 });
 
-module MdPowerInput = MakeIcon({
+module MdPowerInput = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPowerInput";
 });
 
-module MdRouter = MakeIcon({
+module MdRouter = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdRouter";
 });
 
-module MdScanner = MakeIcon({
+module MdScanner = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdScanner";
 });
 
-module MdSecurity = MakeIcon({
+module MdSecurity = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSecurity";
 });
 
-module MdSimCard = MakeIcon({
+module MdSimCard = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSimCard";
 });
 
-module MdSmartphone = MakeIcon({
+module MdSmartphone = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSmartphone";
 });
 
-module MdSpeaker = MakeIcon({
+module MdSpeaker = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSpeaker";
 });
 
-module MdSpeakerGroup = MakeIcon({
+module MdSpeakerGroup = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSpeakerGroup";
 });
 
-module MdTablet = MakeIcon({
+module MdTablet = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdTablet";
 });
 
-module MdTabletAndroid = MakeIcon({
+module MdTabletAndroid = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdTabletAndroid";
 });
 
-module MdTabletMac = MakeIcon({
+module MdTabletMac = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdTabletMac";
 });
 
-module MdToys = MakeIcon({
+module MdToys = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdToys";
 });
 
-module MdTv = MakeIcon({
+module MdTv = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdTv";
 });
 
-module MdVideogameAsset = MakeIcon({
+module MdVideogameAsset = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdVideogameAsset";
 });
 
-module MdWatch = MakeIcon({
+module MdWatch = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdWatch";
 });
 
-module MdAddAPhoto = MakeIcon({
+module MdAddAPhoto = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdAddAPhoto";
 });
 
-module MdAddToPhotos = MakeIcon({
+module MdAddToPhotos = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdAddToPhotos";
 });
 
-module MdAdjust = MakeIcon({
+module MdAdjust = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdAdjust";
 });
 
-module MdAssistant = MakeIcon({
+module MdAssistant = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdAssistant";
 });
 
-module MdAssistantPhoto = MakeIcon({
+module MdAssistantPhoto = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdAssistantPhoto";
 });
 
-module MdAudiotrack = MakeIcon({
+module MdAudiotrack = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdAudiotrack";
 });
 
-module MdBlurCircular = MakeIcon({
+module MdBlurCircular = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBlurCircular";
 });
 
-module MdBlurLinear = MakeIcon({
+module MdBlurLinear = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBlurLinear";
 });
 
-module MdBlurOff = MakeIcon({
+module MdBlurOff = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBlurOff";
 });
 
-module MdBlurOn = MakeIcon({
+module MdBlurOn = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBlurOn";
 });
 
-module MdBrightness1 = MakeIcon({
+module MdBrightness1 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBrightness1";
 });
 
-module MdBrightness2 = MakeIcon({
+module MdBrightness2 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBrightness2";
 });
 
-module MdBrightness3 = MakeIcon({
+module MdBrightness3 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBrightness3";
 });
 
-module MdBrightness4 = MakeIcon({
+module MdBrightness4 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBrightness4";
 });
 
-module MdBrightness5 = MakeIcon({
+module MdBrightness5 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBrightness5";
 });
 
-module MdBrightness6 = MakeIcon({
+module MdBrightness6 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBrightness6";
 });
 
-module MdBrightness7 = MakeIcon({
+module MdBrightness7 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBrightness7";
 });
 
-module MdBrokenImage = MakeIcon({
+module MdBrokenImage = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBrokenImage";
 });
 
-module MdBrush = MakeIcon({
+module MdBrush = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBrush";
 });
 
-module MdBurstMode = MakeIcon({
+module MdBurstMode = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBurstMode";
 });
 
-module MdCamera = MakeIcon({
+module MdCamera = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdCamera";
 });
 
-module MdCameraAlt = MakeIcon({
+module MdCameraAlt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdCameraAlt";
 });
 
-module MdCameraFront = MakeIcon({
+module MdCameraFront = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdCameraFront";
 });
 
-module MdCameraRear = MakeIcon({
+module MdCameraRear = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdCameraRear";
 });
 
-module MdCameraRoll = MakeIcon({
+module MdCameraRoll = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdCameraRoll";
 });
 
-module MdCenterFocusStrong = MakeIcon({
+module MdCenterFocusStrong = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdCenterFocusStrong";
 });
 
-module MdCenterFocusWeak = MakeIcon({
+module MdCenterFocusWeak = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdCenterFocusWeak";
 });
 
-module MdCollections = MakeIcon({
+module MdCollections = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdCollections";
 });
 
-module MdCollectionsBookmark = MakeIcon({
+module MdCollectionsBookmark = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdCollectionsBookmark";
 });
 
-module MdColorLens = MakeIcon({
+module MdColorLens = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdColorLens";
 });
 
-module MdColorize = MakeIcon({
+module MdColorize = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdColorize";
 });
 
-module MdCompare = MakeIcon({
+module MdCompare = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdCompare";
 });
 
-module MdControlPoint = MakeIcon({
+module MdControlPoint = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdControlPoint";
 });
 
-module MdControlPointDuplicate = MakeIcon({
+module MdControlPointDuplicate = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdControlPointDuplicate";
 });
 
-module MdCrop169 = MakeIcon({
+module MdCrop169 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdCrop169";
 });
 
-module MdCrop = MakeIcon({
+module MdCrop = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdCrop";
 });
 
-module MdCrop32 = MakeIcon({
+module MdCrop32 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdCrop32";
 });
 
-module MdCrop54 = MakeIcon({
+module MdCrop54 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdCrop54";
 });
 
-module MdCrop75 = MakeIcon({
+module MdCrop75 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdCrop75";
 });
 
-module MdCropDin = MakeIcon({
+module MdCropDin = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdCropDin";
 });
 
-module MdCropFree = MakeIcon({
+module MdCropFree = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdCropFree";
 });
 
-module MdCropLandscape = MakeIcon({
+module MdCropLandscape = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdCropLandscape";
 });
 
-module MdCropOriginal = MakeIcon({
+module MdCropOriginal = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdCropOriginal";
 });
 
-module MdCropPortrait = MakeIcon({
+module MdCropPortrait = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdCropPortrait";
 });
 
-module MdCropRotate = MakeIcon({
+module MdCropRotate = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdCropRotate";
 });
 
-module MdCropSquare = MakeIcon({
+module MdCropSquare = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdCropSquare";
 });
 
-module MdDehaze = MakeIcon({
+module MdDehaze = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdDehaze";
 });
 
-module MdDetails = MakeIcon({
+module MdDetails = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdDetails";
 });
 
-module MdEdit = MakeIcon({
+module MdEdit = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdEdit";
 });
 
-module MdExposure = MakeIcon({
+module MdExposure = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdExposure";
 });
 
-module MdExposureNeg1 = MakeIcon({
+module MdExposureNeg1 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdExposureNeg1";
 });
 
-module MdExposureNeg2 = MakeIcon({
+module MdExposureNeg2 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdExposureNeg2";
 });
 
-module MdExposurePlus1 = MakeIcon({
+module MdExposurePlus1 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdExposurePlus1";
 });
 
-module MdExposurePlus2 = MakeIcon({
+module MdExposurePlus2 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdExposurePlus2";
 });
 
-module MdExposureZero = MakeIcon({
+module MdExposureZero = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdExposureZero";
 });
 
-module MdFilter1 = MakeIcon({
+module MdFilter1 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFilter1";
 });
 
-module MdFilter2 = MakeIcon({
+module MdFilter2 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFilter2";
 });
 
-module MdFilter = MakeIcon({
+module MdFilter = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFilter";
 });
 
-module MdFilter3 = MakeIcon({
+module MdFilter3 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFilter3";
 });
 
-module MdFilter4 = MakeIcon({
+module MdFilter4 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFilter4";
 });
 
-module MdFilter5 = MakeIcon({
+module MdFilter5 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFilter5";
 });
 
-module MdFilter6 = MakeIcon({
+module MdFilter6 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFilter6";
 });
 
-module MdFilter7 = MakeIcon({
+module MdFilter7 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFilter7";
 });
 
-module MdFilter8 = MakeIcon({
+module MdFilter8 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFilter8";
 });
 
-module MdFilter9 = MakeIcon({
+module MdFilter9 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFilter9";
 });
 
-module MdFilter9Plus = MakeIcon({
+module MdFilter9Plus = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFilter9Plus";
 });
 
-module MdFilterBAndW = MakeIcon({
+module MdFilterBAndW = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFilterBAndW";
 });
 
-module MdFilterCenterFocus = MakeIcon({
+module MdFilterCenterFocus = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFilterCenterFocus";
 });
 
-module MdFilterDrama = MakeIcon({
+module MdFilterDrama = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFilterDrama";
 });
 
-module MdFilterFrames = MakeIcon({
+module MdFilterFrames = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFilterFrames";
 });
 
-module MdFilterHdr = MakeIcon({
+module MdFilterHdr = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFilterHdr";
 });
 
-module MdFilterNone = MakeIcon({
+module MdFilterNone = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFilterNone";
 });
 
-module MdFilterTiltShift = MakeIcon({
+module MdFilterTiltShift = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFilterTiltShift";
 });
 
-module MdFilterVintage = MakeIcon({
+module MdFilterVintage = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFilterVintage";
 });
 
-module MdFlare = MakeIcon({
+module MdFlare = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFlare";
 });
 
-module MdFlashAuto = MakeIcon({
+module MdFlashAuto = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFlashAuto";
 });
 
-module MdFlashOff = MakeIcon({
+module MdFlashOff = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFlashOff";
 });
 
-module MdFlashOn = MakeIcon({
+module MdFlashOn = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFlashOn";
 });
 
-module MdFlip = MakeIcon({
+module MdFlip = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFlip";
 });
 
-module MdGradient = MakeIcon({
+module MdGradient = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdGradient";
 });
 
-module MdGrain = MakeIcon({
+module MdGrain = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdGrain";
 });
 
-module MdGridOff = MakeIcon({
+module MdGridOff = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdGridOff";
 });
 
-module MdGridOn = MakeIcon({
+module MdGridOn = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdGridOn";
 });
 
-module MdHdrOff = MakeIcon({
+module MdHdrOff = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdHdrOff";
 });
 
-module MdHdrOn = MakeIcon({
+module MdHdrOn = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdHdrOn";
 });
 
-module MdHdrStrong = MakeIcon({
+module MdHdrStrong = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdHdrStrong";
 });
 
-module MdHdrWeak = MakeIcon({
+module MdHdrWeak = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdHdrWeak";
 });
 
-module MdHealing = MakeIcon({
+module MdHealing = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdHealing";
 });
 
-module MdImage = MakeIcon({
+module MdImage = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdImage";
 });
 
-module MdImageAspectRatio = MakeIcon({
+module MdImageAspectRatio = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdImageAspectRatio";
 });
 
-module MdIso = MakeIcon({
+module MdIso = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdIso";
 });
 
-module MdLandscape = MakeIcon({
+module MdLandscape = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLandscape";
 });
 
-module MdLeakAdd = MakeIcon({
+module MdLeakAdd = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLeakAdd";
 });
 
-module MdLeakRemove = MakeIcon({
+module MdLeakRemove = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLeakRemove";
 });
 
-module MdLens = MakeIcon({
+module MdLens = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLens";
 });
 
-module MdLinkedCamera = MakeIcon({
+module MdLinkedCamera = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLinkedCamera";
 });
 
-module MdLooks = MakeIcon({
+module MdLooks = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLooks";
 });
 
-module MdLooks3 = MakeIcon({
+module MdLooks3 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLooks3";
 });
 
-module MdLooks4 = MakeIcon({
+module MdLooks4 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLooks4";
 });
 
-module MdLooks5 = MakeIcon({
+module MdLooks5 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLooks5";
 });
 
-module MdLooks6 = MakeIcon({
+module MdLooks6 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLooks6";
 });
 
-module MdLooksOne = MakeIcon({
+module MdLooksOne = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLooksOne";
 });
 
-module MdLooksTwo = MakeIcon({
+module MdLooksTwo = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLooksTwo";
 });
 
-module MdLoupe = MakeIcon({
+module MdLoupe = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLoupe";
 });
 
-module MdMonochromePhotos = MakeIcon({
+module MdMonochromePhotos = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdMonochromePhotos";
 });
 
-module MdMovieCreation = MakeIcon({
+module MdMovieCreation = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdMovieCreation";
 });
 
-module MdMovieFilter = MakeIcon({
+module MdMovieFilter = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdMovieFilter";
 });
 
-module MdMusicNote = MakeIcon({
+module MdMusicNote = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdMusicNote";
 });
 
-module MdNature = MakeIcon({
+module MdNature = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdNature";
 });
 
-module MdNaturePeople = MakeIcon({
+module MdNaturePeople = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdNaturePeople";
 });
 
-module MdNavigateBefore = MakeIcon({
+module MdNavigateBefore = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdNavigateBefore";
 });
 
-module MdNavigateNext = MakeIcon({
+module MdNavigateNext = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdNavigateNext";
 });
 
-module MdPalette = MakeIcon({
+module MdPalette = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPalette";
 });
 
-module MdPanorama = MakeIcon({
+module MdPanorama = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPanorama";
 });
 
-module MdPanoramaFishEye = MakeIcon({
+module MdPanoramaFishEye = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPanoramaFishEye";
 });
 
-module MdPanoramaHorizontal = MakeIcon({
+module MdPanoramaHorizontal = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPanoramaHorizontal";
 });
 
-module MdPanoramaVertical = MakeIcon({
+module MdPanoramaVertical = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPanoramaVertical";
 });
 
-module MdPanoramaWideAngle = MakeIcon({
+module MdPanoramaWideAngle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPanoramaWideAngle";
 });
 
-module MdPhoto = MakeIcon({
+module MdPhoto = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPhoto";
 });
 
-module MdPhotoAlbum = MakeIcon({
+module MdPhotoAlbum = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPhotoAlbum";
 });
 
-module MdPhotoCamera = MakeIcon({
+module MdPhotoCamera = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPhotoCamera";
 });
 
-module MdPhotoFilter = MakeIcon({
+module MdPhotoFilter = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPhotoFilter";
 });
 
-module MdPhotoLibrary = MakeIcon({
+module MdPhotoLibrary = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPhotoLibrary";
 });
 
-module MdPhotoSizeSelectActual = MakeIcon({
+module MdPhotoSizeSelectActual = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPhotoSizeSelectActual";
 });
 
-module MdPhotoSizeSelectLarge = MakeIcon({
+module MdPhotoSizeSelectLarge = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPhotoSizeSelectLarge";
 });
 
-module MdPhotoSizeSelectSmall = MakeIcon({
+module MdPhotoSizeSelectSmall = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPhotoSizeSelectSmall";
 });
 
-module MdPictureAsPdf = MakeIcon({
+module MdPictureAsPdf = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPictureAsPdf";
 });
 
-module MdPortrait = MakeIcon({
+module MdPortrait = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPortrait";
 });
 
-module MdRemoveRedEye = MakeIcon({
+module MdRemoveRedEye = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdRemoveRedEye";
 });
 
-module MdRotate90DegreesCcw = MakeIcon({
+module MdRotate90DegreesCcw = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdRotate90DegreesCcw";
 });
 
-module MdRotateLeft = MakeIcon({
+module MdRotateLeft = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdRotateLeft";
 });
 
-module MdRotateRight = MakeIcon({
+module MdRotateRight = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdRotateRight";
 });
 
-module MdSlideshow = MakeIcon({
+module MdSlideshow = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSlideshow";
 });
 
-module MdStraighten = MakeIcon({
+module MdStraighten = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdStraighten";
 });
 
-module MdStyle = MakeIcon({
+module MdStyle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdStyle";
 });
 
-module MdSwitchCamera = MakeIcon({
+module MdSwitchCamera = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSwitchCamera";
 });
 
-module MdSwitchVideo = MakeIcon({
+module MdSwitchVideo = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSwitchVideo";
 });
 
-module MdTagFaces = MakeIcon({
+module MdTagFaces = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdTagFaces";
 });
 
-module MdTexture = MakeIcon({
+module MdTexture = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdTexture";
 });
 
-module MdTimelapse = MakeIcon({
+module MdTimelapse = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdTimelapse";
 });
 
-module MdTimer10 = MakeIcon({
+module MdTimer10 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdTimer10";
 });
 
-module MdTimer = MakeIcon({
+module MdTimer = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdTimer";
 });
 
-module MdTimer3 = MakeIcon({
+module MdTimer3 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdTimer3";
 });
 
-module MdTimerOff = MakeIcon({
+module MdTimerOff = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdTimerOff";
 });
 
-module MdTonality = MakeIcon({
+module MdTonality = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdTonality";
 });
 
-module MdTransform = MakeIcon({
+module MdTransform = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdTransform";
 });
 
-module MdTune = MakeIcon({
+module MdTune = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdTune";
 });
 
-module MdViewComfy = MakeIcon({
+module MdViewComfy = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdViewComfy";
 });
 
-module MdViewCompact = MakeIcon({
+module MdViewCompact = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdViewCompact";
 });
 
-module MdVignette = MakeIcon({
+module MdVignette = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdVignette";
 });
 
-module MdWbAuto = MakeIcon({
+module MdWbAuto = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdWbAuto";
 });
 
-module MdWbCloudy = MakeIcon({
+module MdWbCloudy = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdWbCloudy";
 });
 
-module MdWbIncandescent = MakeIcon({
+module MdWbIncandescent = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdWbIncandescent";
 });
 
-module MdWbIridescent = MakeIcon({
+module MdWbIridescent = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdWbIridescent";
 });
 
-module MdWbSunny = MakeIcon({
+module MdWbSunny = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdWbSunny";
 });
 
-module MdAddLocation = MakeIcon({
+module MdAddLocation = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdAddLocation";
 });
 
-module MdBeenhere = MakeIcon({
+module MdBeenhere = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBeenhere";
 });
 
-module MdDirections = MakeIcon({
+module MdDirections = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdDirections";
 });
 
-module MdDirectionsBike = MakeIcon({
+module MdDirectionsBike = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdDirectionsBike";
 });
 
-module MdDirectionsBoat = MakeIcon({
+module MdDirectionsBoat = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdDirectionsBoat";
 });
 
-module MdDirectionsBus = MakeIcon({
+module MdDirectionsBus = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdDirectionsBus";
 });
 
-module MdDirectionsCar = MakeIcon({
+module MdDirectionsCar = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdDirectionsCar";
 });
 
-module MdDirectionsRailway = MakeIcon({
+module MdDirectionsRailway = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdDirectionsRailway";
 });
 
-module MdDirectionsRun = MakeIcon({
+module MdDirectionsRun = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdDirectionsRun";
 });
 
-module MdDirectionsSubway = MakeIcon({
+module MdDirectionsSubway = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdDirectionsSubway";
 });
 
-module MdDirectionsTransit = MakeIcon({
+module MdDirectionsTransit = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdDirectionsTransit";
 });
 
-module MdDirectionsWalk = MakeIcon({
+module MdDirectionsWalk = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdDirectionsWalk";
 });
 
-module MdEditLocation = MakeIcon({
+module MdEditLocation = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdEditLocation";
 });
 
-module MdEvStation = MakeIcon({
+module MdEvStation = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdEvStation";
 });
 
-module MdFlight = MakeIcon({
+module MdFlight = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFlight";
 });
 
-module MdHotel = MakeIcon({
+module MdHotel = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdHotel";
 });
 
-module MdLayers = MakeIcon({
+module MdLayers = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLayers";
 });
 
-module MdLayersClear = MakeIcon({
+module MdLayersClear = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLayersClear";
 });
 
-module MdLocalActivity = MakeIcon({
+module MdLocalActivity = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLocalActivity";
 });
 
-module MdLocalAirport = MakeIcon({
+module MdLocalAirport = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLocalAirport";
 });
 
-module MdLocalAtm = MakeIcon({
+module MdLocalAtm = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLocalAtm";
 });
 
-module MdLocalBar = MakeIcon({
+module MdLocalBar = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLocalBar";
 });
 
-module MdLocalCafe = MakeIcon({
+module MdLocalCafe = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLocalCafe";
 });
 
-module MdLocalCarWash = MakeIcon({
+module MdLocalCarWash = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLocalCarWash";
 });
 
-module MdLocalConvenienceStore = MakeIcon({
+module MdLocalConvenienceStore = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLocalConvenienceStore";
 });
 
-module MdLocalDining = MakeIcon({
+module MdLocalDining = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLocalDining";
 });
 
-module MdLocalDrink = MakeIcon({
+module MdLocalDrink = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLocalDrink";
 });
 
-module MdLocalFlorist = MakeIcon({
+module MdLocalFlorist = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLocalFlorist";
 });
 
-module MdLocalGasStation = MakeIcon({
+module MdLocalGasStation = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLocalGasStation";
 });
 
-module MdLocalGroceryStore = MakeIcon({
+module MdLocalGroceryStore = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLocalGroceryStore";
 });
 
-module MdLocalHospital = MakeIcon({
+module MdLocalHospital = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLocalHospital";
 });
 
-module MdLocalHotel = MakeIcon({
+module MdLocalHotel = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLocalHotel";
 });
 
-module MdLocalLaundryService = MakeIcon({
+module MdLocalLaundryService = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLocalLaundryService";
 });
 
-module MdLocalLibrary = MakeIcon({
+module MdLocalLibrary = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLocalLibrary";
 });
 
-module MdLocalMall = MakeIcon({
+module MdLocalMall = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLocalMall";
 });
 
-module MdLocalMovies = MakeIcon({
+module MdLocalMovies = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLocalMovies";
 });
 
-module MdLocalOffer = MakeIcon({
+module MdLocalOffer = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLocalOffer";
 });
 
-module MdLocalParking = MakeIcon({
+module MdLocalParking = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLocalParking";
 });
 
-module MdLocalPharmacy = MakeIcon({
+module MdLocalPharmacy = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLocalPharmacy";
 });
 
-module MdLocalPhone = MakeIcon({
+module MdLocalPhone = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLocalPhone";
 });
 
-module MdLocalPizza = MakeIcon({
+module MdLocalPizza = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLocalPizza";
 });
 
-module MdLocalPlay = MakeIcon({
+module MdLocalPlay = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLocalPlay";
 });
 
-module MdLocalPostOffice = MakeIcon({
+module MdLocalPostOffice = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLocalPostOffice";
 });
 
-module MdLocalPrintshop = MakeIcon({
+module MdLocalPrintshop = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLocalPrintshop";
 });
 
-module MdLocalSee = MakeIcon({
+module MdLocalSee = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLocalSee";
 });
 
-module MdLocalShipping = MakeIcon({
+module MdLocalShipping = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLocalShipping";
 });
 
-module MdLocalTaxi = MakeIcon({
+module MdLocalTaxi = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLocalTaxi";
 });
 
-module MdMap = MakeIcon({
+module MdMap = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdMap";
 });
 
-module MdMyLocation = MakeIcon({
+module MdMyLocation = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdMyLocation";
 });
 
-module MdNavigation = MakeIcon({
+module MdNavigation = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdNavigation";
 });
 
-module MdNearMe = MakeIcon({
+module MdNearMe = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdNearMe";
 });
 
-module MdPersonPin = MakeIcon({
+module MdPersonPin = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPersonPin";
 });
 
-module MdPersonPinCircle = MakeIcon({
+module MdPersonPinCircle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPersonPinCircle";
 });
 
-module MdPinDrop = MakeIcon({
+module MdPinDrop = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPinDrop";
 });
 
-module MdPlace = MakeIcon({
+module MdPlace = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPlace";
 });
 
-module MdRateReview = MakeIcon({
+module MdRateReview = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdRateReview";
 });
 
-module MdRestaurant = MakeIcon({
+module MdRestaurant = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdRestaurant";
 });
 
-module MdRestaurantMenu = MakeIcon({
+module MdRestaurantMenu = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdRestaurantMenu";
 });
 
-module MdSatellite = MakeIcon({
+module MdSatellite = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSatellite";
 });
 
-module MdStoreMallDirectory = MakeIcon({
+module MdStoreMallDirectory = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdStoreMallDirectory";
 });
 
-module MdStreetview = MakeIcon({
+module MdStreetview = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdStreetview";
 });
 
-module MdSubway = MakeIcon({
+module MdSubway = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSubway";
 });
 
-module MdTerrain = MakeIcon({
+module MdTerrain = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdTerrain";
 });
 
-module MdTraffic = MakeIcon({
+module MdTraffic = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdTraffic";
 });
 
-module MdTrain = MakeIcon({
+module MdTrain = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdTrain";
 });
 
-module MdTram = MakeIcon({
+module MdTram = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdTram";
 });
 
-module MdTransferWithinAStation = MakeIcon({
+module MdTransferWithinAStation = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdTransferWithinAStation";
 });
 
-module MdZoomOutMap = MakeIcon({
+module MdZoomOutMap = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdZoomOutMap";
 });
 
-module MdApps = MakeIcon({
+module MdApps = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdApps";
 });
 
-module MdArrowBack = MakeIcon({
+module MdArrowBack = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdArrowBack";
 });
 
-module MdArrowDownward = MakeIcon({
+module MdArrowDownward = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdArrowDownward";
 });
 
-module MdArrowDropDown = MakeIcon({
+module MdArrowDropDown = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdArrowDropDown";
 });
 
-module MdArrowDropDownCircle = MakeIcon({
+module MdArrowDropDownCircle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdArrowDropDownCircle";
 });
 
-module MdArrowDropUp = MakeIcon({
+module MdArrowDropUp = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdArrowDropUp";
 });
 
-module MdArrowForward = MakeIcon({
+module MdArrowForward = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdArrowForward";
 });
 
-module MdArrowUpward = MakeIcon({
+module MdArrowUpward = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdArrowUpward";
 });
 
-module MdCancel = MakeIcon({
+module MdCancel = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdCancel";
 });
 
-module MdCheck = MakeIcon({
+module MdCheck = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdCheck";
 });
 
-module MdChevronLeft = MakeIcon({
+module MdChevronLeft = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdChevronLeft";
 });
 
-module MdChevronRight = MakeIcon({
+module MdChevronRight = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdChevronRight";
 });
 
-module MdClose = MakeIcon({
+module MdClose = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdClose";
 });
 
-module MdExpandLess = MakeIcon({
+module MdExpandLess = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdExpandLess";
 });
 
-module MdExpandMore = MakeIcon({
+module MdExpandMore = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdExpandMore";
 });
 
-module MdFirstPage = MakeIcon({
+module MdFirstPage = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFirstPage";
 });
 
-module MdFullscreen = MakeIcon({
+module MdFullscreen = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFullscreen";
 });
 
-module MdFullscreenExit = MakeIcon({
+module MdFullscreenExit = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFullscreenExit";
 });
 
-module MdLastPage = MakeIcon({
+module MdLastPage = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLastPage";
 });
 
-module MdMenu = MakeIcon({
+module MdMenu = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdMenu";
 });
 
-module MdMoreHoriz = MakeIcon({
+module MdMoreHoriz = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdMoreHoriz";
 });
 
-module MdMoreVert = MakeIcon({
+module MdMoreVert = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdMoreVert";
 });
 
-module MdRefresh = MakeIcon({
+module MdRefresh = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdRefresh";
 });
 
-module MdSubdirectoryArrowLeft = MakeIcon({
+module MdSubdirectoryArrowLeft = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSubdirectoryArrowLeft";
 });
 
-module MdSubdirectoryArrowRight = MakeIcon({
+module MdSubdirectoryArrowRight = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSubdirectoryArrowRight";
 });
 
-module MdUnfoldLess = MakeIcon({
+module MdUnfoldLess = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdUnfoldLess";
 });
 
-module MdUnfoldMore = MakeIcon({
+module MdUnfoldMore = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdUnfoldMore";
 });
 
-module MdAdb = MakeIcon({
+module MdAdb = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdAdb";
 });
 
-module MdAirlineSeatFlat = MakeIcon({
+module MdAirlineSeatFlat = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdAirlineSeatFlat";
 });
 
-module MdAirlineSeatFlatAngled = MakeIcon({
+module MdAirlineSeatFlatAngled = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdAirlineSeatFlatAngled";
 });
 
-module MdAirlineSeatIndividualSuite = MakeIcon({
+module MdAirlineSeatIndividualSuite = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdAirlineSeatIndividualSuite";
 });
 
-module MdAirlineSeatLegroomExtra = MakeIcon({
+module MdAirlineSeatLegroomExtra = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdAirlineSeatLegroomExtra";
 });
 
-module MdAirlineSeatLegroomNormal = MakeIcon({
+module MdAirlineSeatLegroomNormal = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdAirlineSeatLegroomNormal";
 });
 
-module MdAirlineSeatLegroomReduced = MakeIcon({
+module MdAirlineSeatLegroomReduced = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdAirlineSeatLegroomReduced";
 });
 
-module MdAirlineSeatReclineExtra = MakeIcon({
+module MdAirlineSeatReclineExtra = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdAirlineSeatReclineExtra";
 });
 
-module MdAirlineSeatReclineNormal = MakeIcon({
+module MdAirlineSeatReclineNormal = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdAirlineSeatReclineNormal";
 });
 
-module MdBluetoothAudio = MakeIcon({
+module MdBluetoothAudio = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBluetoothAudio";
 });
 
-module MdConfirmationNumber = MakeIcon({
+module MdConfirmationNumber = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdConfirmationNumber";
 });
 
-module MdDiscFull = MakeIcon({
+module MdDiscFull = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdDiscFull";
 });
 
-module MdDoNotDisturb = MakeIcon({
+module MdDoNotDisturb = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdDoNotDisturb";
 });
 
-module MdDoNotDisturbAlt = MakeIcon({
+module MdDoNotDisturbAlt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdDoNotDisturbAlt";
 });
 
-module MdDoNotDisturbOff = MakeIcon({
+module MdDoNotDisturbOff = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdDoNotDisturbOff";
 });
 
-module MdDoNotDisturbOn = MakeIcon({
+module MdDoNotDisturbOn = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdDoNotDisturbOn";
 });
 
-module MdDriveEta = MakeIcon({
+module MdDriveEta = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdDriveEta";
 });
 
-module MdEnhancedEncryption = MakeIcon({
+module MdEnhancedEncryption = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdEnhancedEncryption";
 });
 
-module MdEventAvailable = MakeIcon({
+module MdEventAvailable = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdEventAvailable";
 });
 
-module MdEventBusy = MakeIcon({
+module MdEventBusy = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdEventBusy";
 });
 
-module MdEventNote = MakeIcon({
+module MdEventNote = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdEventNote";
 });
 
-module MdFolderSpecial = MakeIcon({
+module MdFolderSpecial = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFolderSpecial";
 });
 
-module MdLiveTv = MakeIcon({
+module MdLiveTv = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLiveTv";
 });
 
-module MdMms = MakeIcon({
+module MdMms = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdMms";
 });
 
-module MdMore = MakeIcon({
+module MdMore = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdMore";
 });
 
-module MdNetworkCheck = MakeIcon({
+module MdNetworkCheck = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdNetworkCheck";
 });
 
-module MdNetworkLocked = MakeIcon({
+module MdNetworkLocked = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdNetworkLocked";
 });
 
-module MdNoEncryption = MakeIcon({
+module MdNoEncryption = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdNoEncryption";
 });
 
-module MdOndemandVideo = MakeIcon({
+module MdOndemandVideo = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdOndemandVideo";
 });
 
-module MdPersonalVideo = MakeIcon({
+module MdPersonalVideo = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPersonalVideo";
 });
 
-module MdPhoneBluetoothSpeaker = MakeIcon({
+module MdPhoneBluetoothSpeaker = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPhoneBluetoothSpeaker";
 });
 
-module MdPhoneForwarded = MakeIcon({
+module MdPhoneForwarded = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPhoneForwarded";
 });
 
-module MdPhoneInTalk = MakeIcon({
+module MdPhoneInTalk = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPhoneInTalk";
 });
 
-module MdPhoneLocked = MakeIcon({
+module MdPhoneLocked = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPhoneLocked";
 });
 
-module MdPhoneMissed = MakeIcon({
+module MdPhoneMissed = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPhoneMissed";
 });
 
-module MdPhonePaused = MakeIcon({
+module MdPhonePaused = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPhonePaused";
 });
 
-module MdPower = MakeIcon({
+module MdPower = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPower";
 });
 
-module MdPriorityHigh = MakeIcon({
+module MdPriorityHigh = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPriorityHigh";
 });
 
-module MdRvHookup = MakeIcon({
+module MdRvHookup = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdRvHookup";
 });
 
-module MdSdCard = MakeIcon({
+module MdSdCard = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSdCard";
 });
 
-module MdSimCardAlert = MakeIcon({
+module MdSimCardAlert = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSimCardAlert";
 });
 
-module MdSms = MakeIcon({
+module MdSms = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSms";
 });
 
-module MdSmsFailed = MakeIcon({
+module MdSmsFailed = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSmsFailed";
 });
 
-module MdSync = MakeIcon({
+module MdSync = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSync";
 });
 
-module MdSyncDisabled = MakeIcon({
+module MdSyncDisabled = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSyncDisabled";
 });
 
-module MdSyncProblem = MakeIcon({
+module MdSyncProblem = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSyncProblem";
 });
 
-module MdSystemUpdate = MakeIcon({
+module MdSystemUpdate = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSystemUpdate";
 });
 
-module MdTapAndPlay = MakeIcon({
+module MdTapAndPlay = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdTapAndPlay";
 });
 
-module MdTimeToLeave = MakeIcon({
+module MdTimeToLeave = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdTimeToLeave";
 });
 
-module MdVibration = MakeIcon({
+module MdVibration = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdVibration";
 });
 
-module MdVoiceChat = MakeIcon({
+module MdVoiceChat = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdVoiceChat";
 });
 
-module MdVpnLock = MakeIcon({
+module MdVpnLock = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdVpnLock";
 });
 
-module MdWc = MakeIcon({
+module MdWc = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdWc";
 });
 
-module MdWifi = MakeIcon({
+module MdWifi = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdWifi";
 });
 
-module MdAcUnit = MakeIcon({
+module MdAcUnit = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdAcUnit";
 });
 
-module MdAirportShuttle = MakeIcon({
+module MdAirportShuttle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdAirportShuttle";
 });
 
-module MdAllInclusive = MakeIcon({
+module MdAllInclusive = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdAllInclusive";
 });
 
-module MdBeachAccess = MakeIcon({
+module MdBeachAccess = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBeachAccess";
 });
 
-module MdBusinessCenter = MakeIcon({
+module MdBusinessCenter = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdBusinessCenter";
 });
 
-module MdCasino = MakeIcon({
+module MdCasino = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdCasino";
 });
 
-module MdChildCare = MakeIcon({
+module MdChildCare = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdChildCare";
 });
 
-module MdChildFriendly = MakeIcon({
+module MdChildFriendly = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdChildFriendly";
 });
 
-module MdFitnessCenter = MakeIcon({
+module MdFitnessCenter = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFitnessCenter";
 });
 
-module MdFreeBreakfast = MakeIcon({
+module MdFreeBreakfast = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdFreeBreakfast";
 });
 
-module MdGolfCourse = MakeIcon({
+module MdGolfCourse = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdGolfCourse";
 });
 
-module MdHotTub = MakeIcon({
+module MdHotTub = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdHotTub";
 });
 
-module MdKitchen = MakeIcon({
+module MdKitchen = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdKitchen";
 });
 
-module MdPool = MakeIcon({
+module MdPool = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPool";
 });
 
-module MdRoomService = MakeIcon({
+module MdRoomService = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdRoomService";
 });
 
-module MdSmokeFree = MakeIcon({
+module MdSmokeFree = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSmokeFree";
 });
 
-module MdSmokingRooms = MakeIcon({
+module MdSmokingRooms = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSmokingRooms";
 });
 
-module MdSpa = MakeIcon({
+module MdSpa = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSpa";
 });
 
-module MdCake = MakeIcon({
+module MdCake = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdCake";
 });
 
-module MdDomain = MakeIcon({
+module MdDomain = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdDomain";
 });
 
-module MdGroup = MakeIcon({
+module MdGroup = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdGroup";
 });
 
-module MdGroupAdd = MakeIcon({
+module MdGroupAdd = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdGroupAdd";
 });
 
-module MdLocationCity = MakeIcon({
+module MdLocationCity = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdLocationCity";
 });
 
-module MdMood = MakeIcon({
+module MdMood = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdMood";
 });
 
-module MdMoodBad = MakeIcon({
+module MdMoodBad = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdMoodBad";
 });
 
-module MdNotifications = MakeIcon({
+module MdNotifications = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdNotifications";
 });
 
-module MdNotificationsActive = MakeIcon({
+module MdNotificationsActive = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdNotificationsActive";
 });
 
-module MdNotificationsNone = MakeIcon({
+module MdNotificationsNone = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdNotificationsNone";
 });
 
-module MdNotificationsOff = MakeIcon({
+module MdNotificationsOff = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdNotificationsOff";
 });
 
-module MdNotificationsPaused = MakeIcon({
+module MdNotificationsPaused = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdNotificationsPaused";
 });
 
-module MdPages = MakeIcon({
+module MdPages = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPages";
 });
 
-module MdPartyMode = MakeIcon({
+module MdPartyMode = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPartyMode";
 });
 
-module MdPeople = MakeIcon({
+module MdPeople = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPeople";
 });
 
-module MdPeopleOutline = MakeIcon({
+module MdPeopleOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPeopleOutline";
 });
 
-module MdPerson = MakeIcon({
+module MdPerson = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPerson";
 });
 
-module MdPersonAdd = MakeIcon({
+module MdPersonAdd = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPersonAdd";
 });
 
-module MdPersonOutline = MakeIcon({
+module MdPersonOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPersonOutline";
 });
 
-module MdPlusOne = MakeIcon({
+module MdPlusOne = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPlusOne";
 });
 
-module MdPoll = MakeIcon({
+module MdPoll = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPoll";
 });
 
-module MdPublic = MakeIcon({
+module MdPublic = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdPublic";
 });
 
-module MdSchool = MakeIcon({
+module MdSchool = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSchool";
 });
 
-module MdSentimentDissatisfied = MakeIcon({
+module MdSentimentDissatisfied = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSentimentDissatisfied";
 });
 
-module MdSentimentNeutral = MakeIcon({
+module MdSentimentNeutral = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSentimentNeutral";
 });
 
-module MdSentimentSatisfied = MakeIcon({
+module MdSentimentSatisfied = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSentimentSatisfied";
 });
 
-module MdSentimentVeryDissatisfied = MakeIcon({
+module MdSentimentVeryDissatisfied = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSentimentVeryDissatisfied";
 });
 
-module MdSentimentVerySatisfied = MakeIcon({
+module MdSentimentVerySatisfied = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdSentimentVerySatisfied";
 });
 
-module MdShare = MakeIcon({
+module MdShare = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdShare";
 });
 
-module MdWhatshot = MakeIcon({
+module MdWhatshot = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdWhatshot";
 });
 
-module MdCheckBox = MakeIcon({
+module MdCheckBox = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdCheckBox";
 });
 
-module MdCheckBoxOutlineBlank = MakeIcon({
+module MdCheckBoxOutlineBlank = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdCheckBoxOutlineBlank";
 });
 
-module MdIndeterminateCheckBox = MakeIcon({
+module MdIndeterminateCheckBox = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdIndeterminateCheckBox";
 });
 
-module MdRadioButtonChecked = MakeIcon({
+module MdRadioButtonChecked = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdRadioButtonChecked";
 });
 
-module MdRadioButtonUnchecked = MakeIcon({
+module MdRadioButtonUnchecked = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdRadioButtonUnchecked";
 });
 
-module MdStar = MakeIcon({
+module MdStar = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdStar";
 });
 
-module MdStarBorder = MakeIcon({
+module MdStarBorder = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdStarBorder";
 });
 
-module MdStarHalf = MakeIcon({
+module MdStarHalf = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/md"] 
   external reactClass : ReasonReact.reactClass = "MdStarHalf";
 });
 
-module TiAdjustBrightness = MakeIcon({
+module TiAdjustBrightness = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiAdjustBrightness";
 });
 
-module TiAdjustContrast = MakeIcon({
+module TiAdjustContrast = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiAdjustContrast";
 });
 
-module TiAnchorOutline = MakeIcon({
+module TiAnchorOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiAnchorOutline";
 });
 
-module TiAnchor = MakeIcon({
+module TiAnchor = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiAnchor";
 });
 
-module TiArchive = MakeIcon({
+module TiArchive = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiArchive";
 });
 
-module TiArrowBackOutline = MakeIcon({
+module TiArrowBackOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiArrowBackOutline";
 });
 
-module TiArrowBack = MakeIcon({
+module TiArrowBack = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiArrowBack";
 });
 
-module TiArrowDownOutline = MakeIcon({
+module TiArrowDownOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiArrowDownOutline";
 });
 
-module TiArrowDownThick = MakeIcon({
+module TiArrowDownThick = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiArrowDownThick";
 });
 
-module TiArrowDown = MakeIcon({
+module TiArrowDown = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiArrowDown";
 });
 
-module TiArrowForwardOutline = MakeIcon({
+module TiArrowForwardOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiArrowForwardOutline";
 });
 
-module TiArrowForward = MakeIcon({
+module TiArrowForward = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiArrowForward";
 });
 
-module TiArrowLeftOutline = MakeIcon({
+module TiArrowLeftOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiArrowLeftOutline";
 });
 
-module TiArrowLeftThick = MakeIcon({
+module TiArrowLeftThick = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiArrowLeftThick";
 });
 
-module TiArrowLeft = MakeIcon({
+module TiArrowLeft = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiArrowLeft";
 });
 
-module TiArrowLoopOutline = MakeIcon({
+module TiArrowLoopOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiArrowLoopOutline";
 });
 
-module TiArrowLoop = MakeIcon({
+module TiArrowLoop = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiArrowLoop";
 });
 
-module TiArrowMaximiseOutline = MakeIcon({
+module TiArrowMaximiseOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiArrowMaximiseOutline";
 });
 
-module TiArrowMaximise = MakeIcon({
+module TiArrowMaximise = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiArrowMaximise";
 });
 
-module TiArrowMinimiseOutline = MakeIcon({
+module TiArrowMinimiseOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiArrowMinimiseOutline";
 });
 
-module TiArrowMinimise = MakeIcon({
+module TiArrowMinimise = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiArrowMinimise";
 });
 
-module TiArrowMoveOutline = MakeIcon({
+module TiArrowMoveOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiArrowMoveOutline";
 });
 
-module TiArrowMove = MakeIcon({
+module TiArrowMove = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiArrowMove";
 });
 
-module TiArrowRepeatOutline = MakeIcon({
+module TiArrowRepeatOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiArrowRepeatOutline";
 });
 
-module TiArrowRepeat = MakeIcon({
+module TiArrowRepeat = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiArrowRepeat";
 });
 
-module TiArrowRightOutline = MakeIcon({
+module TiArrowRightOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiArrowRightOutline";
 });
 
-module TiArrowRightThick = MakeIcon({
+module TiArrowRightThick = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiArrowRightThick";
 });
 
-module TiArrowRight = MakeIcon({
+module TiArrowRight = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiArrowRight";
 });
 
-module TiArrowShuffle = MakeIcon({
+module TiArrowShuffle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiArrowShuffle";
 });
 
-module TiArrowSortedDown = MakeIcon({
+module TiArrowSortedDown = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiArrowSortedDown";
 });
 
-module TiArrowSortedUp = MakeIcon({
+module TiArrowSortedUp = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiArrowSortedUp";
 });
 
-module TiArrowSyncOutline = MakeIcon({
+module TiArrowSyncOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiArrowSyncOutline";
 });
 
-module TiArrowSync = MakeIcon({
+module TiArrowSync = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiArrowSync";
 });
 
-module TiArrowUnsorted = MakeIcon({
+module TiArrowUnsorted = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiArrowUnsorted";
 });
 
-module TiArrowUpOutline = MakeIcon({
+module TiArrowUpOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiArrowUpOutline";
 });
 
-module TiArrowUpThick = MakeIcon({
+module TiArrowUpThick = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiArrowUpThick";
 });
 
-module TiArrowUp = MakeIcon({
+module TiArrowUp = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiArrowUp";
 });
 
-module TiAt = MakeIcon({
+module TiAt = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiAt";
 });
 
-module TiAttachmentOutline = MakeIcon({
+module TiAttachmentOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiAttachmentOutline";
 });
 
-module TiAttachment = MakeIcon({
+module TiAttachment = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiAttachment";
 });
 
-module TiBackspaceOutline = MakeIcon({
+module TiBackspaceOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiBackspaceOutline";
 });
 
-module TiBackspace = MakeIcon({
+module TiBackspace = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiBackspace";
 });
 
-module TiBatteryCharge = MakeIcon({
+module TiBatteryCharge = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiBatteryCharge";
 });
 
-module TiBatteryFull = MakeIcon({
+module TiBatteryFull = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiBatteryFull";
 });
 
-module TiBatteryHigh = MakeIcon({
+module TiBatteryHigh = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiBatteryHigh";
 });
 
-module TiBatteryLow = MakeIcon({
+module TiBatteryLow = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiBatteryLow";
 });
 
-module TiBatteryMid = MakeIcon({
+module TiBatteryMid = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiBatteryMid";
 });
 
-module TiBeaker = MakeIcon({
+module TiBeaker = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiBeaker";
 });
 
-module TiBeer = MakeIcon({
+module TiBeer = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiBeer";
 });
 
-module TiBell = MakeIcon({
+module TiBell = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiBell";
 });
 
-module TiBook = MakeIcon({
+module TiBook = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiBook";
 });
 
-module TiBookmark = MakeIcon({
+module TiBookmark = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiBookmark";
 });
 
-module TiBriefcase = MakeIcon({
+module TiBriefcase = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiBriefcase";
 });
 
-module TiBrush = MakeIcon({
+module TiBrush = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiBrush";
 });
 
-module TiBusinessCard = MakeIcon({
+module TiBusinessCard = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiBusinessCard";
 });
 
-module TiCalculator = MakeIcon({
+module TiCalculator = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiCalculator";
 });
 
-module TiCalendarOutline = MakeIcon({
+module TiCalendarOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiCalendarOutline";
 });
 
-module TiCalendar = MakeIcon({
+module TiCalendar = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiCalendar";
 });
 
-module TiCameraOutline = MakeIcon({
+module TiCameraOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiCameraOutline";
 });
 
-module TiCamera = MakeIcon({
+module TiCamera = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiCamera";
 });
 
-module TiCancelOutline = MakeIcon({
+module TiCancelOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiCancelOutline";
 });
 
-module TiCancel = MakeIcon({
+module TiCancel = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiCancel";
 });
 
-module TiChartAreaOutline = MakeIcon({
+module TiChartAreaOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiChartAreaOutline";
 });
 
-module TiChartArea = MakeIcon({
+module TiChartArea = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiChartArea";
 });
 
-module TiChartBarOutline = MakeIcon({
+module TiChartBarOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiChartBarOutline";
 });
 
-module TiChartBar = MakeIcon({
+module TiChartBar = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiChartBar";
 });
 
-module TiChartLineOutline = MakeIcon({
+module TiChartLineOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiChartLineOutline";
 });
 
-module TiChartLine = MakeIcon({
+module TiChartLine = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiChartLine";
 });
 
-module TiChartPieOutline = MakeIcon({
+module TiChartPieOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiChartPieOutline";
 });
 
-module TiChartPie = MakeIcon({
+module TiChartPie = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiChartPie";
 });
 
-module TiChevronLeftOutline = MakeIcon({
+module TiChevronLeftOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiChevronLeftOutline";
 });
 
-module TiChevronLeft = MakeIcon({
+module TiChevronLeft = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiChevronLeft";
 });
 
-module TiChevronRightOutline = MakeIcon({
+module TiChevronRightOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiChevronRightOutline";
 });
 
-module TiChevronRight = MakeIcon({
+module TiChevronRight = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiChevronRight";
 });
 
-module TiClipboard = MakeIcon({
+module TiClipboard = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiClipboard";
 });
 
-module TiCloudStorageOutline = MakeIcon({
+module TiCloudStorageOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiCloudStorageOutline";
 });
 
-module TiCloudStorage = MakeIcon({
+module TiCloudStorage = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiCloudStorage";
 });
 
-module TiCodeOutline = MakeIcon({
+module TiCodeOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiCodeOutline";
 });
 
-module TiCode = MakeIcon({
+module TiCode = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiCode";
 });
 
-module TiCoffee = MakeIcon({
+module TiCoffee = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiCoffee";
 });
 
-module TiCogOutline = MakeIcon({
+module TiCogOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiCogOutline";
 });
 
-module TiCog = MakeIcon({
+module TiCog = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiCog";
 });
 
-module TiCompass = MakeIcon({
+module TiCompass = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiCompass";
 });
 
-module TiContacts = MakeIcon({
+module TiContacts = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiContacts";
 });
 
-module TiCreditCard = MakeIcon({
+module TiCreditCard = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiCreditCard";
 });
 
-module TiCss3 = MakeIcon({
+module TiCss3 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiCss3";
 });
 
-module TiDatabase = MakeIcon({
+module TiDatabase = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiDatabase";
 });
 
-module TiDeleteOutline = MakeIcon({
+module TiDeleteOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiDeleteOutline";
 });
 
-module TiDelete = MakeIcon({
+module TiDelete = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiDelete";
 });
 
-module TiDeviceDesktop = MakeIcon({
+module TiDeviceDesktop = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiDeviceDesktop";
 });
 
-module TiDeviceLaptop = MakeIcon({
+module TiDeviceLaptop = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiDeviceLaptop";
 });
 
-module TiDevicePhone = MakeIcon({
+module TiDevicePhone = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiDevicePhone";
 });
 
-module TiDeviceTablet = MakeIcon({
+module TiDeviceTablet = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiDeviceTablet";
 });
 
-module TiDirections = MakeIcon({
+module TiDirections = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiDirections";
 });
 
-module TiDivideOutline = MakeIcon({
+module TiDivideOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiDivideOutline";
 });
 
-module TiDivide = MakeIcon({
+module TiDivide = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiDivide";
 });
 
-module TiDocumentAdd = MakeIcon({
+module TiDocumentAdd = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiDocumentAdd";
 });
 
-module TiDocumentDelete = MakeIcon({
+module TiDocumentDelete = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiDocumentDelete";
 });
 
-module TiDocumentText = MakeIcon({
+module TiDocumentText = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiDocumentText";
 });
 
-module TiDocument = MakeIcon({
+module TiDocument = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiDocument";
 });
 
-module TiDownloadOutline = MakeIcon({
+module TiDownloadOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiDownloadOutline";
 });
 
-module TiDownload = MakeIcon({
+module TiDownload = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiDownload";
 });
 
-module TiDropbox = MakeIcon({
+module TiDropbox = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiDropbox";
 });
 
-module TiEdit = MakeIcon({
+module TiEdit = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiEdit";
 });
 
-module TiEjectOutline = MakeIcon({
+module TiEjectOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiEjectOutline";
 });
 
-module TiEject = MakeIcon({
+module TiEject = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiEject";
 });
 
-module TiEqualsOutline = MakeIcon({
+module TiEqualsOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiEqualsOutline";
 });
 
-module TiEquals = MakeIcon({
+module TiEquals = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiEquals";
 });
 
-module TiExportOutline = MakeIcon({
+module TiExportOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiExportOutline";
 });
 
-module TiExport = MakeIcon({
+module TiExport = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiExport";
 });
 
-module TiEyeOutline = MakeIcon({
+module TiEyeOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiEyeOutline";
 });
 
-module TiEye = MakeIcon({
+module TiEye = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiEye";
 });
 
-module TiFeather = MakeIcon({
+module TiFeather = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiFeather";
 });
 
-module TiFilm = MakeIcon({
+module TiFilm = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiFilm";
 });
 
-module TiFilter = MakeIcon({
+module TiFilter = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiFilter";
 });
 
-module TiFlagOutline = MakeIcon({
+module TiFlagOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiFlagOutline";
 });
 
-module TiFlag = MakeIcon({
+module TiFlag = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiFlag";
 });
 
-module TiFlashOutline = MakeIcon({
+module TiFlashOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiFlashOutline";
 });
 
-module TiFlash = MakeIcon({
+module TiFlash = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiFlash";
 });
 
-module TiFlowChildren = MakeIcon({
+module TiFlowChildren = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiFlowChildren";
 });
 
-module TiFlowMerge = MakeIcon({
+module TiFlowMerge = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiFlowMerge";
 });
 
-module TiFlowParallel = MakeIcon({
+module TiFlowParallel = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiFlowParallel";
 });
 
-module TiFlowSwitch = MakeIcon({
+module TiFlowSwitch = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiFlowSwitch";
 });
 
-module TiFolderAdd = MakeIcon({
+module TiFolderAdd = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiFolderAdd";
 });
 
-module TiFolderDelete = MakeIcon({
+module TiFolderDelete = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiFolderDelete";
 });
 
-module TiFolderOpen = MakeIcon({
+module TiFolderOpen = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiFolderOpen";
 });
 
-module TiFolder = MakeIcon({
+module TiFolder = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiFolder";
 });
 
-module TiGift = MakeIcon({
+module TiGift = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiGift";
 });
 
-module TiGlobeOutline = MakeIcon({
+module TiGlobeOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiGlobeOutline";
 });
 
-module TiGlobe = MakeIcon({
+module TiGlobe = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiGlobe";
 });
 
-module TiGroupOutline = MakeIcon({
+module TiGroupOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiGroupOutline";
 });
 
-module TiGroup = MakeIcon({
+module TiGroup = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiGroup";
 });
 
-module TiHeadphones = MakeIcon({
+module TiHeadphones = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiHeadphones";
 });
 
-module TiHeartFullOutline = MakeIcon({
+module TiHeartFullOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiHeartFullOutline";
 });
 
-module TiHeartHalfOutline = MakeIcon({
+module TiHeartHalfOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiHeartHalfOutline";
 });
 
-module TiHeartOutline = MakeIcon({
+module TiHeartOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiHeartOutline";
 });
 
-module TiHeart = MakeIcon({
+module TiHeart = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiHeart";
 });
 
-module TiHomeOutline = MakeIcon({
+module TiHomeOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiHomeOutline";
 });
 
-module TiHome = MakeIcon({
+module TiHome = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiHome";
 });
 
-module TiHtml5 = MakeIcon({
+module TiHtml5 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiHtml5";
 });
 
-module TiImageOutline = MakeIcon({
+module TiImageOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiImageOutline";
 });
 
-module TiImage = MakeIcon({
+module TiImage = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiImage";
 });
 
-module TiInfinityOutline = MakeIcon({
+module TiInfinityOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiInfinityOutline";
 });
 
-module TiInfinity = MakeIcon({
+module TiInfinity = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiInfinity";
 });
 
-module TiInfoLargeOutline = MakeIcon({
+module TiInfoLargeOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiInfoLargeOutline";
 });
 
-module TiInfoLarge = MakeIcon({
+module TiInfoLarge = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiInfoLarge";
 });
 
-module TiInfoOutline = MakeIcon({
+module TiInfoOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiInfoOutline";
 });
 
-module TiInfo = MakeIcon({
+module TiInfo = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiInfo";
 });
 
-module TiInputCheckedOutline = MakeIcon({
+module TiInputCheckedOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiInputCheckedOutline";
 });
 
-module TiInputChecked = MakeIcon({
+module TiInputChecked = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiInputChecked";
 });
 
-module TiKeyOutline = MakeIcon({
+module TiKeyOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiKeyOutline";
 });
 
-module TiKey = MakeIcon({
+module TiKey = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiKey";
 });
 
-module TiKeyboard = MakeIcon({
+module TiKeyboard = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiKeyboard";
 });
 
-module TiLeaf = MakeIcon({
+module TiLeaf = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiLeaf";
 });
 
-module TiLightbulb = MakeIcon({
+module TiLightbulb = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiLightbulb";
 });
 
-module TiLinkOutline = MakeIcon({
+module TiLinkOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiLinkOutline";
 });
 
-module TiLink = MakeIcon({
+module TiLink = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiLink";
 });
 
-module TiLocationArrowOutline = MakeIcon({
+module TiLocationArrowOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiLocationArrowOutline";
 });
 
-module TiLocationArrow = MakeIcon({
+module TiLocationArrow = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiLocationArrow";
 });
 
-module TiLocationOutline = MakeIcon({
+module TiLocationOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiLocationOutline";
 });
 
-module TiLocation = MakeIcon({
+module TiLocation = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiLocation";
 });
 
-module TiLockClosedOutline = MakeIcon({
+module TiLockClosedOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiLockClosedOutline";
 });
 
-module TiLockClosed = MakeIcon({
+module TiLockClosed = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiLockClosed";
 });
 
-module TiLockOpenOutline = MakeIcon({
+module TiLockOpenOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiLockOpenOutline";
 });
 
-module TiLockOpen = MakeIcon({
+module TiLockOpen = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiLockOpen";
 });
 
-module TiMail = MakeIcon({
+module TiMail = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiMail";
 });
 
-module TiMap = MakeIcon({
+module TiMap = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiMap";
 });
 
-module TiMediaEjectOutline = MakeIcon({
+module TiMediaEjectOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiMediaEjectOutline";
 });
 
-module TiMediaEject = MakeIcon({
+module TiMediaEject = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiMediaEject";
 });
 
-module TiMediaFastForwardOutline = MakeIcon({
+module TiMediaFastForwardOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiMediaFastForwardOutline";
 });
 
-module TiMediaFastForward = MakeIcon({
+module TiMediaFastForward = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiMediaFastForward";
 });
 
-module TiMediaPauseOutline = MakeIcon({
+module TiMediaPauseOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiMediaPauseOutline";
 });
 
-module TiMediaPause = MakeIcon({
+module TiMediaPause = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiMediaPause";
 });
 
-module TiMediaPlayOutline = MakeIcon({
+module TiMediaPlayOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiMediaPlayOutline";
 });
 
-module TiMediaPlayReverseOutline = MakeIcon({
+module TiMediaPlayReverseOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiMediaPlayReverseOutline";
 });
 
-module TiMediaPlayReverse = MakeIcon({
+module TiMediaPlayReverse = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiMediaPlayReverse";
 });
 
-module TiMediaPlay = MakeIcon({
+module TiMediaPlay = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiMediaPlay";
 });
 
-module TiMediaRecordOutline = MakeIcon({
+module TiMediaRecordOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiMediaRecordOutline";
 });
 
-module TiMediaRecord = MakeIcon({
+module TiMediaRecord = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiMediaRecord";
 });
 
-module TiMediaRewindOutline = MakeIcon({
+module TiMediaRewindOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiMediaRewindOutline";
 });
 
-module TiMediaRewind = MakeIcon({
+module TiMediaRewind = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiMediaRewind";
 });
 
-module TiMediaStopOutline = MakeIcon({
+module TiMediaStopOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiMediaStopOutline";
 });
 
-module TiMediaStop = MakeIcon({
+module TiMediaStop = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiMediaStop";
 });
 
-module TiMessageTyping = MakeIcon({
+module TiMessageTyping = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiMessageTyping";
 });
 
-module TiMessage = MakeIcon({
+module TiMessage = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiMessage";
 });
 
-module TiMessages = MakeIcon({
+module TiMessages = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiMessages";
 });
 
-module TiMicrophoneOutline = MakeIcon({
+module TiMicrophoneOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiMicrophoneOutline";
 });
 
-module TiMicrophone = MakeIcon({
+module TiMicrophone = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiMicrophone";
 });
 
-module TiMinusOutline = MakeIcon({
+module TiMinusOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiMinusOutline";
 });
 
-module TiMinus = MakeIcon({
+module TiMinus = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiMinus";
 });
 
-module TiMortarBoard = MakeIcon({
+module TiMortarBoard = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiMortarBoard";
 });
 
-module TiNews = MakeIcon({
+module TiNews = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiNews";
 });
 
-module TiNotesOutline = MakeIcon({
+module TiNotesOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiNotesOutline";
 });
 
-module TiNotes = MakeIcon({
+module TiNotes = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiNotes";
 });
 
-module TiPen = MakeIcon({
+module TiPen = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiPen";
 });
 
-module TiPencil = MakeIcon({
+module TiPencil = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiPencil";
 });
 
-module TiPhoneOutline = MakeIcon({
+module TiPhoneOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiPhoneOutline";
 });
 
-module TiPhone = MakeIcon({
+module TiPhone = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiPhone";
 });
 
-module TiPiOutline = MakeIcon({
+module TiPiOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiPiOutline";
 });
 
-module TiPi = MakeIcon({
+module TiPi = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiPi";
 });
 
-module TiPinOutline = MakeIcon({
+module TiPinOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiPinOutline";
 });
 
-module TiPin = MakeIcon({
+module TiPin = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiPin";
 });
 
-module TiPipette = MakeIcon({
+module TiPipette = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiPipette";
 });
 
-module TiPlaneOutline = MakeIcon({
+module TiPlaneOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiPlaneOutline";
 });
 
-module TiPlane = MakeIcon({
+module TiPlane = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiPlane";
 });
 
-module TiPlug = MakeIcon({
+module TiPlug = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiPlug";
 });
 
-module TiPlusOutline = MakeIcon({
+module TiPlusOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiPlusOutline";
 });
 
-module TiPlus = MakeIcon({
+module TiPlus = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiPlus";
 });
 
-module TiPointOfInterestOutline = MakeIcon({
+module TiPointOfInterestOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiPointOfInterestOutline";
 });
 
-module TiPointOfInterest = MakeIcon({
+module TiPointOfInterest = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiPointOfInterest";
 });
 
-module TiPowerOutline = MakeIcon({
+module TiPowerOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiPowerOutline";
 });
 
-module TiPower = MakeIcon({
+module TiPower = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiPower";
 });
 
-module TiPrinter = MakeIcon({
+module TiPrinter = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiPrinter";
 });
 
-module TiPuzzleOutline = MakeIcon({
+module TiPuzzleOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiPuzzleOutline";
 });
 
-module TiPuzzle = MakeIcon({
+module TiPuzzle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiPuzzle";
 });
 
-module TiRadarOutline = MakeIcon({
+module TiRadarOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiRadarOutline";
 });
 
-module TiRadar = MakeIcon({
+module TiRadar = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiRadar";
 });
 
-module TiRefreshOutline = MakeIcon({
+module TiRefreshOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiRefreshOutline";
 });
 
-module TiRefresh = MakeIcon({
+module TiRefresh = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiRefresh";
 });
 
-module TiRssOutline = MakeIcon({
+module TiRssOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiRssOutline";
 });
 
-module TiRss = MakeIcon({
+module TiRss = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiRss";
 });
 
-module TiScissorsOutline = MakeIcon({
+module TiScissorsOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiScissorsOutline";
 });
 
-module TiScissors = MakeIcon({
+module TiScissors = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiScissors";
 });
 
-module TiShoppingBag = MakeIcon({
+module TiShoppingBag = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiShoppingBag";
 });
 
-module TiShoppingCart = MakeIcon({
+module TiShoppingCart = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiShoppingCart";
 });
 
-module TiSocialAtCircular = MakeIcon({
+module TiSocialAtCircular = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiSocialAtCircular";
 });
 
-module TiSocialDribbbleCircular = MakeIcon({
+module TiSocialDribbbleCircular = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiSocialDribbbleCircular";
 });
 
-module TiSocialDribbble = MakeIcon({
+module TiSocialDribbble = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiSocialDribbble";
 });
 
-module TiSocialFacebookCircular = MakeIcon({
+module TiSocialFacebookCircular = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiSocialFacebookCircular";
 });
 
-module TiSocialFacebook = MakeIcon({
+module TiSocialFacebook = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiSocialFacebook";
 });
 
-module TiSocialFlickrCircular = MakeIcon({
+module TiSocialFlickrCircular = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiSocialFlickrCircular";
 });
 
-module TiSocialFlickr = MakeIcon({
+module TiSocialFlickr = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiSocialFlickr";
 });
 
-module TiSocialGithubCircular = MakeIcon({
+module TiSocialGithubCircular = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiSocialGithubCircular";
 });
 
-module TiSocialGithub = MakeIcon({
+module TiSocialGithub = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiSocialGithub";
 });
 
-module TiSocialGooglePlusCircular = MakeIcon({
+module TiSocialGooglePlusCircular = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiSocialGooglePlusCircular";
 });
 
-module TiSocialGooglePlus = MakeIcon({
+module TiSocialGooglePlus = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiSocialGooglePlus";
 });
 
-module TiSocialInstagramCircular = MakeIcon({
+module TiSocialInstagramCircular = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiSocialInstagramCircular";
 });
 
-module TiSocialInstagram = MakeIcon({
+module TiSocialInstagram = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiSocialInstagram";
 });
 
-module TiSocialLastFmCircular = MakeIcon({
+module TiSocialLastFmCircular = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiSocialLastFmCircular";
 });
 
-module TiSocialLastFm = MakeIcon({
+module TiSocialLastFm = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiSocialLastFm";
 });
 
-module TiSocialLinkedinCircular = MakeIcon({
+module TiSocialLinkedinCircular = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiSocialLinkedinCircular";
 });
 
-module TiSocialLinkedin = MakeIcon({
+module TiSocialLinkedin = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiSocialLinkedin";
 });
 
-module TiSocialPinterestCircular = MakeIcon({
+module TiSocialPinterestCircular = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiSocialPinterestCircular";
 });
 
-module TiSocialPinterest = MakeIcon({
+module TiSocialPinterest = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiSocialPinterest";
 });
 
-module TiSocialSkypeOutline = MakeIcon({
+module TiSocialSkypeOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiSocialSkypeOutline";
 });
 
-module TiSocialSkype = MakeIcon({
+module TiSocialSkype = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiSocialSkype";
 });
 
-module TiSocialTumblerCircular = MakeIcon({
+module TiSocialTumblerCircular = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiSocialTumblerCircular";
 });
 
-module TiSocialTumbler = MakeIcon({
+module TiSocialTumbler = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiSocialTumbler";
 });
 
-module TiSocialTwitterCircular = MakeIcon({
+module TiSocialTwitterCircular = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiSocialTwitterCircular";
 });
 
-module TiSocialTwitter = MakeIcon({
+module TiSocialTwitter = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiSocialTwitter";
 });
 
-module TiSocialVimeoCircular = MakeIcon({
+module TiSocialVimeoCircular = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiSocialVimeoCircular";
 });
 
-module TiSocialVimeo = MakeIcon({
+module TiSocialVimeo = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiSocialVimeo";
 });
 
-module TiSocialYoutubeCircular = MakeIcon({
+module TiSocialYoutubeCircular = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiSocialYoutubeCircular";
 });
 
-module TiSocialYoutube = MakeIcon({
+module TiSocialYoutube = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiSocialYoutube";
 });
 
-module TiSortAlphabeticallyOutline = MakeIcon({
+module TiSortAlphabeticallyOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiSortAlphabeticallyOutline";
 });
 
-module TiSortAlphabetically = MakeIcon({
+module TiSortAlphabetically = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiSortAlphabetically";
 });
 
-module TiSortNumericallyOutline = MakeIcon({
+module TiSortNumericallyOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiSortNumericallyOutline";
 });
 
-module TiSortNumerically = MakeIcon({
+module TiSortNumerically = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiSortNumerically";
 });
 
-module TiSpannerOutline = MakeIcon({
+module TiSpannerOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiSpannerOutline";
 });
 
-module TiSpanner = MakeIcon({
+module TiSpanner = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiSpanner";
 });
 
-module TiSpiral = MakeIcon({
+module TiSpiral = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiSpiral";
 });
 
-module TiStarFullOutline = MakeIcon({
+module TiStarFullOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiStarFullOutline";
 });
 
-module TiStarHalfOutline = MakeIcon({
+module TiStarHalfOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiStarHalfOutline";
 });
 
-module TiStarHalf = MakeIcon({
+module TiStarHalf = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiStarHalf";
 });
 
-module TiStarOutline = MakeIcon({
+module TiStarOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiStarOutline";
 });
 
-module TiStar = MakeIcon({
+module TiStar = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiStar";
 });
 
-module TiStarburstOutline = MakeIcon({
+module TiStarburstOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiStarburstOutline";
 });
 
-module TiStarburst = MakeIcon({
+module TiStarburst = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiStarburst";
 });
 
-module TiStopwatch = MakeIcon({
+module TiStopwatch = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiStopwatch";
 });
 
-module TiSupport = MakeIcon({
+module TiSupport = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiSupport";
 });
 
-module TiTabsOutline = MakeIcon({
+module TiTabsOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiTabsOutline";
 });
 
-module TiTag = MakeIcon({
+module TiTag = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiTag";
 });
 
-module TiTags = MakeIcon({
+module TiTags = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiTags";
 });
 
-module TiThLargeOutline = MakeIcon({
+module TiThLargeOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiThLargeOutline";
 });
 
-module TiThLarge = MakeIcon({
+module TiThLarge = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiThLarge";
 });
 
-module TiThListOutline = MakeIcon({
+module TiThListOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiThListOutline";
 });
 
-module TiThList = MakeIcon({
+module TiThList = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiThList";
 });
 
-module TiThMenuOutline = MakeIcon({
+module TiThMenuOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiThMenuOutline";
 });
 
-module TiThMenu = MakeIcon({
+module TiThMenu = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiThMenu";
 });
 
-module TiThSmallOutline = MakeIcon({
+module TiThSmallOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiThSmallOutline";
 });
 
-module TiThSmall = MakeIcon({
+module TiThSmall = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiThSmall";
 });
 
-module TiThermometer = MakeIcon({
+module TiThermometer = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiThermometer";
 });
 
-module TiThumbsDown = MakeIcon({
+module TiThumbsDown = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiThumbsDown";
 });
 
-module TiThumbsOk = MakeIcon({
+module TiThumbsOk = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiThumbsOk";
 });
 
-module TiThumbsUp = MakeIcon({
+module TiThumbsUp = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiThumbsUp";
 });
 
-module TiTickOutline = MakeIcon({
+module TiTickOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiTickOutline";
 });
 
-module TiTick = MakeIcon({
+module TiTick = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiTick";
 });
 
-module TiTicket = MakeIcon({
+module TiTicket = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiTicket";
 });
 
-module TiTime = MakeIcon({
+module TiTime = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiTime";
 });
 
-module TiTimesOutline = MakeIcon({
+module TiTimesOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiTimesOutline";
 });
 
-module TiTimes = MakeIcon({
+module TiTimes = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiTimes";
 });
 
-module TiTrash = MakeIcon({
+module TiTrash = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiTrash";
 });
 
-module TiTree = MakeIcon({
+module TiTree = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiTree";
 });
 
-module TiUploadOutline = MakeIcon({
+module TiUploadOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiUploadOutline";
 });
 
-module TiUpload = MakeIcon({
+module TiUpload = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiUpload";
 });
 
-module TiUserAddOutline = MakeIcon({
+module TiUserAddOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiUserAddOutline";
 });
 
-module TiUserAdd = MakeIcon({
+module TiUserAdd = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiUserAdd";
 });
 
-module TiUserDeleteOutline = MakeIcon({
+module TiUserDeleteOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiUserDeleteOutline";
 });
 
-module TiUserDelete = MakeIcon({
+module TiUserDelete = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiUserDelete";
 });
 
-module TiUserOutline = MakeIcon({
+module TiUserOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiUserOutline";
 });
 
-module TiUser = MakeIcon({
+module TiUser = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiUser";
 });
 
-module TiVendorAndroid = MakeIcon({
+module TiVendorAndroid = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiVendorAndroid";
 });
 
-module TiVendorApple = MakeIcon({
+module TiVendorApple = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiVendorApple";
 });
 
-module TiVendorMicrosoft = MakeIcon({
+module TiVendorMicrosoft = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiVendorMicrosoft";
 });
 
-module TiVideoOutline = MakeIcon({
+module TiVideoOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiVideoOutline";
 });
 
-module TiVideo = MakeIcon({
+module TiVideo = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiVideo";
 });
 
-module TiVolumeDown = MakeIcon({
+module TiVolumeDown = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiVolumeDown";
 });
 
-module TiVolumeMute = MakeIcon({
+module TiVolumeMute = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiVolumeMute";
 });
 
-module TiVolumeUp = MakeIcon({
+module TiVolumeUp = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiVolumeUp";
 });
 
-module TiVolume = MakeIcon({
+module TiVolume = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiVolume";
 });
 
-module TiWarningOutline = MakeIcon({
+module TiWarningOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiWarningOutline";
 });
 
-module TiWarning = MakeIcon({
+module TiWarning = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiWarning";
 });
 
-module TiWatch = MakeIcon({
+module TiWatch = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiWatch";
 });
 
-module TiWavesOutline = MakeIcon({
+module TiWavesOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiWavesOutline";
 });
 
-module TiWaves = MakeIcon({
+module TiWaves = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiWaves";
 });
 
-module TiWeatherCloudy = MakeIcon({
+module TiWeatherCloudy = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiWeatherCloudy";
 });
 
-module TiWeatherDownpour = MakeIcon({
+module TiWeatherDownpour = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiWeatherDownpour";
 });
 
-module TiWeatherNight = MakeIcon({
+module TiWeatherNight = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiWeatherNight";
 });
 
-module TiWeatherPartlySunny = MakeIcon({
+module TiWeatherPartlySunny = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiWeatherPartlySunny";
 });
 
-module TiWeatherShower = MakeIcon({
+module TiWeatherShower = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiWeatherShower";
 });
 
-module TiWeatherSnow = MakeIcon({
+module TiWeatherSnow = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiWeatherSnow";
 });
 
-module TiWeatherStormy = MakeIcon({
+module TiWeatherStormy = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiWeatherStormy";
 });
 
-module TiWeatherSunny = MakeIcon({
+module TiWeatherSunny = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiWeatherSunny";
 });
 
-module TiWeatherWindyCloudy = MakeIcon({
+module TiWeatherWindyCloudy = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiWeatherWindyCloudy";
 });
 
-module TiWeatherWindy = MakeIcon({
+module TiWeatherWindy = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiWeatherWindy";
 });
 
-module TiWiFiOutline = MakeIcon({
+module TiWiFiOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiWiFiOutline";
 });
 
-module TiWiFi = MakeIcon({
+module TiWiFi = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiWiFi";
 });
 
-module TiWine = MakeIcon({
+module TiWine = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiWine";
 });
 
-module TiWorldOutline = MakeIcon({
+module TiWorldOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiWorldOutline";
 });
 
-module TiWorld = MakeIcon({
+module TiWorld = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiWorld";
 });
 
-module TiZoomInOutline = MakeIcon({
+module TiZoomInOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiZoomInOutline";
 });
 
-module TiZoomIn = MakeIcon({
+module TiZoomIn = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiZoomIn";
 });
 
-module TiZoomOutOutline = MakeIcon({
+module TiZoomOutOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiZoomOutOutline";
 });
 
-module TiZoomOut = MakeIcon({
+module TiZoomOut = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiZoomOut";
 });
 
-module TiZoomOutline = MakeIcon({
+module TiZoomOutline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiZoomOutline";
 });
 
-module TiZoom = MakeIcon({
+module TiZoom = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/ti"] 
   external reactClass : ReasonReact.reactClass = "TiZoom";
 });
 
-module GoAlert = MakeIcon({
+module GoAlert = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoAlert";
 });
 
-module GoArchive = MakeIcon({
+module GoArchive = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoArchive";
 });
 
-module GoArrowDown = MakeIcon({
+module GoArrowDown = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoArrowDown";
 });
 
-module GoArrowLeft = MakeIcon({
+module GoArrowLeft = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoArrowLeft";
 });
 
-module GoArrowRight = MakeIcon({
+module GoArrowRight = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoArrowRight";
 });
 
-module GoArrowSmallDown = MakeIcon({
+module GoArrowSmallDown = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoArrowSmallDown";
 });
 
-module GoArrowSmallLeft = MakeIcon({
+module GoArrowSmallLeft = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoArrowSmallLeft";
 });
 
-module GoArrowSmallRight = MakeIcon({
+module GoArrowSmallRight = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoArrowSmallRight";
 });
 
-module GoArrowSmallUp = MakeIcon({
+module GoArrowSmallUp = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoArrowSmallUp";
 });
 
-module GoArrowUp = MakeIcon({
+module GoArrowUp = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoArrowUp";
 });
 
-module GoBeaker = MakeIcon({
+module GoBeaker = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoBeaker";
 });
 
-module GoBell = MakeIcon({
+module GoBell = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoBell";
 });
 
-module GoBold = MakeIcon({
+module GoBold = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoBold";
 });
 
-module GoBook = MakeIcon({
+module GoBook = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoBook";
 });
 
-module GoBookmark = MakeIcon({
+module GoBookmark = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoBookmark";
 });
 
-module GoBriefcase = MakeIcon({
+module GoBriefcase = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoBriefcase";
 });
 
-module GoBroadcast = MakeIcon({
+module GoBroadcast = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoBroadcast";
 });
 
-module GoBrowser = MakeIcon({
+module GoBrowser = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoBrowser";
 });
 
-module GoBug = MakeIcon({
+module GoBug = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoBug";
 });
 
-module GoCalendar = MakeIcon({
+module GoCalendar = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoCalendar";
 });
 
-module GoCheck = MakeIcon({
+module GoCheck = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoCheck";
 });
 
-module GoChecklist = MakeIcon({
+module GoChecklist = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoChecklist";
 });
 
-module GoChevronDown = MakeIcon({
+module GoChevronDown = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoChevronDown";
 });
 
-module GoChevronLeft = MakeIcon({
+module GoChevronLeft = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoChevronLeft";
 });
 
-module GoChevronRight = MakeIcon({
+module GoChevronRight = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoChevronRight";
 });
 
-module GoChevronUp = MakeIcon({
+module GoChevronUp = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoChevronUp";
 });
 
-module GoCircleSlash = MakeIcon({
+module GoCircleSlash = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoCircleSlash";
 });
 
-module GoCircuitBoard = MakeIcon({
+module GoCircuitBoard = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoCircuitBoard";
 });
 
-module GoClippy = MakeIcon({
+module GoClippy = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoClippy";
 });
 
-module GoClock = MakeIcon({
+module GoClock = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoClock";
 });
 
-module GoCloudDownload = MakeIcon({
+module GoCloudDownload = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoCloudDownload";
 });
 
-module GoCloudUpload = MakeIcon({
+module GoCloudUpload = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoCloudUpload";
 });
 
-module GoCode = MakeIcon({
+module GoCode = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoCode";
 });
 
-module GoCommentDiscussion = MakeIcon({
+module GoCommentDiscussion = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoCommentDiscussion";
 });
 
-module GoComment = MakeIcon({
+module GoComment = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoComment";
 });
 
-module GoCreditCard = MakeIcon({
+module GoCreditCard = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoCreditCard";
 });
 
-module GoDash = MakeIcon({
+module GoDash = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoDash";
 });
 
-module GoDashboard = MakeIcon({
+module GoDashboard = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoDashboard";
 });
 
-module GoDatabase = MakeIcon({
+module GoDatabase = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoDatabase";
 });
 
-module GoDesktopDownload = MakeIcon({
+module GoDesktopDownload = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoDesktopDownload";
 });
 
-module GoDeviceCameraVideo = MakeIcon({
+module GoDeviceCameraVideo = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoDeviceCameraVideo";
 });
 
-module GoDeviceCamera = MakeIcon({
+module GoDeviceCamera = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoDeviceCamera";
 });
 
-module GoDeviceDesktop = MakeIcon({
+module GoDeviceDesktop = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoDeviceDesktop";
 });
 
-module GoDeviceMobile = MakeIcon({
+module GoDeviceMobile = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoDeviceMobile";
 });
 
-module GoDiffAdded = MakeIcon({
+module GoDiffAdded = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoDiffAdded";
 });
 
-module GoDiffIgnored = MakeIcon({
+module GoDiffIgnored = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoDiffIgnored";
 });
 
-module GoDiffModified = MakeIcon({
+module GoDiffModified = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoDiffModified";
 });
 
-module GoDiffRemoved = MakeIcon({
+module GoDiffRemoved = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoDiffRemoved";
 });
 
-module GoDiffRenamed = MakeIcon({
+module GoDiffRenamed = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoDiffRenamed";
 });
 
-module GoDiff = MakeIcon({
+module GoDiff = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoDiff";
 });
 
-module GoEllipsis = MakeIcon({
+module GoEllipsis = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoEllipsis";
 });
 
-module GoEye = MakeIcon({
+module GoEye = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoEye";
 });
 
-module GoFileBinary = MakeIcon({
+module GoFileBinary = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoFileBinary";
 });
 
-module GoFileCode = MakeIcon({
+module GoFileCode = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoFileCode";
 });
 
-module GoFileDirectory = MakeIcon({
+module GoFileDirectory = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoFileDirectory";
 });
 
-module GoFileMedia = MakeIcon({
+module GoFileMedia = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoFileMedia";
 });
 
-module GoFilePdf = MakeIcon({
+module GoFilePdf = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoFilePdf";
 });
 
-module GoFileSubmodule = MakeIcon({
+module GoFileSubmodule = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoFileSubmodule";
 });
 
-module GoFileSymlinkDirectory = MakeIcon({
+module GoFileSymlinkDirectory = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoFileSymlinkDirectory";
 });
 
-module GoFileSymlinkFile = MakeIcon({
+module GoFileSymlinkFile = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoFileSymlinkFile";
 });
 
-module GoFileZip = MakeIcon({
+module GoFileZip = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoFileZip";
 });
 
-module GoFile = MakeIcon({
+module GoFile = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoFile";
 });
 
-module GoFlame = MakeIcon({
+module GoFlame = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoFlame";
 });
 
-module GoFold = MakeIcon({
+module GoFold = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoFold";
 });
 
-module GoGear = MakeIcon({
+module GoGear = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoGear";
 });
 
-module GoGift = MakeIcon({
+module GoGift = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoGift";
 });
 
-module GoGistSecret = MakeIcon({
+module GoGistSecret = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoGistSecret";
 });
 
-module GoGist = MakeIcon({
+module GoGist = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoGist";
 });
 
-module GoGitBranch = MakeIcon({
+module GoGitBranch = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoGitBranch";
 });
 
-module GoGitCommit = MakeIcon({
+module GoGitCommit = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoGitCommit";
 });
 
-module GoGitCompare = MakeIcon({
+module GoGitCompare = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoGitCompare";
 });
 
-module GoGitMerge = MakeIcon({
+module GoGitMerge = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoGitMerge";
 });
 
-module GoGitPullRequest = MakeIcon({
+module GoGitPullRequest = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoGitPullRequest";
 });
 
-module GoGlobe = MakeIcon({
+module GoGlobe = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoGlobe";
 });
 
-module GoGrabber = MakeIcon({
+module GoGrabber = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoGrabber";
 });
 
-module GoGraph = MakeIcon({
+module GoGraph = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoGraph";
 });
 
-module GoHeart = MakeIcon({
+module GoHeart = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoHeart";
 });
 
-module GoHistory = MakeIcon({
+module GoHistory = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoHistory";
 });
 
-module GoHome = MakeIcon({
+module GoHome = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoHome";
 });
 
-module GoHorizontalRule = MakeIcon({
+module GoHorizontalRule = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoHorizontalRule";
 });
 
-module GoHubot = MakeIcon({
+module GoHubot = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoHubot";
 });
 
-module GoInbox = MakeIcon({
+module GoInbox = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoInbox";
 });
 
-module GoInfo = MakeIcon({
+module GoInfo = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoInfo";
 });
 
-module GoIssueClosed = MakeIcon({
+module GoIssueClosed = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoIssueClosed";
 });
 
-module GoIssueOpened = MakeIcon({
+module GoIssueOpened = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoIssueOpened";
 });
 
-module GoIssueReopened = MakeIcon({
+module GoIssueReopened = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoIssueReopened";
 });
 
-module GoItalic = MakeIcon({
+module GoItalic = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoItalic";
 });
 
-module GoJersey = MakeIcon({
+module GoJersey = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoJersey";
 });
 
-module GoKebabHorizontal = MakeIcon({
+module GoKebabHorizontal = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoKebabHorizontal";
 });
 
-module GoKebabVertical = MakeIcon({
+module GoKebabVertical = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoKebabVertical";
 });
 
-module GoKey = MakeIcon({
+module GoKey = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoKey";
 });
 
-module GoKeyboard = MakeIcon({
+module GoKeyboard = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoKeyboard";
 });
 
-module GoLaw = MakeIcon({
+module GoLaw = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoLaw";
 });
 
-module GoLightBulb = MakeIcon({
+module GoLightBulb = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoLightBulb";
 });
 
-module GoLinkExternal = MakeIcon({
+module GoLinkExternal = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoLinkExternal";
 });
 
-module GoLink = MakeIcon({
+module GoLink = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoLink";
 });
 
-module GoListOrdered = MakeIcon({
+module GoListOrdered = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoListOrdered";
 });
 
-module GoListUnordered = MakeIcon({
+module GoListUnordered = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoListUnordered";
 });
 
-module GoLocation = MakeIcon({
+module GoLocation = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoLocation";
 });
 
-module GoLock = MakeIcon({
+module GoLock = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoLock";
 });
 
-module GoLogoGist = MakeIcon({
+module GoLogoGist = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoLogoGist";
 });
 
-module GoLogoGithub = MakeIcon({
+module GoLogoGithub = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoLogoGithub";
 });
 
-module GoMailRead = MakeIcon({
+module GoMailRead = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoMailRead";
 });
 
-module GoMail = MakeIcon({
+module GoMail = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoMail";
 });
 
-module GoMarkGithub = MakeIcon({
+module GoMarkGithub = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoMarkGithub";
 });
 
-module GoMarkdown = MakeIcon({
+module GoMarkdown = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoMarkdown";
 });
 
-module GoMegaphone = MakeIcon({
+module GoMegaphone = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoMegaphone";
 });
 
-module GoMention = MakeIcon({
+module GoMention = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoMention";
 });
 
-module GoMilestone = MakeIcon({
+module GoMilestone = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoMilestone";
 });
 
-module GoMirror = MakeIcon({
+module GoMirror = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoMirror";
 });
 
-module GoMortarBoard = MakeIcon({
+module GoMortarBoard = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoMortarBoard";
 });
 
-module GoMute = MakeIcon({
+module GoMute = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoMute";
 });
 
-module GoNoNewline = MakeIcon({
+module GoNoNewline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoNoNewline";
 });
 
-module GoNote = MakeIcon({
+module GoNote = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoNote";
 });
 
-module GoOctoface = MakeIcon({
+module GoOctoface = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoOctoface";
 });
 
-module GoOrganization = MakeIcon({
+module GoOrganization = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoOrganization";
 });
 
-module GoPackage = MakeIcon({
+module GoPackage = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoPackage";
 });
 
-module GoPaintcan = MakeIcon({
+module GoPaintcan = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoPaintcan";
 });
 
-module GoPencil = MakeIcon({
+module GoPencil = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoPencil";
 });
 
-module GoPerson = MakeIcon({
+module GoPerson = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoPerson";
 });
 
-module GoPin = MakeIcon({
+module GoPin = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoPin";
 });
 
-module GoPlug = MakeIcon({
+module GoPlug = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoPlug";
 });
 
-module GoPlusSmall = MakeIcon({
+module GoPlusSmall = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoPlusSmall";
 });
 
-module GoPlus = MakeIcon({
+module GoPlus = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoPlus";
 });
 
-module GoPrimitiveDot = MakeIcon({
+module GoPrimitiveDot = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoPrimitiveDot";
 });
 
-module GoPrimitiveSquare = MakeIcon({
+module GoPrimitiveSquare = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoPrimitiveSquare";
 });
 
-module GoProject = MakeIcon({
+module GoProject = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoProject";
 });
 
-module GoPulse = MakeIcon({
+module GoPulse = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoPulse";
 });
 
-module GoQuestion = MakeIcon({
+module GoQuestion = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoQuestion";
 });
 
-module GoQuote = MakeIcon({
+module GoQuote = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoQuote";
 });
 
-module GoRadioTower = MakeIcon({
+module GoRadioTower = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoRadioTower";
 });
 
-module GoReply = MakeIcon({
+module GoReply = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoReply";
 });
 
-module GoRepoClone = MakeIcon({
+module GoRepoClone = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoRepoClone";
 });
 
-module GoRepoForcePush = MakeIcon({
+module GoRepoForcePush = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoRepoForcePush";
 });
 
-module GoRepoForked = MakeIcon({
+module GoRepoForked = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoRepoForked";
 });
 
-module GoRepoPull = MakeIcon({
+module GoRepoPull = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoRepoPull";
 });
 
-module GoRepoPush = MakeIcon({
+module GoRepoPush = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoRepoPush";
 });
 
-module GoRepo = MakeIcon({
+module GoRepo = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoRepo";
 });
 
-module GoReport = MakeIcon({
+module GoReport = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoReport";
 });
 
-module GoRocket = MakeIcon({
+module GoRocket = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoRocket";
 });
 
-module GoRss = MakeIcon({
+module GoRss = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoRss";
 });
 
-module GoRuby = MakeIcon({
+module GoRuby = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoRuby";
 });
 
-module GoScreenFull = MakeIcon({
+module GoScreenFull = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoScreenFull";
 });
 
-module GoScreenNormal = MakeIcon({
+module GoScreenNormal = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoScreenNormal";
 });
 
-module GoSearch = MakeIcon({
+module GoSearch = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoSearch";
 });
 
-module GoServer = MakeIcon({
+module GoServer = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoServer";
 });
 
-module GoSettings = MakeIcon({
+module GoSettings = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoSettings";
 });
 
-module GoShield = MakeIcon({
+module GoShield = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoShield";
 });
 
-module GoSignIn = MakeIcon({
+module GoSignIn = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoSignIn";
 });
 
-module GoSignOut = MakeIcon({
+module GoSignOut = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoSignOut";
 });
 
-module GoSmiley = MakeIcon({
+module GoSmiley = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoSmiley";
 });
 
-module GoSquirrel = MakeIcon({
+module GoSquirrel = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoSquirrel";
 });
 
-module GoStar = MakeIcon({
+module GoStar = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoStar";
 });
 
-module GoStop = MakeIcon({
+module GoStop = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoStop";
 });
 
-module GoSync = MakeIcon({
+module GoSync = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoSync";
 });
 
-module GoTag = MakeIcon({
+module GoTag = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoTag";
 });
 
-module GoTasklist = MakeIcon({
+module GoTasklist = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoTasklist";
 });
 
-module GoTelescope = MakeIcon({
+module GoTelescope = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoTelescope";
 });
 
-module GoTerminal = MakeIcon({
+module GoTerminal = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoTerminal";
 });
 
-module GoTextSize = MakeIcon({
+module GoTextSize = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoTextSize";
 });
 
-module GoThreeBars = MakeIcon({
+module GoThreeBars = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoThreeBars";
 });
 
-module GoThumbsdown = MakeIcon({
+module GoThumbsdown = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoThumbsdown";
 });
 
-module GoThumbsup = MakeIcon({
+module GoThumbsup = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoThumbsup";
 });
 
-module GoTools = MakeIcon({
+module GoTools = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoTools";
 });
 
-module GoTrashcan = MakeIcon({
+module GoTrashcan = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoTrashcan";
 });
 
-module GoTriangleDown = MakeIcon({
+module GoTriangleDown = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoTriangleDown";
 });
 
-module GoTriangleLeft = MakeIcon({
+module GoTriangleLeft = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoTriangleLeft";
 });
 
-module GoTriangleRight = MakeIcon({
+module GoTriangleRight = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoTriangleRight";
 });
 
-module GoTriangleUp = MakeIcon({
+module GoTriangleUp = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoTriangleUp";
 });
 
-module GoUnfold = MakeIcon({
+module GoUnfold = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoUnfold";
 });
 
-module GoUnmute = MakeIcon({
+module GoUnmute = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoUnmute";
 });
 
-module GoUnverified = MakeIcon({
+module GoUnverified = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoUnverified";
 });
 
-module GoVerified = MakeIcon({
+module GoVerified = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoVerified";
 });
 
-module GoVersions = MakeIcon({
+module GoVersions = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoVersions";
 });
 
-module GoWatch = MakeIcon({
+module GoWatch = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoWatch";
 });
 
-module GoX = MakeIcon({
+module GoX = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoX";
 });
 
-module GoZap = MakeIcon({
+module GoZap = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/go"] 
   external reactClass : ReasonReact.reactClass = "GoZap";
 });
 
-module FiActivity = MakeIcon({
+module FiActivity = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiActivity";
 });
 
-module FiAirplay = MakeIcon({
+module FiAirplay = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiAirplay";
 });
 
-module FiAlertCircle = MakeIcon({
+module FiAlertCircle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiAlertCircle";
 });
 
-module FiAlertOctagon = MakeIcon({
+module FiAlertOctagon = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiAlertOctagon";
 });
 
-module FiAlertTriangle = MakeIcon({
+module FiAlertTriangle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiAlertTriangle";
 });
 
-module FiAlignCenter = MakeIcon({
+module FiAlignCenter = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiAlignCenter";
 });
 
-module FiAlignJustify = MakeIcon({
+module FiAlignJustify = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiAlignJustify";
 });
 
-module FiAlignLeft = MakeIcon({
+module FiAlignLeft = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiAlignLeft";
 });
 
-module FiAlignRight = MakeIcon({
+module FiAlignRight = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiAlignRight";
 });
 
-module FiAnchor = MakeIcon({
+module FiAnchor = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiAnchor";
 });
 
-module FiAperture = MakeIcon({
+module FiAperture = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiAperture";
 });
 
-module FiArchive = MakeIcon({
+module FiArchive = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiArchive";
 });
 
-module FiArrowDownCircle = MakeIcon({
+module FiArrowDownCircle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiArrowDownCircle";
 });
 
-module FiArrowDownLeft = MakeIcon({
+module FiArrowDownLeft = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiArrowDownLeft";
 });
 
-module FiArrowDownRight = MakeIcon({
+module FiArrowDownRight = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiArrowDownRight";
 });
 
-module FiArrowDown = MakeIcon({
+module FiArrowDown = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiArrowDown";
 });
 
-module FiArrowLeftCircle = MakeIcon({
+module FiArrowLeftCircle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiArrowLeftCircle";
 });
 
-module FiArrowLeft = MakeIcon({
+module FiArrowLeft = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiArrowLeft";
 });
 
-module FiArrowRightCircle = MakeIcon({
+module FiArrowRightCircle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiArrowRightCircle";
 });
 
-module FiArrowRight = MakeIcon({
+module FiArrowRight = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiArrowRight";
 });
 
-module FiArrowUpCircle = MakeIcon({
+module FiArrowUpCircle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiArrowUpCircle";
 });
 
-module FiArrowUpLeft = MakeIcon({
+module FiArrowUpLeft = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiArrowUpLeft";
 });
 
-module FiArrowUpRight = MakeIcon({
+module FiArrowUpRight = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiArrowUpRight";
 });
 
-module FiArrowUp = MakeIcon({
+module FiArrowUp = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiArrowUp";
 });
 
-module FiAtSign = MakeIcon({
+module FiAtSign = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiAtSign";
 });
 
-module FiAward = MakeIcon({
+module FiAward = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiAward";
 });
 
-module FiBarChart2 = MakeIcon({
+module FiBarChart2 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiBarChart2";
 });
 
-module FiBarChart = MakeIcon({
+module FiBarChart = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiBarChart";
 });
 
-module FiBatteryCharging = MakeIcon({
+module FiBatteryCharging = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiBatteryCharging";
 });
 
-module FiBattery = MakeIcon({
+module FiBattery = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiBattery";
 });
 
-module FiBellOff = MakeIcon({
+module FiBellOff = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiBellOff";
 });
 
-module FiBell = MakeIcon({
+module FiBell = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiBell";
 });
 
-module FiBluetooth = MakeIcon({
+module FiBluetooth = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiBluetooth";
 });
 
-module FiBold = MakeIcon({
+module FiBold = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiBold";
 });
 
-module FiBookOpen = MakeIcon({
+module FiBookOpen = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiBookOpen";
 });
 
-module FiBook = MakeIcon({
+module FiBook = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiBook";
 });
 
-module FiBookmark = MakeIcon({
+module FiBookmark = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiBookmark";
 });
 
-module FiBox = MakeIcon({
+module FiBox = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiBox";
 });
 
-module FiBriefcase = MakeIcon({
+module FiBriefcase = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiBriefcase";
 });
 
-module FiCalendar = MakeIcon({
+module FiCalendar = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiCalendar";
 });
 
-module FiCameraOff = MakeIcon({
+module FiCameraOff = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiCameraOff";
 });
 
-module FiCamera = MakeIcon({
+module FiCamera = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiCamera";
 });
 
-module FiCast = MakeIcon({
+module FiCast = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiCast";
 });
 
-module FiCheckCircle = MakeIcon({
+module FiCheckCircle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiCheckCircle";
 });
 
-module FiCheckSquare = MakeIcon({
+module FiCheckSquare = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiCheckSquare";
 });
 
-module FiCheck = MakeIcon({
+module FiCheck = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiCheck";
 });
 
-module FiChevronDown = MakeIcon({
+module FiChevronDown = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiChevronDown";
 });
 
-module FiChevronLeft = MakeIcon({
+module FiChevronLeft = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiChevronLeft";
 });
 
-module FiChevronRight = MakeIcon({
+module FiChevronRight = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiChevronRight";
 });
 
-module FiChevronUp = MakeIcon({
+module FiChevronUp = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiChevronUp";
 });
 
-module FiChevronsDown = MakeIcon({
+module FiChevronsDown = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiChevronsDown";
 });
 
-module FiChevronsLeft = MakeIcon({
+module FiChevronsLeft = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiChevronsLeft";
 });
 
-module FiChevronsRight = MakeIcon({
+module FiChevronsRight = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiChevronsRight";
 });
 
-module FiChevronsUp = MakeIcon({
+module FiChevronsUp = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiChevronsUp";
 });
 
-module FiChrome = MakeIcon({
+module FiChrome = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiChrome";
 });
 
-module FiCircle = MakeIcon({
+module FiCircle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiCircle";
 });
 
-module FiClipboard = MakeIcon({
+module FiClipboard = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiClipboard";
 });
 
-module FiClock = MakeIcon({
+module FiClock = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiClock";
 });
 
-module FiCloudDrizzle = MakeIcon({
+module FiCloudDrizzle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiCloudDrizzle";
 });
 
-module FiCloudLightning = MakeIcon({
+module FiCloudLightning = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiCloudLightning";
 });
 
-module FiCloudOff = MakeIcon({
+module FiCloudOff = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiCloudOff";
 });
 
-module FiCloudRain = MakeIcon({
+module FiCloudRain = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiCloudRain";
 });
 
-module FiCloudSnow = MakeIcon({
+module FiCloudSnow = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiCloudSnow";
 });
 
-module FiCloud = MakeIcon({
+module FiCloud = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiCloud";
 });
 
-module FiCode = MakeIcon({
+module FiCode = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiCode";
 });
 
-module FiCodepen = MakeIcon({
+module FiCodepen = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiCodepen";
 });
 
-module FiCommand = MakeIcon({
+module FiCommand = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiCommand";
 });
 
-module FiCompass = MakeIcon({
+module FiCompass = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiCompass";
 });
 
-module FiCopy = MakeIcon({
+module FiCopy = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiCopy";
 });
 
-module FiCornerDownLeft = MakeIcon({
+module FiCornerDownLeft = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiCornerDownLeft";
 });
 
-module FiCornerDownRight = MakeIcon({
+module FiCornerDownRight = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiCornerDownRight";
 });
 
-module FiCornerLeftDown = MakeIcon({
+module FiCornerLeftDown = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiCornerLeftDown";
 });
 
-module FiCornerLeftUp = MakeIcon({
+module FiCornerLeftUp = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiCornerLeftUp";
 });
 
-module FiCornerRightDown = MakeIcon({
+module FiCornerRightDown = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiCornerRightDown";
 });
 
-module FiCornerRightUp = MakeIcon({
+module FiCornerRightUp = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiCornerRightUp";
 });
 
-module FiCornerUpLeft = MakeIcon({
+module FiCornerUpLeft = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiCornerUpLeft";
 });
 
-module FiCornerUpRight = MakeIcon({
+module FiCornerUpRight = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiCornerUpRight";
 });
 
-module FiCpu = MakeIcon({
+module FiCpu = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiCpu";
 });
 
-module FiCreditCard = MakeIcon({
+module FiCreditCard = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiCreditCard";
 });
 
-module FiCrop = MakeIcon({
+module FiCrop = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiCrop";
 });
 
-module FiCrosshair = MakeIcon({
+module FiCrosshair = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiCrosshair";
 });
 
-module FiDatabase = MakeIcon({
+module FiDatabase = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiDatabase";
 });
 
-module FiDelete = MakeIcon({
+module FiDelete = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiDelete";
 });
 
-module FiDisc = MakeIcon({
+module FiDisc = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiDisc";
 });
 
-module FiDollarSign = MakeIcon({
+module FiDollarSign = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiDollarSign";
 });
 
-module FiDownloadCloud = MakeIcon({
+module FiDownloadCloud = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiDownloadCloud";
 });
 
-module FiDownload = MakeIcon({
+module FiDownload = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiDownload";
 });
 
-module FiDroplet = MakeIcon({
+module FiDroplet = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiDroplet";
 });
 
-module FiEdit2 = MakeIcon({
+module FiEdit2 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiEdit2";
 });
 
-module FiEdit3 = MakeIcon({
+module FiEdit3 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiEdit3";
 });
 
-module FiEdit = MakeIcon({
+module FiEdit = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiEdit";
 });
 
-module FiExternalLink = MakeIcon({
+module FiExternalLink = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiExternalLink";
 });
 
-module FiEyeOff = MakeIcon({
+module FiEyeOff = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiEyeOff";
 });
 
-module FiEye = MakeIcon({
+module FiEye = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiEye";
 });
 
-module FiFacebook = MakeIcon({
+module FiFacebook = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiFacebook";
 });
 
-module FiFastForward = MakeIcon({
+module FiFastForward = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiFastForward";
 });
 
-module FiFeather = MakeIcon({
+module FiFeather = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiFeather";
 });
 
-module FiFileMinus = MakeIcon({
+module FiFileMinus = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiFileMinus";
 });
 
-module FiFilePlus = MakeIcon({
+module FiFilePlus = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiFilePlus";
 });
 
-module FiFileText = MakeIcon({
+module FiFileText = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiFileText";
 });
 
-module FiFile = MakeIcon({
+module FiFile = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiFile";
 });
 
-module FiFilm = MakeIcon({
+module FiFilm = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiFilm";
 });
 
-module FiFilter = MakeIcon({
+module FiFilter = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiFilter";
 });
 
-module FiFlag = MakeIcon({
+module FiFlag = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiFlag";
 });
 
-module FiFolderMinus = MakeIcon({
+module FiFolderMinus = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiFolderMinus";
 });
 
-module FiFolderPlus = MakeIcon({
+module FiFolderPlus = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiFolderPlus";
 });
 
-module FiFolder = MakeIcon({
+module FiFolder = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiFolder";
 });
 
-module FiGift = MakeIcon({
+module FiGift = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiGift";
 });
 
-module FiGitBranch = MakeIcon({
+module FiGitBranch = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiGitBranch";
 });
 
-module FiGitCommit = MakeIcon({
+module FiGitCommit = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiGitCommit";
 });
 
-module FiGitMerge = MakeIcon({
+module FiGitMerge = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiGitMerge";
 });
 
-module FiGitPullRequest = MakeIcon({
+module FiGitPullRequest = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiGitPullRequest";
 });
 
-module FiGithub = MakeIcon({
+module FiGithub = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiGithub";
 });
 
-module FiGitlab = MakeIcon({
+module FiGitlab = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiGitlab";
 });
 
-module FiGlobe = MakeIcon({
+module FiGlobe = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiGlobe";
 });
 
-module FiGrid = MakeIcon({
+module FiGrid = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiGrid";
 });
 
-module FiHardDrive = MakeIcon({
+module FiHardDrive = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiHardDrive";
 });
 
-module FiHash = MakeIcon({
+module FiHash = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiHash";
 });
 
-module FiHeadphones = MakeIcon({
+module FiHeadphones = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiHeadphones";
 });
 
-module FiHeart = MakeIcon({
+module FiHeart = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiHeart";
 });
 
-module FiHelpCircle = MakeIcon({
+module FiHelpCircle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiHelpCircle";
 });
 
-module FiHome = MakeIcon({
+module FiHome = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiHome";
 });
 
-module FiImage = MakeIcon({
+module FiImage = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiImage";
 });
 
-module FiInbox = MakeIcon({
+module FiInbox = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiInbox";
 });
 
-module FiInfo = MakeIcon({
+module FiInfo = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiInfo";
 });
 
-module FiInstagram = MakeIcon({
+module FiInstagram = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiInstagram";
 });
 
-module FiItalic = MakeIcon({
+module FiItalic = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiItalic";
 });
 
-module FiLayers = MakeIcon({
+module FiLayers = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiLayers";
 });
 
-module FiLayout = MakeIcon({
+module FiLayout = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiLayout";
 });
 
-module FiLifeBuoy = MakeIcon({
+module FiLifeBuoy = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiLifeBuoy";
 });
 
-module FiLink2 = MakeIcon({
+module FiLink2 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiLink2";
 });
 
-module FiLink = MakeIcon({
+module FiLink = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiLink";
 });
 
-module FiLinkedin = MakeIcon({
+module FiLinkedin = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiLinkedin";
 });
 
-module FiList = MakeIcon({
+module FiList = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiList";
 });
 
-module FiLoader = MakeIcon({
+module FiLoader = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiLoader";
 });
 
-module FiLock = MakeIcon({
+module FiLock = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiLock";
 });
 
-module FiLogIn = MakeIcon({
+module FiLogIn = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiLogIn";
 });
 
-module FiLogOut = MakeIcon({
+module FiLogOut = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiLogOut";
 });
 
-module FiMail = MakeIcon({
+module FiMail = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiMail";
 });
 
-module FiMapPin = MakeIcon({
+module FiMapPin = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiMapPin";
 });
 
-module FiMap = MakeIcon({
+module FiMap = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiMap";
 });
 
-module FiMaximize2 = MakeIcon({
+module FiMaximize2 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiMaximize2";
 });
 
-module FiMaximize = MakeIcon({
+module FiMaximize = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiMaximize";
 });
 
-module FiMenu = MakeIcon({
+module FiMenu = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiMenu";
 });
 
-module FiMessageCircle = MakeIcon({
+module FiMessageCircle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiMessageCircle";
 });
 
-module FiMessageSquare = MakeIcon({
+module FiMessageSquare = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiMessageSquare";
 });
 
-module FiMicOff = MakeIcon({
+module FiMicOff = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiMicOff";
 });
 
-module FiMic = MakeIcon({
+module FiMic = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiMic";
 });
 
-module FiMinimize2 = MakeIcon({
+module FiMinimize2 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiMinimize2";
 });
 
-module FiMinimize = MakeIcon({
+module FiMinimize = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiMinimize";
 });
 
-module FiMinusCircle = MakeIcon({
+module FiMinusCircle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiMinusCircle";
 });
 
-module FiMinusSquare = MakeIcon({
+module FiMinusSquare = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiMinusSquare";
 });
 
-module FiMinus = MakeIcon({
+module FiMinus = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiMinus";
 });
 
-module FiMonitor = MakeIcon({
+module FiMonitor = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiMonitor";
 });
 
-module FiMoon = MakeIcon({
+module FiMoon = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiMoon";
 });
 
-module FiMoreHorizontal = MakeIcon({
+module FiMoreHorizontal = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiMoreHorizontal";
 });
 
-module FiMoreVertical = MakeIcon({
+module FiMoreVertical = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiMoreVertical";
 });
 
-module FiMove = MakeIcon({
+module FiMove = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiMove";
 });
 
-module FiMusic = MakeIcon({
+module FiMusic = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiMusic";
 });
 
-module FiNavigation2 = MakeIcon({
+module FiNavigation2 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiNavigation2";
 });
 
-module FiNavigation = MakeIcon({
+module FiNavigation = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiNavigation";
 });
 
-module FiOctagon = MakeIcon({
+module FiOctagon = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiOctagon";
 });
 
-module FiPackage = MakeIcon({
+module FiPackage = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiPackage";
 });
 
-module FiPaperclip = MakeIcon({
+module FiPaperclip = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiPaperclip";
 });
 
-module FiPauseCircle = MakeIcon({
+module FiPauseCircle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiPauseCircle";
 });
 
-module FiPause = MakeIcon({
+module FiPause = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiPause";
 });
 
-module FiPercent = MakeIcon({
+module FiPercent = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiPercent";
 });
 
-module FiPhoneCall = MakeIcon({
+module FiPhoneCall = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiPhoneCall";
 });
 
-module FiPhoneForwarded = MakeIcon({
+module FiPhoneForwarded = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiPhoneForwarded";
 });
 
-module FiPhoneIncoming = MakeIcon({
+module FiPhoneIncoming = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiPhoneIncoming";
 });
 
-module FiPhoneMissed = MakeIcon({
+module FiPhoneMissed = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiPhoneMissed";
 });
 
-module FiPhoneOff = MakeIcon({
+module FiPhoneOff = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiPhoneOff";
 });
 
-module FiPhoneOutgoing = MakeIcon({
+module FiPhoneOutgoing = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiPhoneOutgoing";
 });
 
-module FiPhone = MakeIcon({
+module FiPhone = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiPhone";
 });
 
-module FiPieChart = MakeIcon({
+module FiPieChart = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiPieChart";
 });
 
-module FiPlayCircle = MakeIcon({
+module FiPlayCircle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiPlayCircle";
 });
 
-module FiPlay = MakeIcon({
+module FiPlay = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiPlay";
 });
 
-module FiPlusCircle = MakeIcon({
+module FiPlusCircle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiPlusCircle";
 });
 
-module FiPlusSquare = MakeIcon({
+module FiPlusSquare = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiPlusSquare";
 });
 
-module FiPlus = MakeIcon({
+module FiPlus = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiPlus";
 });
 
-module FiPocket = MakeIcon({
+module FiPocket = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiPocket";
 });
 
-module FiPower = MakeIcon({
+module FiPower = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiPower";
 });
 
-module FiPrinter = MakeIcon({
+module FiPrinter = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiPrinter";
 });
 
-module FiRadio = MakeIcon({
+module FiRadio = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiRadio";
 });
 
-module FiRefreshCcw = MakeIcon({
+module FiRefreshCcw = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiRefreshCcw";
 });
 
-module FiRefreshCw = MakeIcon({
+module FiRefreshCw = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiRefreshCw";
 });
 
-module FiRepeat = MakeIcon({
+module FiRepeat = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiRepeat";
 });
 
-module FiRewind = MakeIcon({
+module FiRewind = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiRewind";
 });
 
-module FiRotateCcw = MakeIcon({
+module FiRotateCcw = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiRotateCcw";
 });
 
-module FiRotateCw = MakeIcon({
+module FiRotateCw = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiRotateCw";
 });
 
-module FiRss = MakeIcon({
+module FiRss = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiRss";
 });
 
-module FiSave = MakeIcon({
+module FiSave = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiSave";
 });
 
-module FiScissors = MakeIcon({
+module FiScissors = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiScissors";
 });
 
-module FiSearch = MakeIcon({
+module FiSearch = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiSearch";
 });
 
-module FiSend = MakeIcon({
+module FiSend = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiSend";
 });
 
-module FiServer = MakeIcon({
+module FiServer = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiServer";
 });
 
-module FiSettings = MakeIcon({
+module FiSettings = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiSettings";
 });
 
-module FiShare2 = MakeIcon({
+module FiShare2 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiShare2";
 });
 
-module FiShare = MakeIcon({
+module FiShare = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiShare";
 });
 
-module FiShieldOff = MakeIcon({
+module FiShieldOff = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiShieldOff";
 });
 
-module FiShield = MakeIcon({
+module FiShield = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiShield";
 });
 
-module FiShoppingBag = MakeIcon({
+module FiShoppingBag = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiShoppingBag";
 });
 
-module FiShoppingCart = MakeIcon({
+module FiShoppingCart = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiShoppingCart";
 });
 
-module FiShuffle = MakeIcon({
+module FiShuffle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiShuffle";
 });
 
-module FiSidebar = MakeIcon({
+module FiSidebar = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiSidebar";
 });
 
-module FiSkipBack = MakeIcon({
+module FiSkipBack = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiSkipBack";
 });
 
-module FiSkipForward = MakeIcon({
+module FiSkipForward = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiSkipForward";
 });
 
-module FiSlack = MakeIcon({
+module FiSlack = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiSlack";
 });
 
-module FiSlash = MakeIcon({
+module FiSlash = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiSlash";
 });
 
-module FiSliders = MakeIcon({
+module FiSliders = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiSliders";
 });
 
-module FiSmartphone = MakeIcon({
+module FiSmartphone = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiSmartphone";
 });
 
-module FiSpeaker = MakeIcon({
+module FiSpeaker = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiSpeaker";
 });
 
-module FiSquare = MakeIcon({
+module FiSquare = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiSquare";
 });
 
-module FiStar = MakeIcon({
+module FiStar = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiStar";
 });
 
-module FiStopCircle = MakeIcon({
+module FiStopCircle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiStopCircle";
 });
 
-module FiSun = MakeIcon({
+module FiSun = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiSun";
 });
 
-module FiSunrise = MakeIcon({
+module FiSunrise = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiSunrise";
 });
 
-module FiSunset = MakeIcon({
+module FiSunset = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiSunset";
 });
 
-module FiTablet = MakeIcon({
+module FiTablet = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiTablet";
 });
 
-module FiTag = MakeIcon({
+module FiTag = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiTag";
 });
 
-module FiTarget = MakeIcon({
+module FiTarget = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiTarget";
 });
 
-module FiTerminal = MakeIcon({
+module FiTerminal = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiTerminal";
 });
 
-module FiThermometer = MakeIcon({
+module FiThermometer = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiThermometer";
 });
 
-module FiThumbsDown = MakeIcon({
+module FiThumbsDown = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiThumbsDown";
 });
 
-module FiThumbsUp = MakeIcon({
+module FiThumbsUp = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiThumbsUp";
 });
 
-module FiToggleLeft = MakeIcon({
+module FiToggleLeft = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiToggleLeft";
 });
 
-module FiToggleRight = MakeIcon({
+module FiToggleRight = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiToggleRight";
 });
 
-module FiTrash2 = MakeIcon({
+module FiTrash2 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiTrash2";
 });
 
-module FiTrash = MakeIcon({
+module FiTrash = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiTrash";
 });
 
-module FiTrendingDown = MakeIcon({
+module FiTrendingDown = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiTrendingDown";
 });
 
-module FiTrendingUp = MakeIcon({
+module FiTrendingUp = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiTrendingUp";
 });
 
-module FiTriangle = MakeIcon({
+module FiTriangle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiTriangle";
 });
 
-module FiTruck = MakeIcon({
+module FiTruck = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiTruck";
 });
 
-module FiTv = MakeIcon({
+module FiTv = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiTv";
 });
 
-module FiTwitter = MakeIcon({
+module FiTwitter = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiTwitter";
 });
 
-module FiType = MakeIcon({
+module FiType = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiType";
 });
 
-module FiUmbrella = MakeIcon({
+module FiUmbrella = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiUmbrella";
 });
 
-module FiUnderline = MakeIcon({
+module FiUnderline = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiUnderline";
 });
 
-module FiUnlock = MakeIcon({
+module FiUnlock = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiUnlock";
 });
 
-module FiUploadCloud = MakeIcon({
+module FiUploadCloud = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiUploadCloud";
 });
 
-module FiUpload = MakeIcon({
+module FiUpload = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiUpload";
 });
 
-module FiUserCheck = MakeIcon({
+module FiUserCheck = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiUserCheck";
 });
 
-module FiUserMinus = MakeIcon({
+module FiUserMinus = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiUserMinus";
 });
 
-module FiUserPlus = MakeIcon({
+module FiUserPlus = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiUserPlus";
 });
 
-module FiUserX = MakeIcon({
+module FiUserX = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiUserX";
 });
 
-module FiUser = MakeIcon({
+module FiUser = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiUser";
 });
 
-module FiUsers = MakeIcon({
+module FiUsers = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiUsers";
 });
 
-module FiVideoOff = MakeIcon({
+module FiVideoOff = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiVideoOff";
 });
 
-module FiVideo = MakeIcon({
+module FiVideo = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiVideo";
 });
 
-module FiVoicemail = MakeIcon({
+module FiVoicemail = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiVoicemail";
 });
 
-module FiVolume1 = MakeIcon({
+module FiVolume1 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiVolume1";
 });
 
-module FiVolume2 = MakeIcon({
+module FiVolume2 = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiVolume2";
 });
 
-module FiVolumeX = MakeIcon({
+module FiVolumeX = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiVolumeX";
 });
 
-module FiVolume = MakeIcon({
+module FiVolume = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiVolume";
 });
 
-module FiWatch = MakeIcon({
+module FiWatch = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiWatch";
 });
 
-module FiWifiOff = MakeIcon({
+module FiWifiOff = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiWifiOff";
 });
 
-module FiWifi = MakeIcon({
+module FiWifi = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiWifi";
 });
 
-module FiWind = MakeIcon({
+module FiWind = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiWind";
 });
 
-module FiXCircle = MakeIcon({
+module FiXCircle = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiXCircle";
 });
 
-module FiXSquare = MakeIcon({
+module FiXSquare = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiXSquare";
 });
 
-module FiX = MakeIcon({
+module FiX = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiX";
 });
 
-module FiYoutube = MakeIcon({
+module FiYoutube = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiYoutube";
 });
 
-module FiZapOff = MakeIcon({
+module FiZapOff = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiZapOff";
 });
 
-module FiZap = MakeIcon({
+module FiZap = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiZap";
 });
 
-module FiZoomIn = MakeIcon({
+module FiZoomIn = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiZoomIn";
 });
 
-module FiZoomOut = MakeIcon({
+module FiZoomOut = [%%bs.raw{|/*#__PURE__*/|}] ReactIcons_Functor.MakeIcon({
   [@bs.module "react-icons/fi"] 
   external reactClass : ReasonReact.reactClass = "FiZoomOut";
 });
